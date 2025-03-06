@@ -40,7 +40,7 @@ export const graphData: GraphData = {
     { id: "v22", objectName: null, cx: 361.105, cy: 873.505 },
     { id: "v23", objectName: null, cx: 237.691, cy: 873.505 },
     { id: "v24", objectName: null, cx: 155.674, cy: 243.887 },
-    { id: "v25", objectName: "Mall Office", cx: 195.932, cy: 439.536 },
+    { id: "v25", objectName: "Office", cx: 183.932, cy: 278.536 },
     { id: "v26", objectName: null, cx: 542.482, cy: 512.811 },
     { id: "v27", objectName: null, cx: 779.083, cy: 512.811 },
     { id: "v28", objectName: null, cx: 1017.929, cy: 512.811 },
@@ -72,11 +72,11 @@ export const graphData: GraphData = {
     { id: "v54", objectName: null, cx: 1316.882, cy: 214.387 },
     { id: "v55", objectName: null, cx: 1242.029, cy: 214.387 },
     { id: "v56", objectName: null, cx: 1242.029, cy: 343.02 },
-    { id: "v57", objectName: null, cx: 238.382, cy: 214.387 },
+    { id: "v57", objectName: null, cx: 155.674, cy: 113.887 },
     { id: "v58", objectName: null, cx: 203.474, cy: 214.387 },
     { id: "v59", objectName: "Chanel", cx: 345.867, cy: 242.517 },
-    { id: "v60", objectName: "Rolex", cx: 524.915, cy: 242.517 },
-    { id: "v61", objectName: null, cx: 524.915, cy: 214.387 },
+    { id: "v60", objectName: "Arrival", cx: 439.915, cy: 214.387 },
+    { id: "v61", objectName: null , cx: 524.915, cy: 242.517 },
     { id: "v62", objectName: null, cx: 345.867, cy: 214.387 },
     { id: "v63", objectName: null, cx: 661.007, cy: 214.387 },
     { id: "v64", objectName: null, cx: 661.007, cy: 254.159 },
@@ -93,6 +93,8 @@ export const graphData: GraphData = {
     { id: "v75", objectName: "Vans", cx: 380.811, cy: 690.858 },
     { id: "v76", objectName: null, cx: 1106.42, cy: 789.755 },
     { id: "v77", objectName: null, cx: 1218.515, cy: 789.755 },
+
+
   ],
 
   edges: [
@@ -188,5 +190,11 @@ export const graphData: GraphData = {
     { id: "v32_to_v77", from: "v32", to: "v77" },
     { id: "v41_to_v75", from: "v41", to: "v75" },
     { id: "v40_to_v74", from: "v40", to: "v74" },
+    { id: "v64_to_v63", from: "v64", to: "v63" },
+    { id: "v63_to_v60", from: "v63", to: "v60" },
+    
+
+    
+
   ],
 };
