@@ -14,7 +14,7 @@ function Positions({
   navigation,
 }: PositionsProps) {
   const positionBackgroundColor = "#4285f4";
-  const positionBackgroundRadius = positionRadius + 7;
+  const positionBackgroundRadius = positionRadius + 3;
   const positonBackgroundOpacity = 0.2;
   const startVertex = graphData.vertices.find(
     (v) => v.id === navigation?.start
@@ -59,7 +59,7 @@ function Positions({
       >
         <animate
           attributeName="stroke-width"
-          values="1;3;1"
+          values="0.1;3;0.1"
           dur="3s"
           repeatCount="indefinite"
         />

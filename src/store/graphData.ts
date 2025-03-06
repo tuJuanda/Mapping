@@ -16,7 +16,7 @@ export interface GraphData {
 }
 export const graphData: GraphData = {
   vertices: [
-    { id: "v1", objectName: null, cx: 361.105, cy: 512.811 },
+    { id: "v1", objectName: null, cx: 118.874, cy: 243.887 },
     { id: "v2", objectName: null, cx: 237.691, cy: 512.811 },
     { id: "v3", objectName: "Zara", cx: 237.691, cy: 905.781 },
     { id: "v4", objectName: "McShark", cx: 361.105, cy: 905.781 },
