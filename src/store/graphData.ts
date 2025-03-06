@@ -17,8 +17,8 @@ export interface GraphData {
 export const graphData: GraphData = {
   vertices: [
     { id: "v1", objectName: null, cx: 118.874, cy: 243.887 },
-    { id: "v2", objectName: null, cx: 237.691, cy: 512.811 },
-    { id: "v3", objectName: "Zara", cx: 237.691, cy: 905.781 },
+    { id: "v2", objectName: null, cx: 139.774, cy: 243.887 },
+    { id: "v3", objectName: "Zara", cx: 118.874, cy: 239.887 },
     { id: "v4", objectName: "McShark", cx: 361.105, cy: 905.781 },
     { id: "v5", objectName: "Nike", cx: 490.616, cy: 905.781 },
     { id: "v6", objectName: "Adidas", cx: 622.812, cy: 905.781 },
@@ -39,7 +39,7 @@ export const graphData: GraphData = {
     { id: "v21", objectName: null, cx: 490.616, cy: 873.505 },
     { id: "v22", objectName: null, cx: 361.105, cy: 873.505 },
     { id: "v23", objectName: null, cx: 237.691, cy: 873.505 },
-    { id: "v24", objectName: null, cx: 237.691, cy: 439.536 },
+    { id: "v24", objectName: null, cx: 155.674, cy: 243.887 },
     { id: "v25", objectName: "Mall Office", cx: 195.932, cy: 439.536 },
     { id: "v26", objectName: null, cx: 542.482, cy: 512.811 },
     { id: "v27", objectName: null, cx: 779.083, cy: 512.811 },
@@ -116,7 +116,7 @@ export const graphData: GraphData = {
     { id: "v22_to_v4", from: "v22", to: "v4" },
     { id: "v71_to_v72", from: "v71", to: "v72" },
     { id: "v22_to_v23", from: "v22", to: "v23" },
-    { id: "v23_to_v3", from: "v23", to: "v3" },
+    { id: "v2_to_v3", from: "v2", to: "v3" },
     { id: "v22_to_v41", from: "v22", to: "v41" },
     { id: "v40_to_v40", from: "v40", to: "v40" },
     { id: "v1_to_v1", from: "v1", to: "v1" },
