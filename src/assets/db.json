@@ -21,8 +21,8 @@
     {
       "id": "d4e5",
       "categoryId": "d21e",
-      "name": "Arrival",
-      "desc": "Arrival Passengers"
+      "name": "Umroh Check-in",
+      "desc": " Umroh Passengers Check-in"
     },
     {
       "id": "e5f6",
@@ -191,6 +191,16 @@
       "categoryId": "e753",
       "name": "Entrance",
       "desc": ""
+    },
+    {"id": "ac14",
+    "categoryId":"58a9",
+    "name":"Check-in",
+    "desc":""
+  },
+  {"id": "ac15",
+  "categoryId":"58a9",
+  "name":"Arrival",
+  "desc":""
     }
   ],
   "categories": [
@@ -229,6 +239,7 @@
     {
       "id": "e753",
       "name": "Entrace"
+      
     }
   ]
 }

@@ -90,7 +90,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         onClick={handleObjectClick}
       />
       <path
-        id="Arrival"
+        id="Umroh Check-in"
         className={`${className} object`}
         d="M455.6 246.006l179.653-.037.12 104.876-179.822-.036.05-104.803z"
         onClick={handleObjectClick}
@@ -195,6 +195,25 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         id="Entrance"
         cx={1157.655}
         cy={1072.459}
+        rx={57}
+        ry={57}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      
+      />
+      <path
+        id="Check-in"
+        cx={439.915}
+        cy={276.387}
+        rx={57}
+        ry={57}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Arrival"
+        cx={201.474}
+        cy={214.387}
         rx={57}
         ry={57}
         className={`${className} object`}
