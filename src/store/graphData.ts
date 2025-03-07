@@ -16,16 +16,16 @@ export interface GraphData {
 }
 export const graphData: GraphData = {
   vertices: [
-    { id: "v1", objectName: null, cx: 139.774, cy: 243.887 },
+    { id: "v1", objectName: null, cx: 139.774, cy: 240.887 },
     { id: "v2", objectName: null, cx: 118.874, cy: 243.887 },
-    { id: "v3", objectName: "Zara", cx: 118.874, cy: 239.887 },
+    { id: "v3", objectName: "A&W", cx: 118.874, cy: 239.887 },
     { id: "v4", objectName: "McShark", cx: 361.105, cy: 905.781 },
     { id: "v5", objectName: "Nike", cx: 490.616, cy: 905.781 },
     { id: "v6", objectName: "Adidas", cx: 622.812, cy: 905.781 },
     { id: "v7", objectName: "Primark", cx: 754.244, cy: 905.781 },
     { id: "v8", objectName: "Svarovski", cx: 889.316, cy: 905.781 },
     { id: "v9", objectName: "H&M", cx: 1020.234, cy: 905.781 },
-    { id: "v10", objectName: "Gucci", cx: 361.105, cy: 474.539 },
+    { id: "v10", objectName: "Chinese Food", cx: 139.774, cy: 234.887 },
     { id: "v11", objectName: "Louis Vuitton", cx: 542.482, cy: 474.539 },
     { id: "v12", objectName: "KFC", cx: 779.083, cy: 474.539 },
     { id: "v13", objectName: "McDonald's", cx: 1017.929, cy: 474.539 },
@@ -40,7 +40,7 @@ export const graphData: GraphData = {
     { id: "v22", objectName: null, cx: 361.105, cy: 873.505 },
     { id: "v23", objectName: null, cx: 237.691, cy: 873.505 },
     { id: "v24", objectName: null, cx: 152.674, cy: 240.887 },
-    { id: "v25", objectName: "Office", cx: 183.932, cy: 278.536 },
+    { id: "v25", objectName: "Bank", cx: 155.674, cy: 234.887 },
     { id: "v26", objectName: null, cx: 542.482, cy: 512.811 },
     { id: "v27", objectName: null, cx: 779.083, cy: 512.811 },
     { id: "v28", objectName: null, cx: 1017.929, cy: 512.811 },
@@ -108,6 +108,19 @@ export const graphData: GraphData = {
 
   edges: [
     { id: "v1_to_v2", from: "v1", to: "v2" },
+    { id: "v2_to_v3", from: "v2", to: "v3" },
+    { id: "v1_to_v10", from: "v1", to: "v10" },
+    { id: "v1_to_v24", from: "v1", to: "v24" },
+    { id: "v24_to_v25", from: "v24", to: "v25" },
+    { id: "v60_to_v63", from: "v60", to: "v63" },
+    { id: "v63_to_v64", from: "v63", to: "v64" },
+    { id: "v60_to_v78", from: "v60", to: "v78" },
+    { id: "v79_to_v80", from: "v79", to: "v80" },
+    { id: "v80_to_v81", from: "v80", to: "v81" },
+    { id: "v81_to_v24", from: "v81", to: "v24" },
+    { id: "v24_to_v82", from: "v24", to: "v82" },
+    { id: "v82_to_v58", from: "v82", to: "v58" },
+    /* { id: "v1_to_v2", from: "v1", to: "v2" },
     { id: "v34_to_v35", from: "v34", to: "v35" },
     { id: "v35_to_v36", from: "v35", to: "v36" },
     { id: "v36_to_v38", from: "v36", to: "v38" },
@@ -206,7 +219,7 @@ export const graphData: GraphData = {
     { id: "v80_to_v81", from: "v80", to: "v81" },
     { id: "v81_to_v24", from: "v81", to: "v24" },
     { id: "v24_to_v82", from: "v24", to: "v82" },
-    { id: "v82_to_v58", from: "v82", to: "v58" },
+    { id: "v82_to_v58", from: "v82", to: "v58" }, */
 
   ],
 };
