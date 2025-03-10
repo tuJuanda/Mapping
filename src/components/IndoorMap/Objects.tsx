@@ -6,191 +6,539 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
   return (
     <g id="Objects">
       <path
-        id="Adidas"
+        id="FB20"
         className={`${className} object`}
-        d="M32.027 451.872L77.027 451.872L77.027 482.372L4.027 482.372L4.027 411.372L31.527 411.372L31.527 451.372L31.527 451.872L32.027 451.872Z"
-        onClick={handleObjectClick}
-      />
-      {/* <path
-        id="Nike"
-        className={`${className} object`}
-        d="M430.273 910.876l120.253.333-1.054 114.46-119.468.792.269-115.585z"
+        d="M32.1914 311.872L77.1914 311.872L77.1914 342.372L4.19141 342.372L4.19141 271.372L31.6914 271.372L31.6914 311.372L31.6914 311.872L32.1914 311.872Z"
         onClick={handleObjectClick}
       />
       <path
-        id="McShark"
+        id="MS1"
         className={`${className} object`}
-        d="M303.324 910.876l120.253.333-2.042 115.252-118.443.698.232-116.283z"
+        d="M373.691 386.372L387.191 386.372L387.191 482.372L373.691 482.372L353.191 482.372L353.191 343.372L373.191 343.372L373.191 385.872L373.191 386.372L373.691 386.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Zara"
+        id="SV3"
         className={`${className} object`}
-        d="M172.029 911.04l122.833-.164-.243 116.283-122.709.667.119-116.786z"
+        d="M1247.15 354.372L1213.19 354.372L1213.19 328.897L1228.38 340.766L1228.39 340.772L1228.4 340.777L1247.15 354.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Primark"
+        id="FB19"
         className={`${className} object`}
-        d="M684.126 911.04l123.189.003-1.08 114.297-122.947.503.838-114.803z"
+        d="M599.691 378.372L599.691 396.372L569.191 396.372L569.191 343.372L668.191 343.372L668.191 377.872L600.191 377.872L599.691 377.872L599.691 378.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Svarovski"
+        id="EP9"
         className={`${className} object`}
-        d="M815.849 911.04l124.416.003-1.091 114.297-124.171.503.846-114.803z"
+        d="M785.164 288.372C785.164 296.38 778.672 302.872 770.664 302.872L747.664 302.872C739.656 302.872 733.164 296.38 733.164 288.372V288.372C733.164 280.364 739.656 273.872 747.664 273.872L760.364 273.872L770.664 273.872C778.672 273.872 785.164 280.364 785.164 288.372V288.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="H&M"
+        id="FB17"
         className={`${className} object`}
-        d="M948.369 911.04l125.087.003-1.097 112.234-124.841.494.851-112.731z"
+        d="M864.691 371.372L864.191 371.372L864.191 371.872L864.191 386.372L834.191 386.372L834.191 343.372L890.191 343.372L890.191 371.372L864.691 371.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="MediaMarkt"
+        id="EP8"
         className={`${className} object`}
-        d="M492.345 554.188l478.43 1.477.269 286.743-478.664-.017-.035-288.203z"
+        d="M1019.16 288.372C1019.16 296.38 1012.67 302.872 1004.66 302.872L981.664 302.872C973.656 302.872 967.164 296.38 967.164 288.372V288.372C967.164 280.364 973.656 273.872 981.664 273.872L994.364 273.872L1004.66 273.872C1012.67 273.872 1019.16 280.364 1019.16 288.372V288.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Sephora"
+        id="SV4"
         className={`${className} object`}
-        d="M978.726 555.123l99.437 1.533-.111 286.383-99.487-.075.161-287.841z"
+        d="M1033.85 358.92L1033.85 358.92L1033.86 358.915L1051.66 343.946L1051.66 371.372L1018.57 371.372L1033.85 358.92Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Levi's"
+        id="RT10"
         className={`${className} object`}
-        d="M384.429 554.004l98.751.437.026 89.317-98.782.047.005-89.801z"
+        d="M1007.19 236.372L1007.19 193.372L1269.66 193.372L1269.66 273.372L1236.98 273.372C1224.08 245.34 1211.98 229.334 1196.47 223.747C1180.92 218.146 1162.12 223.08 1136.04 236.372L1112.31 236.372C1095.7 225.799 1082.84 220.853 1070.24 221.051C1057.64 221.25 1045.4 226.588 1030.02 236.372L1007.19 236.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Vans"
+        id="EP5"
         className={`${className} object`}
-        d="M384.371 652.277l98.752.081.078 87-98.883-.015.053-87.066z"
+        d="M1617.16 287.372C1617.16 295.38 1610.67 301.872 1602.66 301.872L1579.66 301.872C1571.66 301.872 1565.16 295.38 1565.16 287.372V287.372C1565.16 279.364 1571.66 272.872 1579.66 272.872L1592.36 272.872L1602.66 272.872C1610.67 272.872 1617.16 279.364 1617.16 287.372V287.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Starbucks"
+        id="FB15"
         className={`${className} object`}
-        d="M384.263 747.018l98.933.057-.159 95.586-98.747-.047-.027-95.596z"
+        d="M1617.19 472.372L1514.19 472.372L1514.19 365.782L1617.19 351.447L1617.19 472.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="KFC"
+        id="EP2"
         className={`${className} object`}
-        d="M696.664 238.508l171.452-.046.021 232.906-171.458-.113-.015-232.747z"
+        d="M2113.16 287.372C2113.16 295.38 2106.67 301.872 2098.66 301.872L2075.66 301.872C2067.66 301.872 2061.16 295.38 2061.16 287.372V287.372C2061.16 279.364 2067.66 272.872 2075.66 272.872L2088.36 272.872L2098.66 272.872C2106.67 272.872 2113.16 279.364 2113.16 287.372V287.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="McDonald's"
+        id="EP1"
         className={`${className} object`}
-        d="M935.02 239.647l171.451-.046.022 232.493-171.625.071.151-232.518z"
+        d="M2362.16 287.372C2362.16 295.38 2355.67 301.872 2347.66 301.872L2324.66 301.872C2316.66 301.872 2310.16 295.38 2310.16 287.372V287.372C2310.16 279.364 2316.66 272.872 2324.66 272.872L2337.36 272.872L2347.66 272.872C2355.67 272.872 2362.16 279.364 2362.16 287.372V287.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Umroh Check-in"
+        id="FB7"
         className={`${className} object`}
-        d="M455.6 246.006l179.653-.037.12 104.876-179.822-.036.05-104.803z"
+        d="M2526.66 366.872L2526.66 402.372L2491.66 402.372L2491.66 351.372L2562.66 351.372L2562.66 366.372L2527.16 366.372L2526.66 366.372L2526.66 366.872Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Louis Vuitton"
+        id="FB3"
         className={`${className} object`}
-        d="M455.473 359.466l179.713-.037.126 111.555-179.919-.293.08-111.225z"
+        d="M2846.16 287.372C2846.16 295.38 2839.67 301.872 2831.66 301.872L2808.66 301.872C2800.66 301.872 2794.16 295.38 2794.16 287.372V287.372C2794.16 279.364 2800.66 272.872 2808.66 272.872L2821.36 272.872L2831.66 272.872C2839.67 272.872 2846.16 279.364 2846.16 287.372V287.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Chanel"
+        id="FB2"
         className={`${className} object`}
-        d="M288.551 245.905l158.26-.05.1 104.876-158.41-.023.05-104.803z"
+        d="M3008.16 287.372C3008.16 295.38 3001.67 301.872 2993.66 301.872L2970.66 301.872C2962.66 301.872 2956.16 295.38 2956.16 287.372V287.372C2956.16 279.364 2962.66 272.872 2970.66 272.872L2983.36 272.872L2993.66 272.872C3001.67 272.872 3008.16 279.364 3008.16 287.372V287.372Z"
         onClick={handleObjectClick}
       />
       <path
-        id="Gucci"
+        id="FB1"
         className={`${className} object`}
-        d="M288.483 359.374l158.26-.059.095 111.54-158.409-.018.054-111.463z"
+        d="M3174.16 349.393L3145.16 349.393L3126.16 290.872L3174.16 290.872L3174.16 349.393Z"
         onClick={handleObjectClick}
       />
-      <path
-        id="7-Eleven"
+      <rect
+        id="MS2"
         className={`${className} object`}
-        d="M271.405 34.433l144.006-.114.19 146.272-144.281.014.085-146.172z"
+        x="3121.16"
+        y="289.872"
+        width="35"
+        height="27"
+        transform="rotate(-180 3121.16 289.872)"
         onClick={handleObjectClick}
       />
-      <path
-        id="Victoria's Secret"
+      <rect
+        id="TOtwin"
         className={`${className} object`}
-        d="M424.29 34.522l146.224-.113.063 146.316-146.362.01.075-146.213z"
+        x="2661.16"
+        y="291.872"
+        width="74"
+        height="27"
+        transform="rotate(-180 2661.16 291.872)"
         onClick={handleObjectClick}
       />
-      <path
-        id="Pandora"
+      <rect
+        id="TO1"
         className={`${className} object`}
-        d="M579.065 34.617l170.852-.098.088 146.316-171.013-.004.073-146.214z"
+        d=""
+        x="3080.16"
+        y="289.872"
+        width="34"
+        height="27"
+        transform="rotate(-180 3080.16 289.872)"
         onClick={handleObjectClick}
       />
-      <path
-        id="Foot Locker"
+      <rect
+        id="RT1"
         className={`${className} object`}
-        d="M758.677 34.72l155.194-.108.072 146.316-155.34.005.074-146.214z"
+        x="2706.66"
+        y="382.372"
+        width="31"
+        height="34"
+        transform="rotate(-180 2706.66 382.372)"
         onClick={handleObjectClick}
       />
-      <path
-        id="Pharmacy"
+      <rect
+        id="FB4"
         className={`${className} object`}
-        d="M922.523 34.818l174.226-.096.09 146.317-174.39-.006.074-146.215z"
+        x="2674.66"
+        y="382.372"
+        width="38"
+        height="34"
+        transform="rotate(-180 2674.66 382.372)"
         onClick={handleObjectClick}
       />
-      <path
-        id="GameStop"
+      <rect
+        id="FB5"
         className={`${className} object`}
-        d="M1105.14 34.92l155.263-.107.07 146.317-155.407.005.074-146.215z"
+        x="2636.66"
+        y="382.372"
+        width="35"
+        height="34"
+        transform="rotate(-180 2636.66 382.372)"
         onClick={handleObjectClick}
       />
-      <path
-        id="Claire's"
+      <rect
+        id="FB6"
         className={`${className} object`}
-        d="M1269.109 35.006l105.412-.136.02 146.317-105.51.034.078-146.215z"
+        x="2601.66"
+        y="382.372"
+        width="35"
+        height="34"
+        transform="rotate(-180 2601.66 382.372)"
         onClick={handleObjectClick}
       />
-      <path
-        id="Tobacco Shop"
+      <rect
+        id="FB8"
         className={`${className} object`}
-        d="M1244.815 412.508l179.773.266-.04 128.337-179.694-.064-.04-128.539z"
+        x="2475.66"
+        y="382.372"
+        width="48"
+        height="31"
+        transform="rotate(-180 2475.66 382.372)"
         onClick={handleObjectClick}
       />
-      <path
-        id="PetSmart"
+      <rect
+        id="FB8A"
         className={`${className} object`}
-        d="M1244.728 549.605l98.037.282.177 183.25-98.255-4.044.041-179.488z"
+        x="2510.16"
+        y="292.872"
+        width="68"
+        height="32"
+        transform="rotate(-180 2510.16 292.872)"
         onClick={handleObjectClick}
       />
-      <path
-        id="Barbershop"
+      <rect
+        id=""
         className={`${className} object`}
-        d="M1244.509 737.562l98.428 4.068-.193 189.675-98.283-.602.048-193.141z"
+        d=""
         onClick={handleObjectClick}
       />
-      <path
-        id="Office"
+      <rect
+        id="FB9"
         className={`${className} object`}
-        d="M33.225 368.014l158.276-.11.083 265.887-158.45-.03.091-265.747z"
+        x="2423.66"
+        y="388.372"
+        width="32"
+        height="37"
+        transform="rotate(-180 2423.66 388.372)"
         onClick={handleObjectClick}
       />
-      <path
-        id="East Wing Toilet"
+      <rect
+        id="RT2"
         className={`${className} object`}
-        d="M1305.166 292.446l119.546.21-.043 111.717-119.492-.035-.011-111.892z"
+        x="2390.66"
+        y="388.372"
+        width="37"
+        height="37"
+        transform="rotate(-180 2390.66 388.372)"
         onClick={handleObjectClick}
       />
-      <path
-        id="North Wing Toilet"
+      <rect
+        id="FB9A"
         className={`${className} object`}
-        d="M151.579 34.324l111.218-.134.127 146.349-111.43.033.085-146.248z"
+        x="2353.66"
+        y="388.372"
+        width="18"
+        height="37"
+        transform="rotate(-180 2353.66 388.372)"
         onClick={handleObjectClick}
-      /> */}
+      />
+      <rect
+        id="FB9B"
+        className={`${className} object`}
+        x="2313.66"
+        y="388.372"
+        width="18"
+        height="37"
+        transform="rotate(-180 2353.66 388.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT3"
+        className={`${className} object`}
+        x="2318.66"
+        y="388.372"
+        width="38"
+        height="37"
+        transform="rotate(-180 2318.66 388.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT5"
+        className={`${className} object`}
+        x="2280.66"
+        y="388.372"
+        width="35"
+        height="37"
+        transform="rotate(-180 2280.66 388.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="BMS"
+        className={`${className} object`}
+        x="2427.16"
+        y="542.872"
+        width="138"
+        height="41"
+        transform="rotate(-180 2427.16 542.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT5A"
+        className={`${className} object`}
+        x="2072.66"
+        y="374.372"
+        width="27"
+        height="13"
+        transform="rotate(-180 2072.66 374.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB10"
+        className={`${className} object`}
+        x="1980.66"
+        y="361.372"
+        width="64"
+        height="27"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT4"
+        className={`${className} object`}
+        x="1855.66"
+        y="395.372"
+        width="31"
+        height="34"
+        transform="rotate(-180 1855.66 395.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="MS3"
+        className={`${className} object`}
+        x="1807.16"
+        y="286.872"
+        width="34.0001"
+        height="47"
+        transform="rotate(-180 1807.16 286.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="T0B"
+        className={`${className} object`}
+        x="1804.16"
+        y="386.872"
+        width="46"
+        height="36"
+        transform="rotate(-180 1804.16 386.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB11"
+        className={`${className} object`}
+        x="1743.66"
+        y="386.372"
+        width="32"
+        height="35"
+        transform="rotate(-180 1743.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB12"
+        className={`${className} object`}
+        x="1711.66"
+        y="386.372"
+        width="32"
+        height="35"
+        transform="rotate(-180 1711.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB13"
+        className={`${className} object`}
+        x="1679.66"
+        y="386.372"
+        width="32"
+        height="35"
+        transform="rotate(-180 1679.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB14"
+        className={`${className} object`}
+        x="1647.66"
+        y="386.372"
+        width="29"
+        height="35"
+        transform="rotate(-180 1647.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP6"
+        className={`${className} object`}
+        x="1534.16"
+        y="286.872"
+        width="29.877"
+        height="17"
+        transform="rotate(-180 1534.16 286.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="SV2"
+        className={`${className} object`}
+        x="1479.66"
+        y="386.372"
+        width="20"
+        height="31"
+        transform="rotate(-180 1479.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT6"
+        className={`${className} object`}
+        x="1458.66"
+        y="386.372"
+        width="43.5714"
+        height="31"
+        transform="rotate(-180 1458.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT7"
+        className={`${className} object`}
+        x="1415.66"
+        y="386.372"
+        width="43.5714"
+        height="31"
+        transform="rotate(-180 1415.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT8"
+        className={`${className} object`}
+        x="1372.66"
+        y="386.372"
+        width="43.5714"
+        height="31"
+        transform="rotate(-180 1372.66 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="TOH"
+        className={`${className} object`}
+        x="1328.16"
+        y="386.872"
+        width="49"
+        height="32"
+        transform="rotate(-180 1328.16 386.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT9"
+        className={`${className} object`}
+        x="1212.66"
+        y="371.372"
+        width="34"
+        height="43"
+        transform="rotate(-180 1212.66 371.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP7"
+        className={`${className} object`}
+        x="1270.16"
+        y="287.872"
+        width="34"
+        height="14"
+        transform="rotate(-180 1270.16 287.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT11"
+        className={`${className} object`}
+        x="1086.66"
+        y="371.372"
+        width="34"
+        height="43"
+        transform="rotate(-180 1086.66 371.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT12"
+        className={`${className} object`}
+        x="974.191"
+        y="371.372"
+        width="83"
+        height="28"
+        transform="rotate(-180 974.191 371.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT13"
+        className={`${className} object`}
+        x="833.191"
+        y="386.372"
+        width="37"
+        height="43"
+        transform="rotate(-180 833.191 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB16"
+        className={`${className} object`}
+        x="795.191"
+        y="386.372"
+        width="49"
+        height="43"
+        transform="rotate(-180 795.191 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="TOK"
+        className={`${className} object`}
+        x="693.691"
+        y="477.872"
+        width="78"
+        height="88"
+        transform="rotate(-180 693.691 477.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB19"
+        className={`${className} object`}
+        x="568.191"
+        y="396.372"
+        width="71"
+        height="53"
+        transform="rotate(-180 568.191 396.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="SV5"
+        className={`${className} object`}
+        x="496.191"
+        y="396.372"
+        width="39"
+        height="53"
+        transform="rotate(-180 496.191 396.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT14"
+        className={`${className} object`}
+        x="286.191"
+        y="283.372"
+        width="29"
+        height="50"
+        transform="rotate(-180 286.191 283.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="MOM"
+        className={`${className} object`}
+        x="194.691"
+        y="431.872"
+        width="46"
+        height="88"
+        transform="rotate(-180 194.691 431.872)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id=""
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+
       <ellipse
         id="Entrance"
         cx={1157.655}
@@ -199,7 +547,6 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         ry={57}
         className={`${className} object`}
         onClick={handleObjectClick}
-      
       />
       <path
         id="Check-in"
