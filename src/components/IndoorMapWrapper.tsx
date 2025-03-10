@@ -67,12 +67,12 @@ function IndoorMapWrapper() {
         <TransformComponent wrapperClass="bg-white">
           <MapBackground>
             {/*Objects are the clickable areas on the map e.g. Rooms, Desks, ...*/}
-            {/* <Objects
+            {<Objects
               handleObjectClick={handleObjectClick}
               className={
                 isEditMode ? "" : "hover:cursor-pointer hover:opacity-50"
               }
-            /> */}
+            />}
             {/*Edges are the lines on the map aka the paths*/}
             <Paths />
             {/*Vertexes are the circles on the map aka the positions*/}

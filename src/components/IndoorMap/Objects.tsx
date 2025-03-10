@@ -8,10 +8,10 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
       <path
         id="Adidas"
         className={`${className} object`}
-        d="M558.987 911.04l116.848.003-1.024 114.297-116.619.503.795-114.803z"
+        d="M32.027 451.872L77.027 451.872L77.027 482.372L4.027 482.372L4.027 411.372L31.527 411.372L31.527 451.372L31.527 451.872L32.027 451.872Z"
         onClick={handleObjectClick}
       />
-      <path
+      {/* <path
         id="Nike"
         className={`${className} object`}
         d="M430.273 910.876l120.253.333-1.054 114.46-119.468.792.269-115.585z"
@@ -190,7 +190,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         className={`${className} object`}
         d="M151.579 34.324l111.218-.134.127 146.349-111.43.033.085-146.248z"
         onClick={handleObjectClick}
-      />
+      /> */}
       <ellipse
         id="Entrance"
         cx={1157.655}
