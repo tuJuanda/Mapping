@@ -11,13 +11,19 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         d="M32.0273 311.872L77.0273 311.872L77.0273 342.372L4.02734 342.372L4.02735 271.372L31.5274 271.372L31.5273 311.372L31.5273 311.872L32.0273 311.872Z"
         onClick={handleObjectClick}
       />
-      {/* <path
-        id="Nike"
+      <path
+        id="Adidas"
         className={`${className} object`}
-        d="M430.273 910.876l120.253.333-1.054 114.46-119.468.792.269-115.585z"
+        d="M599.691 378.372L599.691 396.372L569.191 396.372L569.191 343.372L668.191 343.372L668.191 377.872L600.191 377.872L599.691 377.872L599.691 378.372Z"
         onClick={handleObjectClick}
       />
-      <path
+      {<path
+        id="Nike"
+        className={`${className} object`}
+        d="M864.527 371.372L864.027 371.372L864.027 371.872L864.027 386.372L834.027 386.372L834.027 343.372L890.027 343.372L890.027 371.372L864.527 371.372Z"
+        onClick={handleObjectClick}
+      />
+      /* <path
         id="McShark"
         className={`${className} object`}
         d="M303.324 910.876l120.253.333-2.042 115.252-118.443.698.232-116.283z"
