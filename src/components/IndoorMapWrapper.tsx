@@ -18,7 +18,7 @@ import { toast } from "react-toastify";
 function IndoorMapWrapper() {
   const [modalOpen, setModalOpen] = useState(false);
   const [object, setObject] = useState<ObjectItem>({} as ObjectItem);
-  const positionRadius = isMobile ? 10 : 2;
+  const positionRadius = isMobile ? 10 : 5;
   const { navigation, setNavigation, isEditMode, setIsEditMode } = useContext(
     NavigationContext
   ) as NavigationContextType;
