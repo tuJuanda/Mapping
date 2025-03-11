@@ -237,7 +237,7 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
       <rect
         id="FB9B"
         className={`${className} object`}
-        x="2313.66"
+        x="2371.66"
         y="388.372"
         width="18"
         height="37"
