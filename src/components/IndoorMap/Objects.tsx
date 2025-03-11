@@ -533,9 +533,24 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         transform="rotate(-180 194.691 431.872)"
         onClick={handleObjectClick}
       />
-      <rect
-        id=""
+      <rect 
+        id="TORED"
         className={`${className} object`}
+        x="2242.16" 
+        y="388.872" 
+        width="46" 
+        height="38" 
+        transform="rotate(-180 2242.16 388.872)"
+        onClick={handleObjectClick}
+      />
+      <rect 
+        id="TORED2"
+        className={`${className} object`}
+        x="2766.16" 
+        y="382.872" 
+        width="46" 
+        height="35" 
+        transform="rotate(-180 2766.16 382.872)"
         onClick={handleObjectClick}
       />
 
