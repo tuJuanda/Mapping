@@ -555,14 +555,141 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
       />
 
       <ellipse
-        id="Entrance"
-        cx={1157.655}
-        cy={1072.459}
-        rx={57}
-        ry={57}
+        id="Gate1"
+        cx={48}
+        cy={226}
+        rx={16}
+        ry={14}
         className={`${className} object`}
         onClick={handleObjectClick}
       />
+      <ellipse
+        id="Gate2"
+        cx={372}
+        cy={229}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate3"
+        cx={426}
+        cy={230}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate4"
+        cx={697}
+        cy={231}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate5"
+        cx={973}
+        cy={231}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate6"
+        cx={1303}
+        cy={231}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate7"
+        cx={1500}
+        cy={215}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate8"
+        cx={1617}
+        cy={227}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate9"
+        cx={1834}
+        cy={226}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate10"
+        cx={2086}
+        cy={226}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate11"
+        cx={2332}
+        cy={226}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate12"
+        cx={2608}
+        cy={227}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate13"
+        cx={2815}
+        cy={227}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate14"
+        cx={2983}
+        cy={227}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+      <ellipse
+        id="Gate15"
+        cx={3142}
+        cy={227}
+        rx={16}
+        ry={14}
+        className={`${className} object`}
+        onClick={handleObjectClick}
+      />
+
       <path
         id="Check-in"
         cx={439.915}
