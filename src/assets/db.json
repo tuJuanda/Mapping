@@ -140,7 +140,163 @@
    "categoryId":"52f1",
    "name":"LA CAFE",
    "desc":""
-  }
+  },
+  {"id":"FB11",
+   "categoryId":"52f1",
+   "name":"Bebek Goreng Harissa",
+   "desc":""
+  },
+  {"id":"FB12",
+   "categoryId":"52f1",
+   "name":"Roti O",
+   "desc":""
+  },
+  {"id":"FB13",
+   "categoryId":"52f1",
+   "name":"A Fung",
+   "desc":""
+  },
+  {"id":"FB14",
+   "categoryId":"52f1",
+   "name":"Gloria Jeans Cafe",
+   "desc":""
+  },
+  {"id":"FB15",
+   "categoryId":"52f1",
+   "name":"Kulineri",
+   "desc":""
+  },
+  {"id":"FB16",
+   "categoryId":"52f1",
+   "name":"Restaurant Bangkalan",
+   "desc":""
+  },
+  {"id":"FB17",
+   "categoryId":"52f1",
+   "name":"Bakmi Gocit",
+   "desc":""
+  },
+  {"id":"FB18",
+   "categoryId":"52f1",
+   "name":"Bangi Cafe",
+   "desc":""
+  },
+  {"id":"FB19",
+   "categoryId":"52f1",
+   "name":"Dunkun Coffee",
+   "desc":""
+  },
+  {"id":"FB20",
+   "categoryId":"52f1",
+   "name":"KILLINEY",
+   "desc":""
+  },
+  {"id":"EP1",
+   "categoryId":"e928",
+   "name":"Periplus",
+   "desc":""
+  },
+  {"id":"EP2",
+   "categoryId":"e928",
+   "name":"Doughlab",
+   "desc":""
+  },
+  {"id":"EP5",
+   "categoryId":"e928",
+   "name":"Chez Choux",
+   "desc":""
+  },
+  {"id":"EP6",
+  "categoryId":"e928",
+  "name":"Polo Leather",
+  "desc":""
+ },
+ {"id":"EP7",
+  "categoryId":"e928",
+  "name":"Perfect Relax",
+  "desc":""
+ },
+ {"id":"EP8",
+ "categoryId":"e928",
+ "name":"Blue Sky Lounge",
+ "desc":""
+},
+{"id":"RT1",
+ "categoryId":"58a9",
+ "name":"Circle K",
+ "desc":""
+},
+{"id":"RT2",
+ "categoryId":"58a9",
+ "name":"Boga Jaya",
+ "desc":""
+},
+{"id":"RT3",
+ "categoryId":"58a9",
+ "name":"POLO",
+ "desc":""
+},
+{"id":"RT4",
+ "categoryId":"58a9",
+ "name":"Time To Go",
+ "desc":""
+},
+{"id":"RT5",
+ "categoryId":"58a9",
+ "name":"Beauty Center",
+ "desc":""
+},
+{"id":"RT5A",
+ "categoryId":"58a9",
+ "name":"POLO",
+ "desc":""
+},
+{"id":"RT6",
+ "categoryId":"58a9",
+ "name":"BOGAJAYA",
+ "desc":""
+},
+{"id":"RT7",
+ "categoryId":"58a9",
+ "name":"Periplus",
+ "desc":""
+},
+{"id":"RT8",
+ "categoryId":"58a9",
+ "name":"Batik Kris",
+ "desc":""
+},
+{"id":"RT9",
+ "categoryId":"58a9",
+ "name":"No Partner",
+ "desc":""
+},
+{"id":"RT10",
+ "categoryId":"58a9",
+ "name":"DFS",
+ "desc":""
+},
+{"id":"RT11",
+ "categoryId":"58a9",
+ "name":"No Partner",
+ "desc":""
+},
+{"id":"RT12",
+ "categoryId":"58a9",
+ "name":"BOGAJAYA",
+ "desc":""
+},
+{"id":"RT13",
+ "categoryId":"58a9",
+ "name":"Circle K",
+ "desc":""
+},
+{"id":"RT14",
+ "categoryId":"58a9",
+ "name":"Alfa Express",
+ "desc":""
+}
+
   ],
   "categories": [
     {
