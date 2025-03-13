@@ -153,6 +153,7 @@ export const graphData: GraphData = {
     { id: "FB20", objectName: "KILLINEY", cx: 50.674, cy: 329.875 },
     { id: "EP1", objectName: "Periplus", cx: 2328.234, cy: 308.387 },
     { id: "EP2", objectName: "Doughlab", cx: 2087.515, cy: 308.387 },
+    { id: "EP3", objectName: "Beard Papa's",  cx: 1694.674, cy: 340.875 },
     { id: "EP5", objectName: "Chez Choux", cx: 1592.674, cy: 308.387 },
     { id: "EP6", objectName: "Polo Leather", cx: 1518.674, cy: 298.387 },
     { id: "EP7", objectName: "Perfect Relax", cx: 1592.674, cy: 298.387 },
