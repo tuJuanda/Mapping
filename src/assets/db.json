@@ -295,6 +295,86 @@
  "categoryId":"58a9",
  "name":"Alfa Express",
  "desc":""
+},
+{"id":"SV2",
+ "categoryId":"16be",
+ "name":"Message & Reflexology",
+ "desc":""
+},
+{"id":"SV3",
+ "categoryId":"16be",
+ "name":"ATM",
+ "desc":""
+},
+{"id":"SV4",
+ "categoryId":"16be",
+ "name":"ATM",
+ "desc":""
+},
+{"id":"SV5",
+ "categoryId":"16be",
+ "name":"Message & Reflexology",
+ "desc":""
+},
+{"id":"T1",
+ "categoryId":"87b0",
+ "name":"Toilet 1",
+ "desc":""
+},
+{"id":"T2",
+ "categoryId":"87b0",
+ "name":"Toilet 2",
+ "desc":""
+},
+{"id":"T3",
+ "categoryId":"87b0",
+ "name":"Toilet 3",
+ "desc":""
+},
+{"id":"T4",
+ "categoryId":"87b0",
+ "name":"Toilet 4",
+ "desc":""
+},
+{"id":"T5",
+ "categoryId":"87b0",
+ "name":"Toilet 5",
+ "desc":""
+},
+{"id":"T6",
+ "categoryId":"87b0",
+ "name":"Toilet 6",
+ "desc":""
+},
+{"id":"T7",
+ "categoryId":"87b0",
+ "name":"Toilet 7",
+ "desc":""
+},
+{"id":"T8",
+ "categoryId":"87b0",
+ "name":"Toilet 8",
+ "desc":""
+},
+{"id":"PR1",
+ "categoryId":"a191",
+ "name":"Prayer Room 1",
+ "desc":""
+},
+{"id":"PR2",
+"categoryId":"a191",
+"name":"Prayer Room 2",
+"desc":""
+},
+{"id":"PR3",
+"categoryId":"a191",
+"name":"Prayer Room 3",
+"desc":""
+},
+{"id":"PR4",
+"categoryId":"a191",
+"name":"Prayer Room 4",
+"desc":""
 }
 
   ],

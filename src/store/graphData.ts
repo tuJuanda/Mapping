@@ -172,7 +172,22 @@ export const graphData: GraphData = {
     { id: "RT12", objectName: "BOGAJAYA", cx: 936.613, cy: 337.875 },
     { id: "RT13", objectName: "Circle K", cx: 814.875, cy: 337.875 },
     { id: "RT14", objectName: "Alfa Express", cx: 272.691, cy: 277.887 },
-
+    { id: "SV2", objectName: "Message & Reflexology", cx: 1470.029, cy: 343.875 },
+    { id: "SV3", objectName: "ATM", cx: 1228.515, cy: 375.875 },
+    { id: "SV4", objectName: "ATM", cx: 1033.008, cy: 347.875 },
+    { id: "SV5", objectName: "Message & Reflexology", cx: 477.105, cy: 337.875 },
+    { id: "T1", objectName: "Toilet 1", cx: 171.105, cy: 328.755 },
+    { id: "T2", objectName: "Toilet 2", cx: 702.875, cy: 435.387 },
+    { id: "T3", objectName: "Toilet 3", cx: 1310.515, cy: 332.755 },
+    { id: "T4", objectName: "Toilet 4", cx: 1782.674, cy: 332.755 },
+    { id: "T5", objectName: "Toilet 5", cx: 2220.16, cy: 332.755 },
+    { id: "T6", objectName: "Toilet 6", cx: 2743.616, cy: 332.755 },
+    { id: "T7", objectName: "Toilet 7", cx: 3063.087, cy: 312.387 },
+    { id: "T8", objectName: "Toilet 8", cx: 2622.812, cy: 312.387 },
+    { id: "PR1", objectName: "Prayer Room 1", cx: 368.105, cy: 328.755 },
+    { id: "PR2", objectName: "Prayer Room 2", cx: 1782.674, cy: 302.387 },
+    { id: "PR3", objectName: "Prayer Room 3", cx: 2290.16, cy: 520.387 },
+    { id: "PR4", objectName: "Prayer Room 4", cx: 3108.087, cy: 312.387 },
 
   ],
 
