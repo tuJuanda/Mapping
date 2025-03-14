@@ -83,17 +83,17 @@
   },
   {"id":"FB2",
    "categoryId":"52f1",
-   "name":"Bakso Pak Djo",
+   "name":"Bakso Pak Djo 1",
    "desc":""
   },
   {"id":"FB3",
    "categoryId":"52f1",
-   "name":"Roti O",
+   "name":"Roti O 1",
    "desc":""
   },
   {"id":"FB4",
    "categoryId":"52f1",
-   "name":"Bangi Cafe",
+   "name":"Bangi Cafe 1",
    "desc":""
   },
   {"id":"FB5",
@@ -128,12 +128,12 @@
   },
   {"id":"FB9A",
    "categoryId":"52f1",
-   "name":"Bakso Pak Djo",
+   "name":"Bakso Pak Djo 2",
    "desc":""
   },
   {"id":"FB9B",
    "categoryId":"52f1",
-   "name":"Roti O",
+   "name":"Roti O 2",
    "desc":""
   },
   {"id":"FB10",
@@ -148,7 +148,7 @@
   },
   {"id":"FB12",
    "categoryId":"52f1",
-   "name":"Roti O",
+   "name":"Roti O 3",
    "desc":""
   },
   {"id":"FB13",
@@ -178,7 +178,7 @@
   },
   {"id":"FB18",
    "categoryId":"52f1",
-   "name":"Bangi Cafe",
+   "name":"Bangi Cafe 2",
    "desc":""
   },
   {"id":"FB19",
@@ -193,7 +193,7 @@
   },
   {"id":"EP1",
    "categoryId":"e928",
-   "name":"Periplus",
+   "name":"Periplus 1",
    "desc":""
   },
   {"id":"EP2",
@@ -228,17 +228,17 @@
 },
 {"id":"RT1",
  "categoryId":"58a9",
- "name":"Circle K",
+ "name":"Circle K 1",
  "desc":""
 },
 {"id":"RT2",
  "categoryId":"58a9",
- "name":"Boga Jaya",
+ "name":"BOGAJAYA 1",
  "desc":""
 },
 {"id":"RT3",
  "categoryId":"58a9",
- "name":"POLO",
+ "name":"POLO 1",
  "desc":""
 },
 {"id":"RT4",
@@ -253,17 +253,17 @@
 },
 {"id":"RT5A",
  "categoryId":"58a9",
- "name":"POLO",
+ "name":"POLO 2",
  "desc":""
 },
 {"id":"RT6",
  "categoryId":"58a9",
- "name":"BOGAJAYA",
+ "name":"BOGAJAYA 2",
  "desc":""
 },
 {"id":"RT7",
  "categoryId":"58a9",
- "name":"Periplus",
+ "name":"Periplus 2",
  "desc":""
 },
 {"id":"RT8",
@@ -273,7 +273,7 @@
 },
 {"id":"RT9",
  "categoryId":"58a9",
- "name":"No Partner",
+ "name":"No Partner 1",
  "desc":""
 },
 {"id":"RT10",
@@ -283,17 +283,17 @@
 },
 {"id":"RT11",
  "categoryId":"58a9",
- "name":"No Partner",
+ "name":"No Partner 2",
  "desc":""
 },
 {"id":"RT12",
  "categoryId":"58a9",
- "name":"BOGAJAYA",
+ "name":"BOGAJAYA 3",
  "desc":""
 },
 {"id":"RT13",
  "categoryId":"58a9",
- "name":"Circle K",
+ "name":"Circle K 2",
  "desc":""
 },
 {"id":"RT14",
@@ -303,22 +303,22 @@
 },
 {"id":"SV2",
  "categoryId":"16be",
- "name":"Message & Reflexology",
+ "name":"Message & Reflexology 1",
  "desc":""
 },
 {"id":"SV3",
  "categoryId":"16be",
- "name":"ATM",
+ "name":"ATM 1",
  "desc":""
 },
 {"id":"SV4",
  "categoryId":"16be",
- "name":"ATM",
+ "name":"ATM 2",
  "desc":""
 },
 {"id":"SV5",
  "categoryId":"16be",
- "name":"Message & Reflexology",
+ "name":"Message & Reflexology 2",
  "desc":""
 },
 {"id":"T1",
