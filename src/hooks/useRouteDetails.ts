@@ -38,7 +38,7 @@ export function useRouteDetails() {
         "navigation-route"
       ) as SVGPathElement | null;
       const routeLength = navigationRoutePath?.getTotalLength() || 0;
-      const mapRatio = 20; // fictional ratio
+      const mapRatio = 6.40; // fictional ratio
       const walkingSpeed = 1.4; // m/s
       const rightRouteLength = Math.round((routeLength / mapRatio) * 10) / 10;
       const walkingTime = Math.round(rightRouteLength / walkingSpeed);
