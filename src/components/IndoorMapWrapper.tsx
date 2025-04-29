@@ -15,7 +15,7 @@ import ObjectDetailsModal from "./Modals/ObjectDetailsModal";
 import { navigateToObject } from "@/utils/navigationHelper";
 import { toast } from "react-toastify";
 
-function IndoorMapWrapper() {
+function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [object, setObject] = useState<ObjectItem>({} as ObjectItem);
   const positionRadius = isMobile ? 10 : 5;
@@ -65,7 +65,7 @@ function IndoorMapWrapper() {
         wheel={{ smoothStep: 0.01 }}
       >
         <TransformComponent wrapperClass="bg-white">
-          <MapBackground>
+        <MapBackground selectedFloor={selectedFloor}>
             {/*Objects are the clickable areas on the map e.g. Rooms, Desks, ...*/}
             {<Objects
               handleObjectClick={handleObjectClick}
