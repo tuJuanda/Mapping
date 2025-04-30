@@ -1,10 +1,14 @@
 interface ObjectsProps {
   handleObjectClick: (e: React.MouseEvent<SVGPathElement>) => void;
   className?: string;
+  selectedFloor: number; // 👈 Tambahkan ini
 }
-function Objects({ handleObjectClick, className }: ObjectsProps) {
+
+function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) {
   return (
-    <g id="Objects">
+    <>
+    {selectedFloor === 2 && (
+     <g id="Objects2">
       <path
         id="FB20"
         className={`${className} object`}
@@ -707,8 +711,14 @@ function Objects({ handleObjectClick, className }: ObjectsProps) {
         ry={57}
         className={`${className} object`}
         onClick={handleObjectClick}
+
       />
     </g>
+    )}
+    <g id = "object1">
+
+    </g>
+    </>
   );
 }
 

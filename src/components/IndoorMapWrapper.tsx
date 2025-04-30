@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { MapDataContext, NavigationContext } from "../pages/Map";
@@ -23,18 +23,28 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
     NavigationContext
   ) as NavigationContextType;
   const { objects } = useContext(MapDataContext) as MapDataContextType;
+
+  // Tutup modal saat pindah dari lantai 2 ke lantai lain
+  useEffect(() => {
+    if (selectedFloor !== 2 && modalOpen) {
+      setModalOpen(false);
+    }
+  }, [selectedFloor, modalOpen]);
+
   async function handleObjectClick(e: React.MouseEvent<SVGPathElement>) {
-    if (!isEditMode) {
-      const targetId = (e.target as HTMLElement).id;
-      const selectedObject = objects.find((obj) => obj.name === targetId);
-      if (selectedObject?.id) {
-        setObject(selectedObject);
-        setModalOpen(true);
-      } else {
-        toast.error("Object not found");
-      }
+    // Batasi interaksi hanya pada lantai 2
+    if (selectedFloor !== 2 || isEditMode) return;
+
+    const targetId = (e.target as HTMLElement).id;
+    const selectedObject = objects.find((obj) => obj.name === targetId);
+    if (selectedObject?.id) {
+      setObject(selectedObject);
+      setModalOpen(true);
+    } else {
+      toast.error("Object not found");
     }
   }
+
   const handlePositionClick = (e: React.MouseEvent<SVGPathElement>) => {
     if (isEditMode) {
       const vertexId = (e.target as HTMLElement).id;
@@ -47,14 +57,17 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
     setModalOpen(false);
     navigateToObject(object.name, navigation, setNavigation);
   }
+
   return (
     <div className="relative w-full h-full bg-white center">
-      <ObjectDetailsModal
-        open={modalOpen}
-        object={object}
-        onClose={() => setModalOpen((cur) => !cur)}
-        objectNavigation={handleNavigationClick}
-      />
+      {selectedFloor === 2 && (
+        <ObjectDetailsModal
+          open={modalOpen}
+          object={object}
+          onClose={() => setModalOpen((cur) => !cur)}
+          objectNavigation={handleNavigationClick}
+        />
+      )}
 
       <TransformWrapper
         centerOnInit
@@ -65,17 +78,15 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
         wheel={{ smoothStep: 0.01 }}
       >
         <TransformComponent wrapperClass="bg-white">
-        <MapBackground selectedFloor={selectedFloor}>
-            {/*Objects are the clickable areas on the map e.g. Rooms, Desks, ...*/}
-            {<Objects
+          <MapBackground selectedFloor={selectedFloor}>
+            <Objects
+              selectedFloor={selectedFloor}
               handleObjectClick={handleObjectClick}
               className={
                 isEditMode ? "" : "hover:cursor-pointer hover:opacity-50"
               }
-            />}
-            {/*Edges are the lines on the map aka the paths*/}
+            />
             <Paths />
-            {/*Vertexes are the circles on the map aka the positions*/}
             <Positions
               positionRadius={positionRadius}
               handlePositionClick={handlePositionClick}
@@ -93,4 +104,5 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
     </div>
   );
 }
+
 export default IndoorMapWrapper;
