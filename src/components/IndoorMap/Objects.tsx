@@ -7,6 +7,508 @@ interface ObjectsProps {
 function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) {
   return (
     <>
+    {selectedFloor === 1 && (
+    <g id = "object1">
+      <path
+        id="Toilet1"
+        className={`${className} object`}
+        d="M188.324 154.285V188.833H167.62H146.917V154.285V119.738H167.62H188.324V154.285Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT06" //alfaX
+        className={`${className} object`}
+        d="M57.1211 446.196V461.789H38.5248H19.9283V446.196V430.603H38.5248H57.1211V446.196Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB20" //AW
+        className={`${className} object`}
+        d="M130.714 446.196V461.789H95.8954H61.0769V446.196V430.603H95.8954H130.714V446.196Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet2"
+        className={`${className} object`}
+        d="M252.579 371.871V378.628H241.5H230.421V371.871V365.114H241.5H252.579V371.871Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="SV28" //BNI
+        className={`${className} object`}
+        d="M491.562 503.37V523.121H470.987H450.412V503.37V483.619H470.987H491.562V503.37Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet3"
+        className={`${className} object`}
+        d="M520.05 396.819V426.445H485.627H451.204V396.819V367.193H485.627H520.05V396.819Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="BRI"
+        className={`${className} object`}
+        d="M546 503V525H534H522V503V481H534H546V503Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet4"
+        className={`${className} object`}
+        d="M620 503V524H583H546V503V482H583H620V503Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet5"
+        className={`${className} object`}
+        d="M609.111 319.703V352.077L611.909 353.751C613.732 354.843 614.707 356.623 614.707 358.865V362.304H597.978H581.25L580.912 354.586L580.573 346.868L559.03 346.469L537.488 346.07V316.7V287.329H573.299H609.111V319.703Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet6"
+        className={`${className} object`}
+        d="M480.412 108.712V116.797H465.864H451.315V108.712V100.626H465.864H480.412V108.712Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB19" //Expat
+        className={`${className} object`}
+        d="M685.438 502.33V521.042H663.281H641.124V502.33V483.619H663.281H685.438V502.33Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Mus1"
+        className={`${className} object`}
+        d="M651.638 107.977V113.857H637.089H622.541V107.977V102.096H637.089H651.638V107.977Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet7"
+        className={`${className} object`}
+        d="M685.21 107.977V115.327H671.781H658.352V107.977V100.626H671.781H685.21V107.977Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT04" //Sandang Pangan
+        className={`${className} object`}
+        d="M848.452 503.37V522.081H817.59H786.728V503.37V484.659H817.59H848.452V503.37Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="UM01" //Titian Rasa
+        className={`${className} object`}
+        d="M912.55 503.37V522.081H882.479H852.409V503.37V484.659H882.479H912.55V503.37Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB18" //RotiO
+        className={`${className} object`}
+        d="M944.995 503.37V522.081H931.147H917.298V503.37V484.659H931.147H944.995V503.37Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB17" //Kedai Mj
+        className={`${className} object`}
+        d="M1044 503.5V524.675H1014V523H1013H996.5H949V503.5V484H1008H1014V481.5H1043.78L1044 503.5Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT03" //AlfaX
+        className={`${className} object`}
+        d="M1108.01 503.37V522.081H1084.66H1061.32V503.37V484.659H1084.66H1108.01V503.37Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB14A" //LaPetitte
+        className={`${className} object`}
+        d="M1141.25 502.85V522.081H1127H1112.76V502.85V483.619H1127H1141.25V502.85Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT02B" //Boga
+        className={`${className} object`}
+        d="M1202.11 485.12C1201.93 485.373 1195.63 493.793 1188.11 503.831L1174.45 522.081H1159.82H1145.2V503.37V484.659H1173.82C1189.56 484.659 1202.29 484.866 1202.11 485.12Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet8"
+        className={`${className} object`}
+        d="M1172.02 418.168V425.519H1158.6H1145.17V418.168V410.818H1158.6H1172.02V418.168Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet9"
+        className={`${className} object`}
+        d="M1132.86 207.209V212.354H1122.78H1112.71V207.209V202.063H1122.78H1132.86V207.209Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet10"
+        className={`${className} object`}
+        d="M1187.69 124.148V137.379H1182.1H1176.5V124.148V110.917H1182.1H1187.69V124.148Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Mus3"
+        className={`${className} object`}
+        d="M1253.72 118.268V137.379H1221.83H1189.93V122.678V107.977H1183.22H1176.5V103.567V99.1563H1215.11H1253.72V118.268Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="CSAirline"
+        className={`${className} object`}
+        d="M1335.12 503.37V523.121H1288.64H1242.16L1257.17 503.37L1272.19 483.619H1303.66H1335.12V503.37Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet11"
+        className={`${className} object`}
+        d="M1367.57 503.89V522.081H1354.11H1340.66V503.89V485.698H1354.11H1367.57V503.89Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB14" //Boga
+        className={`${className} object`}
+        d="M1431.66 503.37V523.121H1402.78H1373.9V503.37V483.619H1402.78H1431.66V503.37Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet12"
+        className={`${className} object`}
+        d="M1464.9 503.89V522.081H1451.45H1437.99V503.89V485.698H1451.45H1464.9V503.89Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet13"
+        className={`${className} object`}
+        d="M1386.89 379.946V391.706H1379.62H1372.35V379.946V368.185H1379.62H1386.89V379.946Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet14"
+        className={`${className} object`}
+        d="M1400.32 205.004V213.824H1385.78H1371.23V205.004V196.183H1385.78H1400.32V205.004Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet15"
+        className={`${className} object`}
+        d="M1498.81 235.876V254.987H1490.53C1484.02 254.987 1482.11 255.482 1481.58 257.312C1481.21 258.591 1480.9 270.499 1480.9 283.774V307.911H1475.31H1469.71V300.174C1469.71 293.56 1470.08 292.226 1472.23 290.986C1474.36 289.759 1474.75 288.397 1474.75 282.184C1474.75 275.68 1474.46 274.779 1472.23 274.364C1469.89 273.928 1469.71 273.15 1469.71 263.77V253.646L1477.82 253.214L1485.94 252.782L1486.25 234.773L1486.57 216.764H1492.69H1498.81V235.876Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="SV22" //Bagggage Sol
+        className={`${className} object`}
+        d="M1424 267V275H1397.5H1371V267V259H1397.5H1424V267Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB16" //Circle K
+        className={`${className} object`}
+        d="M1466.35 382.886V399.057H1474.19H1482.02V412.288V425.519H1460.37H1438.71L1437.98 409.854C1437.58 401.238 1437.25 388.007 1437.25 380.452V366.715H1451.8H1466.35V382.886Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB15" //Papan Dhahar
+        className={`${className} object`}
+        d="M1530.14 412.288V425.519H1508.88H1487.61V412.288V399.057H1508.88H1530.14V412.288Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB9A" //rOTI o
+        className={`${className} object`}
+        d="M1431.66 417.433V424.049H1407.6C1386.96 424.049 1383.54 423.735 1383.54 421.843C1383.54 420.249 1384.78 419.638 1388.04 419.638C1392.15 419.638 1392.6 419.252 1393.22 415.228L1393.89 410.818H1412.77H1431.66V417.433Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB13A" //Cerita Roti by kopken
+        className={`${className} object`}
+        d="M1498.93 503.37V523.121H1492.6H1486.27V503.37V483.619H1492.6H1498.93V503.37Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB13" //Dunkin
+        className={`${className} object`}
+        d="M1531.37 503.37V523.121H1517.13H1502.88V503.37V483.619H1517.13H1531.37V503.37Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB12A" //WingMan
+        className={`${className} object`}
+        d="M1596.26 503.37V523.121H1566.19H1536.12V503.37V483.619H1566.19H1596.26V503.37Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT02" //Boga
+        className={`${className} object`}
+        d="M1756.11 503.37V523.121H1726.44H1696.76V503.37V483.619H1726.44H1756.11V503.37Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB12" //Rotiboy
+        className={`${className} object`}
+        d="M1822.58 503.37V523.121H1791.32H1760.07V503.37V483.619H1791.32H1822.58V503.37Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB11" //JavaCafe
+        className={`${className} object`}
+        d="M1865.15 484.709C1877.9 491.427 1877.88 514.513 1865.13 521.512C1862.78 522.802 1858.67 523.121 1844.37 523.121H1826.54V503.37V483.619L1844.94 483.685C1855.06 483.721 1864.15 484.182 1865.15 484.709Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT2A" //Circle K
+        className={`${className} object`}
+        d="M1727 417.5V426H1712H1697V417.5V409H1712H1727V417.5Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB10" //AW
+        className={`${className} object`}
+        d="M1843.95 374.469V382.786H1849.88H1855.82V405.135V427.485H1825.35H1794.89V396.819V366.153H1819.42H1843.95V374.469Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet16"
+        className={`${className} object`}
+        d="M1821.79 190.995V197.751H1808.34H1794.89V190.995V184.238H1808.34H1821.79V190.995Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB09A" //MMjuice
+        className={`${className} object`}
+        d="M1909.68 292.661C1909.68 314.113 1908.5 312.5 1914 312.5C1915.23 312.5 1914.5 316.504 1914.5 339.5L1914.5 363.5H1895.5H1879.5L1878.5 361L1877 358L1874.5 353L1871.5 347L1871 318.5V274H1889.52H1909.68V291.954V292.661Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Mus3" 
+        className={`${className} object`}
+        d="M1995.09 290.788V305.861H1955.13H1915.17V290.788V275.715H1955.13H1995.09V290.788Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="cordia" //CORDIA HOTEL
+        className={`${className} object`}
+        d="M1985 324V335H1955.5H1926V324V313H1955.5H1985V324Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB09" //SoerabajaCafe
+        className={`${className} object`}
+        d="M2050.49 311.866V349.057L2045.12 356.046L2039.76 363.035H2031.28H2022.79V318.855V274.676H2036.64H2050.49V311.866Z" 
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet17" 
+        className={`${className} object`}
+        d="M2115.38 190.995V197.751H2101.92H2088.47V190.995V184.238H2101.92H2115.38V190.995Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB08" //solaria
+        className={`${className} object`}
+        d="M2115.38 397.339V427.485H2084.91H2054.44V416.164V404.844L2069.15 386.018L2083.85 367.193H2099.61H2115.38V397.339Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Kemenkes" //kemenkes
+        className={`${className} object`}
+        d="M2180 417.5V427H2166H2152V417.5V408H2166H2180V417.5Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet18" 
+        className={`${className} object`}
+        d="M2211.92 418.129V425.406H2198.47H2185.01V418.129V410.853H2198.47H2211.92V418.129Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet19"
+        className={`${className} object`}
+        d="M2211.92 379.667V391.102H2202.42H2192.93V379.667V368.232H2202.42H2211.92V379.667Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB05" //Rotiboy
+        className={`${className} object`}
+        d="M2279.18 419.169V426.445H2263.59C2251.47 426.445 2248.21 426.168 2248.95 425.198C2249.47 424.512 2249.9 421.237 2249.9 417.921V411.892H2264.54H2279.18V419.169Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB07" //Soto Bangkalan
+        className={`${className} object`}
+        d="M2082.93 503.301V523.121L2066.51 523.114C2056.92 523.111 2048.77 522.628 2046.93 521.955C2042.8 520.451 2037.51 513.485 2036.23 507.882C2034.42 499.963 2036.85 492.106 2042.68 487.038L2046.01 484.138L2064.47 483.809L2082.93 483.48V503.301Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB6A" //Beard Papas
+        className={`${className} object`}
+        d="M2150.19 503.37V523.121H2135.16H2120.12V503.37V483.619H2135.16H2150.19V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT01" //Alfa Xpress
+        className={`${className} object`}
+        d="M2211.92 503.37V523.121H2183.03H2154.15V503.37V483.619H2183.03H2211.92V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet20"
+        className={`${className} object`}
+        d="M2245.15 502.85V520.002H2231.7H2218.25V502.85V485.698H2231.7H2245.15V502.85Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB04" //Dunkin
+        className={`${className} object`}
+        d="M2375.72 503.37V522.081H2361.48H2347.24V503.37V484.659H2361.48H2375.72V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet21"
+        className={`${className} object`}
+        d="M2504.71 502.85V520.002H2491.65H2478.6V502.85V485.698H2491.65H2504.71V502.85Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB3A" //LAcafe
+        className={`${className} object`}
+        d="M2541.11 503.37V522.081H2525.68H2510.25V503.37V484.659H2525.68H2541.11V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB03" //Roti O cafe
+        className={`${className} object`}
+        d="M2571.18 419.169V426.445H2541.9H2512.62V419.169V411.892H2541.9H2571.18V419.169Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet22"
+        className={`${className} object`}
+        d="M2634.49 418.129V425.406H2613.92H2593.34V418.129V410.853H2613.92H2634.49V418.129Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet23"
+        className={`${className} object`}
+        d="M2586.22 379.667V392.141H2581.07H2575.93V379.667V367.193H2581.07H2586.22V379.667Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet24"
+        className={`${className} object`}
+        d="M2635.5 188.5H2604.1L2604.1 174.323C2604.1 173.721 2596 174.323 2604.1 174.323C2602.11 174.87 2676.5 178 2604.1 185L2604.1 230H2588.5H2576V177.5V162.5H2635.5V188.5Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet25"
+        className={`${className} object`}
+        d="M2538 242L2510 242L2510 215L2538 215L2538 242Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet26"
+        className={`${className} object`}
+        d="M2895.46 122.678V135.909H2889.86H2884.27V122.678V109.447H2889.86H2895.46V122.678Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Taxi" //airport taxi
+        className={`${className} object`}
+        d="M2831 412L2812 412L2812 364L2831 364L2831 412Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="Toilet27"
+        className={`${className} object`}
+        d="M2895.46 418.168V425.519H2882.03H2868.6V418.168V410.818H2882.03H2895.46V418.168Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="EP1"//timnas
+        className={`${className} object`}
+        d="M2636.07 503.37V523.121H2631.32H2626.58V503.37V483.619H2631.32H2636.07V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="SV10"//bca
+        className={`${className} object`}
+        d="M2700.96 503.37V523.121H2670.49H2640.03V503.37V483.619H2670.49H2700.96V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="SV09" //bank jatim
+        className={`${className} object`}
+        d="M2765.06 503.37V523.121H2734.99H2704.92V503.37V483.619H2734.99H2765.06V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB02" //bakmi gocit
+        className={`${className} object`}
+        d="M2830.74 503.37V523.121H2800.27H2769.81V503.37V483.619H2800.27H2830.74V503.37Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB01" //AW
+        className={`${className} object`}
+        d="M2928.86 488.78V523.121H2882.18H2835.49L2835.5 499.472C2835.52 477.943 2835.67 475.403 2837.13 471.145C2839.1 465.418 2842.75 460.267 2846.96 457.28C2850.07 455.074 2850.86 455.027 2889.5 454.735L2928.86 454.439L2928.86 488.78Z"  
+        onClick={handleObjectClick}
+      />
+      <path
+        id="FB1B" //Famima
+        className={`${className} object`}
+        d="M2994.55 545.99V563.662H2964.48H2934.41V545.99V528.318H2964.48H2994.55V545.99Z"  
+        onClick={handleObjectClick}
+      />
+
+      <rect
+        id="avsec"
+        className={`${className} object`}
+        x="2000"
+        y="313"
+        width="18"
+        height="50"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="ATM"
+        className={`${className} object`}
+        x="2119"
+        y="366"
+        width="31"
+        height="61"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="CIC3" //check in counter 3
+        className={`${className} object`}
+        x="1604" 
+        y="223" 
+        width="27" 
+        height="14"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="CIC2" //check in counter 2
+        className={`${className} object`}
+        x="1245" 
+        y="223" 
+        width="27" 
+        height="14"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="CIC1" //check in counter 1
+        className={`${className} object`}
+        x="756" 
+        y="223" 
+        width="27" 
+        height="14"
+        onClick={handleObjectClick}
+      />
+
+    </g>
+    )}
+    
     {selectedFloor === 2 && (
      <g id="Objects2">
       <path

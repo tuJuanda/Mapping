@@ -33,7 +33,6 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
 
   async function handleObjectClick(e: React.MouseEvent<SVGPathElement>) {
     // Batasi interaksi hanya pada lantai 2
-    if (selectedFloor !== 2 || isEditMode) return;
 
     const targetId = (e.target as HTMLElement).id;
     const selectedObject = objects.find((obj) => obj.name === targetId);
