@@ -15,6 +15,9 @@ import ObjectDetailsModal from "./Modals/ObjectDetailsModal";
 import { navigateToObject } from "@/utils/navigationHelper";
 import { toast } from "react-toastify";
 
+// 🆕 Import graph data per lantai
+import { graphData1, graphData2 } from "@/store/graphData";
+
 function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [object, setObject] = useState<ObjectItem>({} as ObjectItem);
@@ -24,7 +27,9 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
   ) as NavigationContextType;
   const { objects } = useContext(MapDataContext) as MapDataContextType;
 
-  // Tutup modal saat pindah dari lantai 2 ke lantai lain
+  // 🆕 Pilih graph data berdasarkan lantai
+  const graphData = selectedFloor === 1 ? graphData1 : graphData2;
+
   useEffect(() => {
     if (selectedFloor !== 2 && modalOpen) {
       setModalOpen(false);
@@ -32,8 +37,6 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
   }, [selectedFloor, modalOpen]);
 
   async function handleObjectClick(e: React.MouseEvent<SVGPathElement>) {
-    // Batasi interaksi hanya pada lantai 2
-
     const targetId = (e.target as HTMLElement).id;
     const selectedObject = objects.find((obj) => obj.name === targetId);
     if (selectedObject?.id) {
@@ -54,7 +57,7 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
 
   function handleNavigationClick() {
     setModalOpen(false);
-    navigateToObject(object.name, navigation, setNavigation);
+    navigateToObject(object.name, navigation, setNavigation, graphData); // 🆕 pastikan helper pakai graphData jika perlu
   }
 
   return (
@@ -85,8 +88,11 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
                 isEditMode ? "" : "hover:cursor-pointer hover:opacity-50"
               }
             />
-            <Paths />
+            {/* 🆕 Kirim graphData dan selectedFloor ke Paths */}
+            <Paths selectedFloor={selectedFloor} graphData={graphData} />
+            {/* 🆕 Kirim graphData ke Positions */}
             <Positions
+              graphData={graphData}
               positionRadius={positionRadius}
               handlePositionClick={handlePositionClick}
               className={

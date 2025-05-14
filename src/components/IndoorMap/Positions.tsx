@@ -1,13 +1,18 @@
-import { graphData } from "@/store/graphData";
 import { NavigationContextType } from "@/utils/types";
+import { VertexData } from "@/store/graphData";
 
 interface PositionsProps {
+  graphData: {
+    vertices: VertexData[];
+  };
   positionRadius: number;
   handlePositionClick: (e: React.MouseEvent<SVGPathElement>) => void;
   className: string;
   navigation?: NavigationContextType["navigation"];
 }
+
 function Positions({
+  graphData,
   positionRadius,
   handlePositionClick,
   className,
@@ -16,6 +21,7 @@ function Positions({
   const positionBackgroundColor = "#4285f4";
   const positionBackgroundRadius = positionRadius + 3;
   const positonBackgroundOpacity = 0.2;
+
   const startVertex = graphData.vertices.find(
     (v) => v.id === navigation?.start
   );
@@ -23,6 +29,7 @@ function Positions({
   function isActivePosition(vertexId: string) {
     return navigation?.start === vertexId;
   }
+
   return (
     <g id="Vertexes">
       {/* Background circle for Google Maps like look */}
@@ -36,12 +43,12 @@ function Positions({
       />
       {graphData.vertices.map((vertex) => (
         <circle
-          // only allow click on positions that are not referring to an object
           onClick={vertex.objectName ? () => {} : handlePositionClick}
           key={vertex.id}
           id={vertex.id}
-          // show only positions that are not referring to an object (e.g. shops, restrooms, etc.)
-          className={`position ${vertex.objectName ? "opacity-0" : className} ${isActivePosition(vertex.id) && "position-active opacity-100"}`}
+          className={`position ${vertex.objectName ? "opacity-0" : className} ${
+            isActivePosition(vertex.id) ? "position-active opacity-100" : ""
+          }`}
           cx={vertex.cx}
           cy={vertex.cy}
           r={positionRadius}
