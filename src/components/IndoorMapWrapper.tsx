@@ -57,7 +57,7 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
 
   function handleNavigationClick() {
     setModalOpen(false);
-    navigateToObject(object.name, navigation, setNavigation, graphData); // 🆕 pastikan helper pakai graphData jika perlu
+    navigateToObject(object.name, navigation, setNavigation); // 🆕 pastikan helper pakai graphData jika perlu
   }
 
   return (

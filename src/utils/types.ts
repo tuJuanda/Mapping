@@ -49,3 +49,21 @@ export interface BleBeacon {
   txPower: number;
   uuids: string[];
 }
+
+export interface Vertex {
+  id: string;
+  cx: number;
+  cy: number;
+}
+
+export interface Edge {
+  id: string;
+  from: string;
+  to: string;
+}
+
+export interface GraphData {
+  vertices: Vertex[];
+  edges: Edge[];
+}
+

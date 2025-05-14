@@ -380,6 +380,9 @@ export const graphData2: GraphData = {
 };
 
 export const graphData1: GraphData = {
-  vertices: [],
+  vertices: [
+  { id: "L1", objectName: null, cx: 1900.929, cy: 532.811 },
+
+  ],
     edges: [],
   };
