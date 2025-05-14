@@ -14,7 +14,8 @@ export interface GraphData {
   vertices: VertexData[];
   edges: EdgeData[];
 }
-export const graphData: GraphData = {
+
+export const graphData2: GraphData = {
   vertices: [
     { id: "L1", objectName: null, cx: 1058.929, cy: 532.811 },
     { id: "L2", objectName: null, cx: 1058.929, cy: 489.811 },
@@ -377,3 +378,8 @@ export const graphData: GraphData = {
     
   ],
 };
+
+export const graphData1: GraphData = {
+  vertices: [],
+    edges: [],
+  };
