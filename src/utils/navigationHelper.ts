@@ -6,28 +6,31 @@ import { toast } from "react-toastify";
 
 export let routeLength = 0;
 
-// Helper untuk menentukan graph dan data yang sesuai berdasarkan id
+// Dapatkan graph dan data berdasarkan vertex
 function getGraphAndDataByVertexId(vertexId: string) {
   const inFloor1 = graphData1.vertices.find((v) => v.id === vertexId);
   const inFloor2 = graphData2.vertices.find((v) => v.id === vertexId);
 
-  if (inFloor1) return { graph: graphFloor1, graphData: graphData1 };
-  if (inFloor2) return { graph: graphFloor2, graphData: graphData2 };
+  if (inFloor1) return { graph: graphFloor1, graphData: graphData1, floor: 1 };
+  if (inFloor2) return { graph: graphFloor2, graphData: graphData2, floor: 2 };
 
   return null;
 }
 
+// Dapatkan vertex berdasarkan nama objek
 function findVertexByObjectId(objectId: string) {
-  const vertex =
+  return (
     graphData1.vertices.find((v) => v.objectName === objectId) ||
-    graphData2.vertices.find((v) => v.objectName === objectId);
-  return vertex;
+    graphData2.vertices.find((v) => v.objectName === objectId)
+  );
 }
 
+// Fungsi utama navigasi
 export function navigateToObject(
   selectedObjectId: string,
   navigation: NavigationContextType["navigation"],
-  setNavigation: NavigationContextType["setNavigation"]
+  setNavigation: NavigationContextType["setNavigation"],
+  selectedFloor: number
 ) {
   const target = findVertexByObjectId(selectedObjectId);
   if (!target) {
@@ -39,7 +42,6 @@ export function navigateToObject(
   const graphInfo = getGraphAndDataByVertexId(navigation.start);
   const targetGraphInfo = getGraphAndDataByVertexId(target.id);
 
-  // Periksa jika start dan target ada di graph yang sama
   if (
     !graphInfo ||
     !targetGraphInfo ||
@@ -49,7 +51,7 @@ export function navigateToObject(
     return;
   }
 
-  const { graph, graphData } = graphInfo;
+  const { graph, graphData, floor } = graphInfo;
   const shortestPath = graph.calculateShortestPath(navigation.start, target.id);
 
   const pathString = shortestPath
@@ -61,13 +63,15 @@ export function navigateToObject(
     .join(" ");
 
   const startVertex = graphData.vertices.find((v) => v.id === navigation.start);
-  const navigationRoutePath = document.getElementById("navigation-route");
+  const pathId = `navigation-route-${floor}`;
+  const navigationRoutePath = document.getElementById(pathId);
 
   if (navigationRoutePath && startVertex) {
     navigationRoutePath.setAttribute(
       "d",
       `M${startVertex.cx} ${startVertex.cy} ${pathString}`
     );
+
     navigationRoutePath.classList.remove("path-once", "path-active");
     navigationRoutePath.classList.add("path-once");
 
@@ -81,14 +85,17 @@ export function navigateToObject(
     );
   }
 
-  setNavigation((prevNavigation) => ({
-    ...prevNavigation,
+  setNavigation((prev) => ({
+    ...prev,
     end: selectedObjectId,
   }));
 }
 
+// Reset semua edge path
 export function resetEdges() {
-  document.getElementById("navigation-route")?.setAttribute("d", "");
+  document.getElementById("navigation-route-1")?.setAttribute("d", "");
+  document.getElementById("navigation-route-2")?.setAttribute("d", "");
+
   [...graphData1.edges, ...graphData2.edges].forEach((edge) => {
     const element = document.getElementById(edge.id);
     if (element) {
@@ -97,19 +104,28 @@ export function resetEdges() {
   });
 }
 
+// Navigasi berurutan dengan delay
 export function navigateWithDelay(
   objects: ObjectItem[],
   index: number,
   delay: number,
   navigation: Navigation,
-  setNavigation: Dispatch<SetStateAction<Navigation>>
+  setNavigation: Dispatch<SetStateAction<Navigation>>,
+  selectedFloor: number
 ) {
   if (index < objects.length) {
     const obj = objects[index];
-    navigateToObject(obj.name, navigation, setNavigation);
+    navigateToObject(obj.name, navigation, setNavigation, selectedFloor);
 
     setTimeout(() => {
-      navigateWithDelay(objects, index + 1, delay, navigation, setNavigation);
+      navigateWithDelay(
+        objects,
+        index + 1,
+        delay,
+        navigation,
+        setNavigation,
+        selectedFloor
+      );
     }, delay);
   }
 }

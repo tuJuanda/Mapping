@@ -60,6 +60,7 @@ export interface Edge {
   id: string;
   from: string;
   to: string;
+  floor: number;
 }
 
 export interface GraphData {
