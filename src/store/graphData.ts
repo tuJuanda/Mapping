@@ -143,22 +143,12 @@ export const graphData2: GraphData = {
     { id: "FB9A", objectName: "Bakso Pak Djo 2", cx: 2345.875, cy: 349.875 },
     { id: "FB9B", objectName: "Roti O 2", cx: 2328.234, cy: 349.875 },
     { id: "FB10", objectName: "LA CAFE", cx: 2010.515, cy: 360 },
-    {
-      id: "FB11",
-      objectName: "Bebek Goreng Harissa",
-      cx: 1730.674,
-      cy: 349.875,
-    },
+    {id: "FB11", objectName: "Bebek Goreng Harissa",cx: 1730.674,cy: 349.875,},
     { id: "FB12", objectName: "Roti O 3", cx: 1694.674, cy: 349.875 },
     { id: "FB13", objectName: "A Fung", cx: 1665.674, cy: 349.875 },
     { id: "FB14", objectName: "Gloria Jeans Cafe", cx: 1635.515, cy: 349.875 },
     { id: "FB15", objectName: "Kulineri", cx: 1592.674, cy: 351.875 },
-    {
-      id: "FB16",
-      objectName: "Restaurant Bangkalan",
-      cx: 758.875,
-      cy: 340.775,
-    },
+    {id: "FB16", objectName: "Restaurant Bangkalan",cx: 758.875,cy: 340.775,},
     { id: "FB17", objectName: "Bakmi Gocit", cx: 860.875, cy: 340.775 },
     { id: "FB18", objectName: "Bangi Cafe 2", cx: 625.875, cy: 340.775 },
     { id: "FB19", objectName: "Dunkun Coffee", cx: 537.482, cy: 340.775 },
@@ -185,20 +175,10 @@ export const graphData2: GraphData = {
     { id: "RT12", objectName: "BOGAJAYA 3", cx: 936.613, cy: 340.775 },
     { id: "RT13", objectName: "Circle K 2", cx: 814.875, cy: 340.775 },
     { id: "RT14", objectName: "Alfa Express", cx: 272.691, cy: 284.287 },
-    {
-      id: "SV2",
-      objectName: "Message & Reflexology 1",
-      cx: 1470.029,
-      cy: 353.875,
-    },
+    {id: "SV2",objectName: "Message & Reflexology 1",cx: 1470.029,cy: 353.875,},
     { id: "SV3", objectName: "ATM 1", cx: 1228.515, cy: 335.875 },
     { id: "SV4", objectName: "ATM 2", cx: 1033.008, cy: 357.175 },
-    {
-      id: "SV5",
-      objectName: "Message & Reflexology 2",
-      cx: 477.105,
-      cy: 340.775,
-    },
+    {id: "SV5",objectName: "Message & Reflexology 2",cx: 477.105,cy: 340.775,},
     { id: "T1", objectName: "Toilet 1", cx: 171.105, cy: 331.755 },
     { id: "T2", objectName: "Toilet 2", cx: 698.875, cy: 435.387 },
     { id: "T3", objectName: "Toilet 3", cx: 1310.515, cy: 337.755 },
@@ -398,6 +378,122 @@ export const graphData2: GraphData = {
 };
 
 export const graphData1: GraphData = {
-  vertices: [{ id: "L1", objectName: null, cx: 1900.929, cy: 532.811 }],
+  vertices: [
+    { id: "P1", objectName: null, cx: 1622.929, cy: 550.811 },
+    { id: "P2", objectName: null, cx: 1622.929, cy: 450.811 },
+    { id:"SC1", objectName:"Self Check-in 1", cx: 1550.929, cy: 459.811},
+    { id: "P3", objectName: null, cx: 1622.929, cy: 380.811 },
+    { id: "SC2", objectName: "Self Check-in2", cx: 1570.929, cy: 380.811 },
+    { id: "CIC1", objectName: "Check-in Counter 1", cx: 1622.929, cy: 270.811 },
+    { id: "P4", objectName: null, cx: 1570.929, cy: 330.811 },
+    { id: "P5", objectName: null, cx: 1463.929, cy: 330.811 },
+    { id: "Toilet1", objectName: "Toilet 1", cx: 1463.929, cy: 282.811 },
+    { id: "P6", objectName: null, cx: 1378.929, cy: 330.811 },
+    { id: "Toilet2", objectName: "Toilet 2", cx: 1378.929, cy: 360.811 },
+    { id: "SV22", objectName: "Bagage Solution", cx: 1378.929, cy:278.811 },
+    { id: "P7", objectName: null, cx: 1255.929, cy: 330.811 },
+    { id: "CIC2", objectName: "Check-in Counter 2", cx: 1255.929, cy: 270.811 },
+    { id: "P8", objectName: null, cx: 1225.929, cy: 550.811 },
+    { id: "P9", objectName: null, cx: 1225.929, cy: 450.811 },
+    { id: "P10", objectName: null, cx: 1622.929, cy: 330.811 },
+    {id: "SC3", objectName: "Self Check-in 3", cx: 1225.929, cy: 395.811},
+    { id: "P11", objectName: null, cx: 1255.929, cy: 395.811 },
+    { id: "P12", objectName: null, cx: 1000.929, cy: 330.811 },
+    { id: "P13", objectName: null, cx: 730.929, cy: 330.811 },
+    { id: "CIC3", objectName: "Check-in Counter 3", cx: 730.929, cy: 270.811 },
+    { id: "Toilet3", objectName: "Toilet 3", cx: 625.929, cy: 330.811 },
+    { id: "P14", objectName: null, cx: 730.929, cy: 450.811 },
+    { id: "P15", objectName: null, cx: 730.929, cy: 550.811 },
+    { id: "SC4", objectName: "Self Check-in 4", cx: 803.929, cy: 459.811 },
+    { id: "P16", objectName: null, cx: 1255.929, cy: 450.811 },
+    { id: "P17", objectName: null, cx: 1565.929, cy: 550.811 },
+    { id: "P18", objectName: null, cx: 1515.929, cy: 550.811 },
+    { id: "P19", objectName: null, cx: 1492.929, cy: 550.811 },
+    { id: "P20", objectName: null, cx: 1400.929, cy: 550.811 },
+    { id: "P21", objectName: null, cx: 1353.929, cy: 550.811 },
+    { id: "P22", objectName: null, cx: 1295.929, cy: 550.811 },
+    { id: "P23", objectName: null, cx: 1158.929, cy: 550.811 },
+    { id: "P24", objectName: null, cx: 1125.929, cy: 550.811 },
+    { id: "P26", objectName: null, cx: 1083.929, cy: 550.811 },
+    { id: "P27", objectName: null, cx: 995.929, cy: 550.811 },
+    { id: "P28", objectName: null, cx: 930.929, cy: 550.811 },
+    { id: "P29", objectName: null, cx: 882.929, cy: 550.811 },
+    { id: "P30", objectName: null, cx: 818.929, cy: 550.811 },
+    { id: "P31", objectName: null, cx: 664.929, cy: 550.811 },
+    { id: "P32", objectName: null, cx: 580.929, cy: 550.811 },
+    { id: "P33", objectName: null, cx: 531.929, cy: 550.811 },
+    { id: "P34", objectName: null, cx: 470.929, cy: 550.811 },
+    { id: "P35", objectName: null, cx: 300.929, cy: 550.811 },
+    { id: "P36", objectName: null, cx: 88.929, cy: 550.811 },
+    { id: "P36", objectName: null, cx: 88.929, cy: 508.811 },
+    { id: "P36", objectName: null, cx: 35.929, cy: 508.811 },
+    { id: "P37", objectName: null, cx: 1725.929, cy: 550.811 },
+    { id: "P38", objectName: null, cx: 1790.929, cy: 550.811 },
+    { id: "P39", objectName: null, cx: 1850.929, cy: 550.811 },
+    { id: "P40", objectName: null, cx: 1888.929, cy: 550.811 },
+    { id: "P41", objectName: null, cx: 1888.929, cy: 450.811 },
+    { id: "P42", objectName: null, cx: 2020.929, cy: 550.811 },
+    { id: "P43", objectName: null, cx: 2020.929, cy: 450.811 },
+    { id: "P44", objectName: null, cx: 2065.929, cy: 550.811 },
+    { id: "P45", objectName: null, cx: 2137.929, cy: 550.811 },
+    { id: "P46", objectName: null, cx: 2183.929, cy: 550.811 },
+    { id: "P47", objectName: null, cx: 2232.929, cy: 550.811 },
+    { id: "P48", objectName: null, cx: 2363.929, cy: 550.811 },
+    { id: "P49", objectName: null, cx: 2490.929, cy: 550.811 },
+    { id: "P50", objectName: null, cx: 2528.929, cy: 550.811 },
+    { id: "P51", objectName: null, cx: 2630.929, cy: 550.811 },
+    { id: "P52", objectName: null, cx: 2670.929, cy: 550.811 },
+    { id: "P53", objectName: null, cx: 2735.929, cy: 550.811 },
+    { id: "P54", objectName: null, cx: 2799.929, cy: 550.811 },
+    { id: "P55", objectName: null, cx: 2885.929, cy: 550.811 },
+    { id: "P56", objectName: null, cx: 2085.929, cy: 450.811 },
+    { id: "P57", objectName: null, cx: 2134.929, cy: 450.811 },
+    { id: "P58", objectName: null, cx: 2735.929, cy: 550.811 },
+    { id: "P59", objectName: null, cx: 2735.929, cy: 550.811 },
+    { id: "P60", objectName: null, cx: 2735.929, cy: 550.811 },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ],
   edges: [],
 };

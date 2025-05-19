@@ -380,6 +380,61 @@
 "categoryId":"a191",
 "name":"Prayer Room 4",
 "desc":""
+},
+{"id":"SC1",
+"categoryId":"48a4",
+"name":"Self Check-in 1",
+"desc":""
+},
+{"id":"SC2",
+"categoryId":"48a4",
+"name":"Self Check-in 2",
+"desc":""
+},
+{"id":"SC3",
+"categoryId":"48a4",
+"name":"Self Check-in 3",
+"desc":""
+},
+{"id":"SC4",
+"categoryId":"48a4",
+"name":"Self Check-in 4",
+"desc":""
+},
+{"id":"CIC1",
+"categoryId":"18p4",
+"name":"Check-in Counter 1",
+"desc":""
+},
+{"id":"CIC2",
+"categoryId":"18p4",
+"name":"Check-in Counter 2",
+"desc":""
+},
+{"id":"CIC3",
+"categoryId":"18p4",
+"name":"Check-in Counter 3",
+"desc":""
+},
+{"id":"Toilet1",
+"categoryId":"87b0",
+"name":"Toilet-1",
+"desc":""
+},
+{"id":"Toilet2",
+"categoryId":"87b0",
+"name":"Toilet-2",
+"desc":""
+},
+{"id":"Toilet3",
+"categoryId":"87b0",
+"name":"Toilet-3",
+"desc":""
+},
+{"id":"SV22",
+"categoryId":"16be",
+"name":"Bagage Solution",
+"desc":""
 }
 
   ],
@@ -411,6 +466,15 @@
     {
       "id": "87b0",
       "name": "Toilet"
-    }
+    },
+    { 
+    "id":"48a4",
+    "name":"Self Check-in"
+  },
+  {
+    "id":"18p4",
+    "name":"Check-in Counter"
+}
+    
   ]
 }

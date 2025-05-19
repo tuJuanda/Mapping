@@ -10,6 +10,38 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
     {selectedFloor === 1 && (
     <g id = "object1">
       <path
+        id="SC1"
+        className={`${className} object`}
+        d="M1543 455C1541.9 455 1541 454.105 1541 453V437C1541 435.895 1541.9 435 1543 435H1560C1561.1 435 1562 435.895 1562 437V453C1562 454.105 1561.1 455 1560 455H1543Z"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="SC4"
+        className={`${className} object`}
+        d="M796 456C794.895 456 794 455.105 794 454V438C794 436.895 794.895 436 796 436H814C815.105 436 816 436.895 816 438V454C816 455.105 815.105 456 814 456H796Z"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="SC3"
+        className={`${className} object`}
+        x="1184"
+        y="383"
+        width="20"
+        height="21"
+        rx="2"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="SC2"
+        className={`${className} object`}
+        x="1541"
+        y="380"
+        width="20"
+        height="21"
+        rx="2"
+        onClick={handleObjectClick}
+      />
+      <path
         id="Toilet1"
         className={`${className} object`}
         d="M188.324 154.285V188.833H167.62H146.917V154.285V119.738H167.62H188.324V154.285Z"
