@@ -567,60 +567,29 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         d="M599.691 378.372L599.691 396.372L569.191 396.372L569.191 343.372L668.191 343.372L668.191 377.872L600.191 377.872L599.691 377.872L599.691 378.372Z"
         onClick={handleObjectClick}
       />
-      <path
-        id="EP9"
-        className={`${className} object`}
-        d="M785.164 288.372C785.164 296.38 778.672 302.872 770.664 302.872L747.664 302.872C739.656 302.872 733.164 296.38 733.164 288.372V288.372C733.164 280.364 739.656 273.872 747.664 273.872L760.364 273.872L770.664 273.872C778.672 273.872 785.164 280.364 785.164 288.372V288.372Z"
-        onClick={handleObjectClick}
-      />
+      
       <path
         id="FB17"
         className={`${className} object`}
         d="M864.691 371.372L864.191 371.372L864.191 371.872L864.191 386.372L834.191 386.372L834.191 343.372L890.191 343.372L890.191 371.372L864.691 371.372Z"
         onClick={handleObjectClick}
       />
-      <path
-        id="EP8"
-        className={`${className} object`}
-        d="M1019.16 288.372C1019.16 296.38 1012.67 302.872 1004.66 302.872L981.664 302.872C973.656 302.872 967.164 296.38 967.164 288.372V288.372C967.164 280.364 973.656 273.872 981.664 273.872L994.364 273.872L1004.66 273.872C1012.67 273.872 1019.16 280.364 1019.16 288.372V288.372Z"
-        onClick={handleObjectClick}
-      />
+      
       <path
         id="SV4"
         className={`${className} object`}
         d="M1033.85 358.92L1033.85 358.92L1033.86 358.915L1051.66 343.946L1051.66 371.372L1018.57 371.372L1033.85 358.92Z"
         onClick={handleObjectClick}
       />
-      <path
-        id="RT10"
-        className={`${className} object`}
-        d="M1007.19 236.372L1007.19 193.372L1269.66 193.372L1269.66 273.372L1236.98 273.372C1224.08 245.34 1211.98 229.334 1196.47 223.747C1180.92 218.146 1162.12 223.08 1136.04 236.372L1112.31 236.372C1095.7 225.799 1082.84 220.853 1070.24 221.051C1057.64 221.25 1045.4 226.588 1030.02 236.372L1007.19 236.372Z"
-        onClick={handleObjectClick}
-      />
-      <path
-        id="EP5"
-        className={`${className} object`}
-        d="M1617.16 287.372C1617.16 295.38 1610.67 301.872 1602.66 301.872L1579.66 301.872C1571.66 301.872 1565.16 295.38 1565.16 287.372V287.372C1565.16 279.364 1571.66 272.872 1579.66 272.872L1592.36 272.872L1602.66 272.872C1610.67 272.872 1617.16 279.364 1617.16 287.372V287.372Z"
-        onClick={handleObjectClick}
-      />
+      
+      
       <path
         id="FB15"
         className={`${className} object`}
         d="M1617.19 472.372L1514.19 472.372L1514.19 365.782L1617.19 351.447L1617.19 472.372Z"
         onClick={handleObjectClick}
       />
-      <path
-        id="EP2"
-        className={`${className} object`}
-        d="M2113.16 287.372C2113.16 295.38 2106.67 301.872 2098.66 301.872L2075.66 301.872C2067.66 301.872 2061.16 295.38 2061.16 287.372V287.372C2061.16 279.364 2067.66 272.872 2075.66 272.872L2088.36 272.872L2098.66 272.872C2106.67 272.872 2113.16 279.364 2113.16 287.372V287.372Z"
-        onClick={handleObjectClick}
-      />
-      <path
-        id="EP1"
-        className={`${className} object`}
-        d="M2362.16 287.372C2362.16 295.38 2355.67 301.872 2347.66 301.872L2324.66 301.872C2316.66 301.872 2310.16 295.38 2310.16 287.372V287.372C2310.16 279.364 2316.66 272.872 2324.66 272.872L2337.36 272.872L2347.66 272.872C2355.67 272.872 2362.16 279.364 2362.16 287.372V287.372Z"
-        onClick={handleObjectClick}
-      />
+      
       <path
         id="FB7"
         className={`${className} object`}
@@ -645,6 +614,22 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         d="M3174.16 349.393L3145.16 349.393L3126.16 290.872L3174.16 290.872L3174.16 349.393Z"
         onClick={handleObjectClick}
       />
+      <path
+        id="RT10"
+        className={`${className} object`}
+        d="M1235.16 238C1218.24 225.564 1206.9 218.88 1192.93 218.382C1178.98 217.884 1162.48 223.563 1135.2 235.554L1111.48 235.554C1094.89 225.207 1082.05 220.368 1069.46 220.562C1056.89 220.757 1044.66 225.98 1029.3 235.554L1006.5 235.554L1006.5 193.5L1268.64 193.5L1268.64 238L1235.16 238Z"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP8" //BLUE SKY
+        className={`${className} object`}
+        x="351.5" 
+        y="448.5" 
+        width="105" 
+        height="105" 
+        transform="rotate(-180 351.5 448.5)"
+        onClick={handleObjectClick}
+      />
       <rect
         id="MS2"
         className={`${className} object`}
@@ -656,13 +641,11 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="TOtwin"
+        id="TOtwin" //toilet twin
         className={`${className} object`}
-        x="2661.16"
-        y="291.872"
-        width="74"
-        height="27"
-        transform="rotate(-180 2661.16 291.872)"
+        width="80" 
+        height="51.3" 
+        transform="matrix(-1 -2.612e-06 8.45619e-07 -1 2656 244.3)"
         onClick={handleObjectClick}
       />
       <rect
@@ -729,17 +712,11 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       <rect
         id="FB8A"
         className={`${className} object`}
-        x="2510.16"
-        y="292.872"
-        width="68"
-        height="32"
-        transform="rotate(-180 2510.16 292.872)"
-        onClick={handleObjectClick}
-      />
-      <rect
-        id=""
-        className={`${className} object`}
-        d=""
+        x="2484.92" 
+        y="224.312" 
+        width="67.9141" 
+        height="31.3117" 
+        transform="rotate(-180 2484.92 224.312)"
         onClick={handleObjectClick}
       />
       <rect
@@ -832,33 +809,113 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT4"
+        id="FB10A"
         className={`${className} object`}
-        x="1855.66"
-        y="395.372"
-        width="31"
-        height="34"
-        transform="rotate(-180 1855.66 395.372)"
+        x="1923.5" 
+        y="389.5" 
+        width="66" 
+        height="28" 
+        transform="rotate(-180 1923.5 389.5)"
         onClick={handleObjectClick}
       />
       <rect
-        id="MS3"
+        id="RT4"
         className={`${className} object`}
-        x="1807.16"
-        y="286.872"
-        width="34.0001"
-        height="47"
-        transform="rotate(-180 1807.16 286.872)"
+        x="1856.5" 
+        y="406.5" 
+        width="49" 
+        height="45" 
+        transform="rotate(-180 1856.5 406.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP1" //Gajah duduk
+        className={`${className} object`}
+        x="2072.5" 
+        y="219.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 2072.5 219.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP2" //polo
+        className={`${className} object`}
+        x="1641.5" 
+        y="219.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 1641.5 219.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP3" //doughlab
+        className={`${className} object`}
+        x="1330.5" 
+        y="232.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 1330.5 232.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP4" //beard papas
+        className={`${className} object`}
+        x="972.478" 
+        y="219.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 972.478 219.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP5"//chez choux
+        className={`${className} object`}
+        x="932.5" 
+        y="219.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 932.5 219.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP6" //fami cafe
+        className={`${className} object`}
+        x="892.478" 
+        y="219.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 892.478 219.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP7" //periplus
+        className={`${className} object`}
+        x="713.478" 
+        y="219.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 713.478 219.5)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP8" //polo
+        className={`${className} object`}
+        x="669.478" 
+        y="219.5" 
+        width="34" 
+        height="25" 
+        transform="rotate(-180 669.478 219.5)"
         onClick={handleObjectClick}
       />
       <rect
         id="T0B"
         className={`${className} object`}
-        x="1804.16"
-        y="386.872"
-        width="46"
-        height="36"
-        transform="rotate(-180 1804.16 386.872)"
+        x="1805" 
+        y="386.92" 
+        width="46.0222" 
+        height="25.9076" 
+        transform="rotate(-180 1804.34 386.92)"
         onClick={handleObjectClick}
       />
       <rect
@@ -901,16 +958,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         transform="rotate(-180 1647.66 386.372)"
         onClick={handleObjectClick}
       />
-      <rect
-        id="EP6"
-        className={`${className} object`}
-        x="1534.16"
-        y="286.872"
-        width="29.877"
-        height="17"
-        transform="rotate(-180 1534.16 286.872)"
-        onClick={handleObjectClick}
-      />
+      
       <rect
         id="SV2"
         className={`${className} object`}
@@ -962,7 +1010,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT9"
+        id="RT9"//Secret Garden
         className={`${className} object`}
         x="1212.66"
         y="371.372"
@@ -971,18 +1019,9 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         transform="rotate(-180 1212.66 371.372)"
         onClick={handleObjectClick}
       />
+      
       <rect
-        id="EP7"
-        className={`${className} object`}
-        x="1270.16"
-        y="287.872"
-        width="34"
-        height="14"
-        transform="rotate(-180 1270.16 287.872)"
-        onClick={handleObjectClick}
-      />
-      <rect
-        id="RT11"
+        id="RT11"//CS
         className={`${className} object`}
         x="1086.66"
         y="371.372"
@@ -1009,6 +1048,32 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         width="37"
         height="43"
         transform="rotate(-180 833.191 386.372)"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT14"
+        className={`${className} object`}
+        x="308.5" 
+        y="212.5" 
+        width="79" 
+        height="39" 
+        transform="rotate(-180 308.5 212.5)"
+        onClick={handleObjectClick}
+      />
+      <path
+        id="RT15" //yogurt
+        className={`${className} object`}
+        d="M1486.5 366.5L1486.5 351.5L1510.5 351.5L1510.5 366.5L1486.5 366.5Z"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="RT16" //pafu
+        className={`${className} object`}
+        x="1534.5" 
+        y="366.5" 
+        width="24" 
+        height="15" 
+        transform="rotate(-180 1534.5 366.5)"
         onClick={handleObjectClick}
       />
       <rect
@@ -1052,13 +1117,13 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT14"
+        id="MOK"
         className={`${className} object`}
-        x="286.191"
-        y="283.372"
-        width="29"
-        height="50"
-        transform="rotate(-180 286.191 283.372)"
+        x="1820.02" 
+        y="225.845" 
+        width="34.0164" 
+        height="32.7669" 
+        transform="rotate(-180 1820.02 225.845)"
         onClick={handleObjectClick}
       />
       <rect
@@ -1074,11 +1139,11 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       <rect 
         id="TORED"
         className={`${className} object`}
-        x="2242.16" 
-        y="388.872" 
-        width="46" 
-        height="38" 
-        transform="rotate(-180 2242.16 388.872)"
+        x="2243" 
+        y="388.92" 
+        width="59.3086" 
+        height="38.0047" 
+        transform="rotate(-180 2242.55 388.92)"
         onClick={handleObjectClick}
       />
       <rect 
@@ -1094,26 +1159,26 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
 
       <ellipse
         id="Gate1"
-        cx={48}
+        cx={47}
         cy={226}
-        rx={16}
+        rx={16} 
         ry={14}
         className={`${className} object`}
         onClick={handleObjectClick}
       />
       <ellipse
         id="Gate2"
-        cx={372}
-        cy={229}
-        rx={16}
+        cx={418}
+        cy={225}
+        rx={16} 
         ry={14}
         className={`${className} object`}
         onClick={handleObjectClick}
       />
       <ellipse
         id="Gate3"
-        cx={426}
-        cy={230}
+        cx={532} 
+        cy={225} 
         rx={16}
         ry={14}
         className={`${className} object`}
@@ -1121,26 +1186,26 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       />
       <ellipse
         id="Gate4"
-        cx={697}
-        cy={231}
-        rx={16}
+        cx={748} 
+        cy={226}
+        rx={16} 
         ry={14}
         className={`${className} object`}
         onClick={handleObjectClick}
       />
       <ellipse
         id="Gate5"
-        cx={973}
-        cy={231}
-        rx={16}
+        cx={830}
+        cy={226} 
+        rx={16} 
         ry={14}
         className={`${className} object`}
         onClick={handleObjectClick}
       />
       <ellipse
         id="Gate6"
-        cx={1303}
-        cy={231}
+        cx={1285}
+        cy={222} 
         rx={16}
         ry={14}
         className={`${className} object`}
@@ -1148,8 +1213,8 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       />
       <ellipse
         id="Gate7"
-        cx={1500}
-        cy={215}
+        cx={1437} 
+        cy={226}
         rx={16}
         ry={14}
         className={`${className} object`}
@@ -1157,9 +1222,9 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       />
       <ellipse
         id="Gate8"
-        cx={1617}
-        cy={227}
-        rx={16}
+        cx={1591} 
+        cy={226} 
+        rx={16} 
         ry={14}
         className={`${className} object`}
         onClick={handleObjectClick}
@@ -1193,9 +1258,9 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       />
       <ellipse
         id="Gate12"
-        cx={2608}
-        cy={227}
-        rx={16}
+        cx={2675} 
+        cy={227} 
+        rx={16} 
         ry={14}
         className={`${className} object`}
         onClick={handleObjectClick}
