@@ -435,7 +435,349 @@
 "categoryId":"16be",
 "name":"Bagage Solution",
 "desc":""
+},
+{"id":"RT01",
+"categoryId":"58a9",
+"name":"Alfa Express 1",
+"desc":""
+},
+{"id":"FB20",
+"categoryId":"52f1",
+"name":"A & W 1",
+"desc":""
+},
+{"id":"SV28",
+"categoryId":"16be",
+"name":"BNI",
+"desc":""
+},
+{"id":"BRI",
+"categoryId":"16be",
+"name":"BRI",
+"desc":""
+},
+{"id":"Toilet26",
+"categoryId":"87b0",
+"name":"Toilet-26",
+"desc":""
+},
+{"id":"FB19",
+"categoryId":"52f1",
+"name":"Expat",
+"desc":""
+},
+{"id":"RT04",
+"categoryId":"58a9",
+"name":"Sandang Pangan",
+"desc":""
+}, 
+{"id":"UM01",
+"categoryId":"52f1",
+"name":"Titian Rasa",
+"desc":""
+},
+{"id":"FB18",
+"categoryId":"52f1",
+"name":"Titian Rasa",
+"desc":""
+},
+{"id":"FB17",
+"categoryId":"52f1",
+"name":"Kedai MJ",
+"desc":""
+},
+{"id":"RT03",
+"categoryId":"58a9",
+"name":"Alfa Express 2",
+"desc":""
+},
+{"id":"FB14A",
+"categoryId":"52f1",
+"name":"Le Petit Jemma",
+"desc":""
+},
+{"id":"RT02B",
+"categoryId":"58a9",
+"name":"Bogajaya 1",
+"desc":""
+},
+{"id":"CSAirline",
+"categoryId":"16be",
+"name":"CS Airline",
+"desc":""
+},
+{"id":"Toilet8",
+"categoryId":"87b0",
+"name":"Toilet-8",
+"desc":""
+},
+{"id":"FB14",
+"categoryId":"58a9",
+"name":"Bogajaya 2",
+"desc":""
+},
+{"id":"Toilet9",
+"categoryId":"87b0",
+"name":"Toilet-9",
+"desc":""
+},
+{"id":"FB13",
+"categoryId":"52f1",
+"name":"Dunkin Donuts 1",
+"desc":""
+},
+{"id":"FB12A",
+"categoryId":"52f1",
+"name":"Wing Man",
+"desc":""
+},
+{"id":"RT02",
+"categoryId":"58a9",
+"name":"Bogajaya 3",
+"desc":""
+},
+{"id":"FB12",
+"categoryId":"52f1",
+"name":"RotiBoy 1",
+"desc":""
+},
+{"id":"FB11",
+"categoryId":"52f1",
+"name":"Java Cafe",
+"desc":""
+},
+{"id":"FB07",
+"categoryId":"52f1",
+"name":"Soto Bangkalan",
+"desc":""
+},
+{"id":"FB08",
+"categoryId":"52f1",
+"name":"Solaria",
+"desc":""
+},
+{"id":"FB6A",
+"categoryId":"52f1",
+"name":"Beard Papa's",
+"desc":""
+},
+{"id":"ATM",
+"categoryId":"16be",
+"name":"ATM Center",
+"desc":""
+},
+{"id":"RT06",
+"categoryId":"58a9",
+"name":"Alfa Express 2",
+"desc":""
+},
+{"id":"Kemenkes",
+"categoryId":"16be",
+"name":"Kemenkes",
+"desc":""
+},
+{"id":"Toilet10",
+"categoryId":"87b0",
+"name":"Toilet-10",
+"desc":""
+},
+{"id":"Toilet11",
+"categoryId":"87b0",
+"name":"Toilet-11",
+"desc":""
+},
+{"id":"Toilet12",
+"categoryId":"87b0",
+"name":"Toilet-12",
+"desc":""
+},
+{"id":"Toilet13",
+"categoryId":"87b0",
+"name":"Toilet-13",
+"desc":""
+},
+{"id":"Toilet14",
+"categoryId":"87b0",
+"name":"Toilet-14",
+"desc":""
+},
+{"id":"Toilet15",
+"categoryId":"87b0",
+"name":"Toilet-15",
+"desc":""
+},
+{"id":"Toilet16",
+"categoryId":"87b0",
+"name":"Toilet-16",
+"desc":""
+},
+{"id":"Toilet17",
+"categoryId":"87b0",
+"name":"Toilet-17",
+"desc":""
+},
+{"id":"Toilet18",
+"categoryId":"87b0",
+"name":"Toilet-18",
+"desc":""
+},
+{"id":"Toilet19",
+"categoryId":"87b0",
+"name":"Toilet-19",
+"desc":""
+},
+{"id":"Toilet20",
+"categoryId":"87b0",
+"name":"Toilet-20",
+"desc":""
+},
+{"id":"Toilet21",
+"categoryId":"87b0",
+"name":"Toilet-21",
+"desc":""
+},
+{"id":"Toilet22",
+"categoryId":"87b0",
+"name":"Toilet-22",
+"desc":""
+},
+{"id":"Toilet23",
+"categoryId":"87b0",
+"name":"Toilet-23",
+"desc":""
+},
+{"id":"Toilet24",
+"categoryId":"87b0",
+"name":"Toilet-24",
+"desc":""
+},
+{"id":"Toilet25",
+"categoryId":"87b0",
+"name":"Toilet-25",
+"desc":""
+},
+
+{"id":"Mus1",
+"categoryId":"87b0",
+"name":"Musholla-1",
+"desc":""
+},
+{"id":"Mus2",
+"categoryId":"87b0",
+"name":"Musholla Perempuan",
+"desc":""
+},
+{"id":"Mus3",
+"categoryId":"87b0",
+"name":"Musholla Laki-laki",
+"desc":""
+},
+{"id":"FB05",
+"categoryId":"52f1",
+"name":"RotiBoy 2",
+"desc":""
+},
+{"id":"FB04",
+"categoryId":"52f1",
+"name":"Dunkin Donuts 2",
+"desc":""
+},
+{"id":"FB3A",
+"categoryId":"52f1",
+"name":"LA Cafe",
+"desc":""
+},
+{"id":"FB03",
+"categoryId":"52f1",
+"name":"Roti O Coffee",
+"desc":""
+},
+{"id":"RT03",
+"categoryId":"e928",
+"name":"Timnas Indonesia",
+"desc":""
+}, 
+{"id":"SV10",
+"categoryId":"e928",
+"name":"BCA",
+"desc":""
+},
+{"id":"SV09",
+"categoryId":"16be",
+"name":"Bank Jatim",
+"desc":""
+},
+{"id":"Taxi",
+"categoryId":"16be",
+"name":"Airport Taxi",
+"desc":""
+},
+{"id":"FB02",
+"categoryId":"52f1",
+"name":"Bakmi Gocit",
+"desc":""
+},
+{"id":"FB01",
+"categoryId":"52f1",
+"name":"A & W 2",
+"desc":""
+},
+{"id":"FB1B",
+"categoryId":"58a9",
+"name":"Family Mart",
+"desc":""
+},
+{"id":"FB16",
+"categoryId":"58a9",
+"name":"Circle K-2",
+"desc":""
+},
+{"id":"FB15",
+"categoryId":"52f1",
+"name":"Papan Dahar",
+"esc":""
+},
+{"id":"RT2A",
+"categoryId":"58a9",
+"name":"Circle K-1",
+"desc":""
+},
+{"id":"FB9A",
+"categoryId":"52f1",
+"name":"Roti O-2",
+"desc":""
+},
+{"id":"FB18",
+"categoryId":"52f1",
+"name":"Roti O-1",
+"desc":""
+},
+{"id":"FB10",
+"categoryId":"52f1",
+"name":"A & W 3",
+"desc":""
+},
+{"id":"FB09A",
+"categoryId":"52f1",
+"name":"MM Juice",
+"desc":""
+},
+{"id":"cordia",
+"categoryId":"16be",
+"name":"Cordia Hotel",
+"desc":""
+},
+{"id":"avsec",
+"categoryId":"16be",
+"name":"Aviation security",
+"desc":""
+},
+{"id":"FB09",
+"categoryId":"52f1",
+"name":"Soerabaja Cafe",
+"desc":""
 }
+
 
   ],
   "categories": [

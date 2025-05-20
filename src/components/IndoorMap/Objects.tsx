@@ -456,7 +456,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <path
-        id="EP1"//timnas
+        id="EP01"//timnas
         className={`${className} object`}
         d="M2636.07 503.37V523.121H2631.32H2626.58V503.37V483.619H2631.32H2636.07V503.37Z"  
         onClick={handleObjectClick}
