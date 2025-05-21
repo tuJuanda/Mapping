@@ -491,7 +491,26 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         d="M2994.55 545.99V563.662H2964.48H2934.41V545.99V528.318H2964.48H2994.55V545.99Z"  
         onClick={handleObjectClick}
       />
-
+      <rect
+        id="bagasi1" //kiri
+        className={`${className} object`}
+        x="2218" 
+        y="192" 
+        width="281" 
+        height="106" 
+        rx="30"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="bagasi2" //kanan
+        className={`${className} object`}
+        x="2642" 
+        y="192" 
+        width="254" 
+        height="106" 
+        rx="30"
+        onClick={handleObjectClick}
+      />
       <rect
         id="avsec"
         className={`${className} object`}

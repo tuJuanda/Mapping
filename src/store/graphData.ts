@@ -372,7 +372,6 @@ export const graphData2: GraphData = {
     { id: "L52_to_L51", from: "L52", to: "L51", floor: 2 },
     { id: "L52_to_FB1", from: "L52", to: "FB1", floor: 2 },
     { id: "L52_to_PR4", from: "L52", to: "PR4", floor: 2 },
-    { id: "L51_to_L50", from: "L51", to: "L50", floor: 2 },
     { id: "L50_to_T2", from: "L50", to: "T2", floor: 2 },
   ],
 };
@@ -406,45 +405,45 @@ export const graphData1: GraphData = {
     { id: "P15", objectName: null, cx: 730.929, cy: 550.811 },
     { id: "SC4", objectName: "Self Check-in 4", cx: 803.929, cy: 447.811 },
     { id: "P16", objectName: null, cx: 1255.929, cy: 450.811 },
-    { id: "P17", objectName: null, cx: 1569.929, cy: 550.811 },
+    /* { id: "P17", objectName: null, cx: 1569.929, cy: 550.811 },
     { id: "P18", objectName: null, cx: 1515.929, cy: 550.811 },
     { id: "P19", objectName: null, cx: 1492.929, cy: 550.811 },
     { id: "P20", objectName: null, cx: 1400.929, cy: 550.811 },
     { id: "P21", objectName: null, cx: 1353.929, cy: 550.811 },
-    { id: "P22", objectName: null, cx: 1295.929, cy: 550.811 },
+    { id: "P22", objectName: null, cx: 1295.929, cy: 550.811 }, 
     { id: "P23", objectName: null, cx: 1168.929, cy: 550.811 },
     { id: "P24", objectName: null, cx: 1125.929, cy: 550.811 },
-    { id: "P26", objectName: null, cx: 1083.929, cy: 550.811 },
+    { id: "P26", objectName: null, cx: 1083.929, cy: 550.811 }, 
     { id: "P27", objectName: null, cx: 995.929, cy: 550.811 },
     { id: "P28", objectName: null, cx: 930.929, cy: 550.811 },
     { id: "P29", objectName: null, cx: 882.929, cy: 550.811 },
-    { id: "P30", objectName: null, cx: 803.929, cy: 550.811 },
+    { id: "P30", objectName: null, cx: 803.929, cy: 550.811 }, 
     { id: "P31", objectName: null, cx: 664.929, cy: 550.811 },
-    { id: "P32", objectName: null, cx: 580.929, cy: 550.811 },
+    { id: "P32", objectName: null, cx: 580.929, cy: 550.811 }, */
     { id: "P33", objectName: null, cx: 531.929, cy: 550.811 },
     { id: "P34", objectName: null, cx: 470.929, cy: 550.811 },
     { id: "P35", objectName: null, cx: 300.929, cy: 550.811 },
     { id: "P36", objectName: null, cx: 88.929, cy: 550.811 },
     { id: "P37", objectName: null, cx: 88.929, cy: 508.811 },
     { id: "P38", objectName: null, cx: 35.929, cy: 508.811 },
-    { id: "P39", objectName: null, cx: 1725.929, cy: 550.811 },
+    /* { id: "P39", objectName: null, cx: 1725.929, cy: 550.811 },
     { id: "P40", objectName: null, cx: 1790.929, cy: 550.811 },
-    { id: "P41", objectName: null, cx: 1850.929, cy: 550.811 },
+    { id: "P41", objectName: null, cx: 1850.929, cy: 550.811 }, */
     { id: "P42", objectName: null, cx: 1888.929, cy: 550.811 },
     { id: "P43", objectName: null, cx: 1888.929, cy: 450.811 },
     { id: "P44", objectName: null, cx: 2028.929, cy: 550.811 },
     { id: "P45", objectName: null, cx: 2028.929, cy: 450.811 },
-    { id: "P46", objectName: null, cx: 2065.929, cy: 550.811 },
+    /* { id: "P46", objectName: null, cx: 2065.929, cy: 550.811 },
     { id: "P47", objectName: null, cx: 2137.929, cy: 550.811 },
     { id: "P48", objectName: null, cx: 2183.929, cy: 550.811 },
     { id: "P49", objectName: null, cx: 2232.929, cy: 550.811 },
     { id: "P50", objectName: null, cx: 2363.929, cy: 550.811 },
     { id: "P51", objectName: null, cx: 2490.929, cy: 550.811 },
     { id: "P52", objectName: null, cx: 2528.929, cy: 550.811 },
-    { id: "P53", objectName: null, cx: 2627.929, cy: 550.811 },
+    { id: "P53", objectName: null, cx: 2627.929, cy: 550.811 }, */
     { id: "P54", objectName: null, cx: 2670.929, cy: 550.811 },
     { id: "P55", objectName: null, cx: 2745.929, cy: 550.811 },
-    { id: "P56", objectName: null, cx: 2817.929, cy: 550.811 },
+    // { id: "P56", objectName: null, cx: 2817.929, cy: 550.811 },
     { id: "P57", objectName: null, cx: 2883.929, cy: 550.811 },
     { id: "P58", objectName: null, cx: 2134.929, cy: 450.811 },
     { id: "P59", objectName: null, cx: 2165.929, cy: 450.811 },
@@ -488,7 +487,7 @@ export const graphData1: GraphData = {
     { id: "P97", objectName: null, cx: 2745.929, cy: 450.811 },
     { id: "P98", objectName: null, cx: 507.929, cy: 550.811 },
     { id: "P99", objectName: null, cx: 1051.929, cy: 550.811 },
-    { id: "P100", objectName: null, cx: 1450.929, cy: 550.811 },
+    //{ id: "P100", objectName: null, cx: 1450.929, cy: 550.811 },
     { id: "P101", objectName: null, cx: 2065.929, cy: 450.811 },
     { id: "P102", objectName: null, cx: 2232.929, cy: 450.811 },
     { id: "P103", objectName: null, cx: 1888.929, cy: 400.811 },
@@ -525,6 +524,8 @@ export const graphData1: GraphData = {
     { id: "P134", objectName: null, cx: 2670.929, cy: 175.811 },
     { id: "P135", objectName: null, cx: 2888.929, cy: 175.811 },
     { id: "P136", objectName: null, cx: 2363.929, cy: 337.811 },
+    { id: "BG1", objectName: "Bagasi 1", cx: 2363.929, cy: 296.982 },
+    { id: "BG2", objectName: "Bagasi 2", cx: 2745.929, cy: 296.982 },
     { id: "P137", objectName: null, cx: 2230.929, cy: 337.811 },
     { id: "P138", objectName: null, cx: 2230.929, cy: 352.811 },
     { id: "P139", objectName: null, cx: 2199.929, cy: 352.811 },
@@ -548,7 +549,7 @@ export const graphData1: GraphData = {
     { id: "FB14", objectName: "Bogajaya 2", cx: 1400.929, cy: 480.811 },
     { id: "FB9A", objectName: "Roti O-2", cx: 1400.929, cy: 420.811 },
     { id: "Toilet9", objectName: "Toilet-9", cx: 1450.929, cy: 480.811 },
-    { id: "RT2A", objectName: "Circle K-1", cx: 1450.929, cy: 480.811 },
+    { id: "RT2A", objectName: "Circle K-1", cx: 1450.929, cy: 480.811 }, //ke read toilet
     { id: "FB13A", objectName: "Cerita Kopi by KOPKEN", cx: 1492.929, cy: 480.811 },
     { id: "FB13", objectName: "Dunkin Donuts 1", cx: 1515.929, cy: 480.811 },
     { id: "FB15", objectName: "Papan Dahar", cx: 1515.929, cy: 420.811 },
@@ -588,7 +589,7 @@ export const graphData1: GraphData = {
     { id: "FB10", objectName: "A & W 3", cx: 1857.929, cy: 400.811 },
     { id: "FB09A", objectName: "MM Juice", cx: 1888.929, cy: 365.811 },
     { id: "Mus3", objectName: "Musholla Perempuan", cx: 1918.929, cy: 365.811 },
-    { id: "Mus3", objectName: "Musholla Laki-laki", cx: 1993.929, cy: 365.811 },
+    { id: "Mus4", objectName: "Musholla Laki-laki", cx: 1993.929, cy: 365.811 },
     { id: "cordia", objectName: "Cordia Hotel", cx: 1953.929, cy: 365.811 },
     { id: "avsec", objectName: "Aviation security", cx: 2010.929, cy: 365.811 },
     { id: "FB09", objectName: "Soerabaja Cafe", cx: 2028.929, cy: 365.811 },
@@ -598,132 +599,201 @@ export const graphData1: GraphData = {
     { id: "Toilet24", objectName: "Toilet-24", cx: 2570.929, cy: 185.811 },
     { id: "Toilet25", objectName: "Toilet-25", cx: 2888.929, cy: 146.811 },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   ],
-  edges: [],
+  edges: [
+    { id: "P65_to_FB01", from: "P65", to: "FB01", floor: 1 },
+    { id: "P65_to_Toilet14", from: "P65", to: "Toilet14", floor: 1 },
+    { id: "P65_to_P64", from: "P65", to: "P64", floor: 1 },
+    { id: "P64_to_Taxi", from: "P64", to: "Taxi", floor: 1 }, 
+    { id: "P64_to_FB02", from: "P64", to: "FB02", floor: 1 },
+    { id: "P64_to_P97", from: "P64", to: "P97", floor: 1 },
+    { id: "P97_to_P127", from: "P97", to: "P127", floor: 1 }, //sambungan ke bagasi blm
+    { id: "P127_to_P128", from: "P127", to: "P128", floor: 1 },
+    { id: "P127_to_BG2", from: "P127", to: "BG2", floor: 1 },
+    { id: "P128_to_P129", from: "P128", to: "P129", floor: 1 },
+    { id: "P128_to_Toilet22", from: "P128", to: "Toilet22", floor: 1 },
+    { id: "P129_to_P136", from: "P129", to: "P136", floor: 1 },
+    { id: "P129_to_P130", from: "P129", to: "P130", floor: 1 },
+    { id: "P130_to_P131", from: "P130", to: "P131", floor: 1 },
+    { id: "P130_to_P131", from: "P130", to: "Toilet23", floor: 1 },
+    { id: "P131_to_P132", from: "P131", to: "P132", floor: 1 },
+    { id: "P131_to_Toilet24", from: "P131", to: "Toilet24", floor: 1 },
+    { id: "P132_to_P133", from: "P132", to: "P133", floor: 1 },
+    { id: "P133_to_P134", from: "P133", to: "P134", floor: 1 },
+    { id: "P134_to_P135", from: "P134", to: "P135", floor: 1 },
+    { id: "P135_to_Toilet25", from: "P135", to: "Toilet25", floor: 1 },
+    { id: "P136_to_P137", from: "P136", to: "P137", floor: 1 },
+    { id: "P136_to_BG1", from: "P136", to: "BG1", floor: 1 },
+    { id: "P137_to_P138", from: "P137", to: "P138", floor: 1 },
+    { id: "P138_to_P139", from: "P138", to: "P139", floor: 1 },
+    { id: "P139_to_Toilet21", from: "P139", to: "Toilet21", floor: 1 },
+    { id: "P55_to_SV09", from: "P55", to: "SV09", floor: 1 },
+    { id: "P97_to_P96", from: "P97", to: "P96", floor: 1 },
+    { id: "P54_to_SV10", from: "P54", to: "SV10", floor: 1 },
+    { id: "P96_to_P95", from: "P96", to: "P95", floor: 1 },
+    { id: "P95_to_EP01", from: "P95", to: "EP01", floor: 1 },
+    { id: "P95_to_Toilet13", from: "P95", to: "Toilet13", floor: 1 },
+    { id: "P95_to_P62", from: "P95", to: "P62", floor: 1 },
+    { id: "P62_to_P90", from: "P62", to: "P90", floor: 1 },
+    { id: "P62_to_P94", from: "P62", to: "P94", floor: 1 },
+    { id: "P94_to_FB03", from: "P94", to: "FB03", floor: 1 },
+    { id: "P94_to_FB3A", from: "P94", to: "FB3A", floor: 1 },
+    { id: "P94_to_P93", from: "P94", to: "P93", floor: 1 },
+    { id: "P93_to_Toilet12", from: "P93", to: "Toilet12", floor: 1 },
+    { id: "P93_to_P91", from: "P93", to: "P91", floor: 1 },
+    { id: "P91_to_P89", from: "P91", to: "P89", floor: 1 },
+    { id: "P93_to_P92", from: "P93", to: "P92", floor: 1 },
+    { id: "P92_to_FB04", from: "P92", to: "FB04", floor: 1 },
+    { id: "P92_to_P63", from: "P92", to: "P63", floor: 1 },
+    { id: "P92_to_P136", from: "P92", to: "P136", floor: 1 }, //BAGASI BLM
+    { id: "P63_to_P88", from: "P63", to: "P88", floor: 1 },
+    { id: "P63_to_P61", from: "P63", to: "P61", floor: 1 },
+    { id: "P61_to_FB05", from: "P61", to: "FB05", floor: 1 },
+    { id: "P61_to_P102", from: "P61", to: "P102", floor: 1 },
+    { id: "P102_to_Toilet11", from: "P102", to: "Toilet11", floor: 1 },
+    { id: "P102_to_P60", from: "P102", to: "P60", floor: 1 },
+    { id: "P60_to_Toilet10", from: "P60", to: "Toilet10", floor: 1 },
+    { id: "P60_to_P59", from: "P60", to: "P59", floor: 1 },
+    { id: "P59_to_RT06", from: "P59", to: "RT06", floor: 1 },
+    { id: "P59_to_Kemenkes", from: "P59", to: "Kemenkes", floor: 1 },
+    { id: "P59_to_P58", from: "P59", to: "P58", floor: 1 },
+    { id: "P58_to_FB6A", from: "P58", to: "FB6A", floor: 1 },
+    { id: "P58_to_ATM", from: "P58", to: "ATM", floor: 1 },
+    { id: "P58_to_P101", from: "P58", to: "P101", floor: 1 },
+    { id: "P101_to_FB07", from: "P101", to: "FB07", floor: 1 },
+    { id: "P101_to_FB08", from: "P101", to: "FB08", floor: 1 },
+    { id: "P101_to_P45", from: "P101", to: "P45", floor: 1 },
+    { id: "P45_to_P44", from: "P45", to: "P44", floor: 1 },
+    { id: "P45_to_P108", from: "P45", to: "P108", floor: 1 },
+    { id: "P108_to_FB09", from: "P108", to: "FB09", floor: 1 },
+    { id: "P108_to_P107", from: "P108", to: "P107", floor: 1 },
+    { id: "P107_to_avsec", from: "P107", to: "avsec", floor: 1 },
+    { id: "P107_to_P106", from: "P107", to: "P106", floor: 1 },
+    { id: "P106_to_Mus4", from: "P106", to: "Mus4", floor: 1 }, //gabisa
+    { id: "P106_to_P105", from: "P106", to: "P105", floor: 1 }, 
+    { id: "P105_to_P104", from: "P105", to: "P104", floor: 1 }, 
+    { id: "P105_to_cordia", from: "P105", to: "cordia", floor: 1 }, 
+    { id: "P104_to_Mus3", from: "P104", to: "Mus3", floor: 1 }, 
+    { id: "P104_to_P103", from: "P104", to: "P103", floor: 1 }, 
+    { id: "P103_to_FB09A", from: "P103", to: "FB09A", floor: 1 }, 
+    { id: "P103_to_P43", from: "P103", to: "P43", floor: 1 }, 
+    { id: "P103_to_FB10", from: "P103", to: "FB10", floor: 1 }, 
+    { id: "P43_to_P87", from: "P43", to: "P87", floor: 1 },
+    { id: "P43_to_P42", from: "P43", to: "P42", floor: 1 }, 
+    { id: "P87_to_FB11", from: "P87", to: "FB11", floor: 1 }, 
+    { id: "P87_to_P86", from: "P87", to: "P86", floor: 1 }, 
+    { id: "P86_to_FB12", from: "P86", to: "FB12", floor: 1 }, 
+    { id: "P86_to_P85", from: "P86", to: "P85", floor: 1 }, 
+    { id: "P85_to_FB16", from: "P85", to: "FB16", floor: 1 }, 
+    { id: "P85_to_RT02", from: "P85", to: "RT02", floor: 1 }, 
+    { id: "P85_to_P2", from: "P85", to: "P2", floor: 1 }, 
+    { id: "P1_to_P2", from: "P1", to: "P2", floor: 1 }, 
+    { id: "P3_to_P2", from: "P3", to: "P2", floor: 1 }, 
+    { id: "P3_to_P10", from: "P3", to: "P10", floor: 1 }, 
+    { id: "P3_to_SC2", from: "P3", to: "SC2", floor: 1 }, 
+    { id: "P10_to_CIC1", from: "P10", to: "CIC1", floor: 1 }, 
+    { id: "P2_to_P84", from: "P2", to: "P84", floor: 1 }, 
+    { id: "P84_to_FB12A", from: "P84", to: "FB12A", floor: 1 }, 
+    { id: "P84_to_SC1", from: "P84", to: "SC1", floor: 1 }, 
+    { id: "P84_to_P83", from: "P84", to: "P83", floor: 1 }, 
+    { id: "P83_to_FB13", from: "P83", to: "FB13", floor: 1 }, 
+    { id: "P83_to_FB15", from: "P83", to: "FB15", floor: 1 }, 
+    { id: "P83_to_P82", from: "P83", to: "P82", floor: 1 }, 
+    { id: "P82_to_FB13A", from: "P82", to: "FB13A", floor: 1 },
+    { id: "P82_to_P81", from: "P82", to: "P81", floor: 1 },
+    { id: "P81_to_RT2A", from: "P81", to: "RT2A", floor: 1 }, 
+    { id: "P81_to_Toilet9", from: "P81", to: "Toilet9", floor: 1 }, 
+    { id: "P81_to_P80", from: "P81", to: "P80", floor: 1 },
+    { id: "P80_to_FB9A", from: "P80", to: "FB9A", floor: 1 },
+    { id: "P80_to_FB14", from: "P80", to: "FB14", floor: 1 },
+    { id: "P80_to_P79", from: "P80", to: "P79", floor: 1 },
+    { id: "P79_to_Toilet8", from: "P79", to: "Toilet8", floor: 1 },
+    { id: "P79_to_P78", from: "P79", to: "P78", floor: 1 },
+    { id: "P78_to_CSAirline", from: "P78", to: "CSAirline", floor: 1 },
+    { id: "P78_to_P16", from: "P78", to: "P16", floor: 1 },
+    { id: "P16_to_P11", from: "P16", to: "P11", floor: 1 },
+    { id: "P11_to_P7", from: "P11", to: "P7", floor: 1 },
+    { id: "P11_to_SC3", from: "P11", to: "SC3", floor: 1 },
+    { id: "P16_to_P9", from: "P16", to: "P9", floor: 1 },
+    { id: "P9_to_P8", from: "P9", to: "P8", floor: 1 },
+    { id: "P9_to_P77", from: "P9", to: "P77", floor: 1 },
+    { id: "P77_to_RT02B", from: "P77", to: "RT02B", floor: 1 },
+    { id: "P77_to_Toilet15", from: "P77", to: "Toilet15", floor: 1 },
+    { id: "P77_to_P76", from: "P77", to: "P76", floor: 1 },
+    { id: "P76_to_FB14A", from: "P76", to: "FB14A", floor: 1 },
+    { id: "P76_to_P75", from: "P76", to: "P75", floor: 1 },
+    { id: "P75_to_RT03", from: "P75", to: "RT03", floor: 1 },
+    { id: "P75_to_P74", from: "P75", to: "P74", floor: 1 },
+    { id: "P74_to_P99", from: "P74", to: "P99", floor: 1 },
+    { id: "P74_to_P73", from: "P74", to: "P73", floor: 1 },
+    { id: "P73_to_FB17", from: "P73", to: "FB17", floor: 1 },
+    { id: "P73_to_P72", from: "P73", to: "P72", floor: 1 },
+    { id: "P72_to_FB18", from: "P72", to: "FB18", floor: 1 },
+    { id: "P72_to_P71", from: "P72", to: "P71", floor: 1 },
+    { id: "P71_to_P70", from: "P71", to: "P70", floor: 1 },
+    { id: "P71_to_UM01", from: "P71", to: "UM01", floor: 1 },
+    { id: "P70_to_P14", from: "P70", to: "P14", floor: 1 },
+    { id: "P70_to_SC4", from: "P70", to: "SC4", floor: 1 },
+    { id: "P70_to_RT04", from: "P70", to: "RT04", floor: 1 },
+    { id: "P14_to_P13", from: "P14", to: "P13", floor: 1 },
+    { id: "P13_to_CIC3", from: "P13", to: "CIC3", floor: 1 },
+    { id: "P13_to_Toilet3", from: "P13", to: "Toilet3", floor: 1 },
+    { id: "P6_to_Toilet2", from: "P6", to: "Toilet2", floor: 1 },
+    { id: "P14_to_P15", from: "P14", to: "P15", floor: 1 },
+    { id: "P14_to_P66", from: "P14", to: "P66", floor: 1 },
+    { id: "P66_to_P67", from: "P66", to: "P67", floor: 1 },
+    { id: "P66_to_FB19", from: "P66", to: "FB19", floor: 1 },
+    { id: "P67_to_P68", from: "P67", to: "P68", floor: 1 },
+    { id: "P67_to_Toilet27", from: "P67", to: "Toilet27", floor: 1 },
+    { id: "P68_to_P69", from: "P68", to: "P69", floor: 1 },
+    { id: "P69_to_P98", from: "P69", to: "P98", floor: 1 },
+    { id: "P34_to_P98", from: "P34", to: "P98", floor: 1 },
+    { id: "P34_to_SV28", from: "P34", to: "SV28", floor: 1 },
+    { id: "P33_to_P98", from: "P33", to: "P98", floor: 1 },
+    { id: "P33_to_BRI", from: "P33", to: "BRI", floor: 1 },
+    { id: "P33_to_P34", from: "P33", to: "P34", floor: 1 },
+    { id: "P34_to_P35", from: "P34", to: "P35", floor: 1 },
+    { id: "P35_to_P36", from: "P35", to: "P36", floor: 1 },
+    { id: "P36_to_P37", from: "P36", to: "P37", floor: 1 },
+    { id: "P37_to_P38", from: "P37", to: "P38", floor: 1 },
+    { id: "P37_to_FB20", from: "P37", to: "FB20", floor: 1 },
+    { id: "P38_to_RT01", from: "P38", to: "RT01", floor: 1 },
+    { id: "P37_to_P109", from: "P37", to: "P109", floor: 1 },
+    { id: "P109_to_P110", from: "P109", to: "P110", floor: 1 },
+    { id: "P110_to_P111", from: "P110", to: "P111", floor: 1 },
+    { id: "P111_to_P112", from: "P111", to: "P112", floor: 1 },
+    { id: "P112_to_P113", from: "P112", to: "P113", floor: 1 },
+    { id: "P113_to_P114", from: "P113", to: "P114", floor: 1 },
+    { id: "P114_to_Toilet16", from: "P114", to: "Toilet16", floor: 1 }, //toilet4-7 gada
+    { id: "P113_to_P140", from: "P113", to: "P140", floor: 1 },
+    { id: "P140_to_Toilet18", from: "P140", to: "Toilet18", floor: 1 },
+    { id: "P125_to_Toilet17", from: "P125", to: "Toilet17", floor: 1 },
+    { id: "P113_to_P115", from: "P113", to: "P115", floor: 1 },  
+    { id: "P115_to_P116", from: "P115", to: "P116", floor: 1 },    
+    { id: "P116_to_P117", from: "P116", to: "P117", floor: 1 },  
+    { id: "P117_to_P118", from: "P117", to: "P118", floor: 1 },  
+    { id: "P117_to_P119", from: "P117", to: "P119", floor: 1 },  
+    { id: "P119_to_P120", from: "P119", to: "P120", floor: 1 },
+    { id: "P119_to_Mus1", from: "P119", to: "Mus1", floor: 1 },
+    { id: "P120_to_Toilet20", from: "P120", to: "Toilet20", floor: 1 }, 
+    { id: "P118_to_P121", from: "P118", to: "P121", floor: 1 }, 
+    { id: "P121_to_P126", from: "P121", to: "P126", floor: 1 }, 
+    { id: "P121_to_Toilet19", from: "P121", to: "Toilet19", floor: 1 }, 
+    { id: "P115_to_P126", from: "P115", to: "P126", floor: 1 }, 
+    { id: "P122_to_P126", from: "P122", to: "P126", floor: 1 },  
+    { id: "P122_to_P123", from: "P122", to: "P123", floor: 1 }, 
+    { id: "P123_to_P124", from: "P123", to: "P124", floor: 1 }, 
+    { id: "P123_to_P125", from: "P123", to: "P125", floor: 1 }, 
+    { id: "P12_to_P13", from: "P12", to: "P13", floor: 1 },
+    { id: "P12_to_P7", from: "P12", to: "P7", floor: 1 },
+    { id: "P7_to_P6", from: "P7", to: "P6", floor: 1 },
+    { id: "P7_to_CIC2", from: "P7", to: "CIC2", floor: 1 },
+    { id: "P6_to_P5", from: "P6", to: "P5", floor: 1 },
+    { id: "P6_to_SV22", from: "P6", to: "SV22", floor: 1 },
+    { id: "P5_to_P4", from: "P5", to: "P4", floor: 1 },
+    { id: "P5_to_Toilet1", from: "P5", to: "Toilet1", floor: 1 },
+    { id: "P4_to_P10", from: "P4", to: "P10", floor: 1 },
+    { id: "P57_to_FB1B", from: "P57", to: "FB1B", floor: 1 },
+    
+  ],
 };
