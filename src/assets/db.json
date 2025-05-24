@@ -86,6 +86,16 @@
    "name":"Bakso Pak Djo 1",
    "desc":""
   },
+  {"id":"EP6",
+   "categoryId":"52f1",
+   "name":"Fami Cafe",
+   "desc":""
+  },
+  {"id":"EP5",
+   "categoryId":"52f1",
+   "name":"Chez Choux",
+   "desc":""
+  },
   {"id":"FB3",
    "categoryId":"52f1",
    "name":"Roti O 1",
@@ -141,11 +151,7 @@
    "name":"LA CAFE",
    "desc":""
   },
-  {"id":"FB11",
-   "categoryId":"52f1",
-   "name":"Bebek Goreng Harissa",
-   "desc":""
-  },
+  
   {"id":"FB12",
    "categoryId":"52f1",
    "name":"Roti O 3",
@@ -191,6 +197,26 @@
    "name":"KILLINEY",
    "desc":""
   },
+  {"id":"FB21B",
+   "categoryId":"52f1",
+   "name":"Bakery Station",
+   "desc":""
+  },
+  {"id":"FB22A",
+   "categoryId":"52f1",
+   "name":"Aroma Padang",
+   "desc":""
+  },
+  {"id":"RT15",
+   "categoryId":"52f1",
+   "name":"Yogurt Republik",
+   "desc":""
+  },
+  {"id":"RT16",
+   "categoryId":"52f1",
+   "name":"Pafu",
+   "desc":""
+  },
   {"id":"EP1",
    "categoryId":"e928",
    "name":"Periplus 1",
@@ -206,19 +232,10 @@
   "name":"Beard Papa's",
   "desc":""
   },
-  {"id":"EP5",
-   "categoryId":"e928",
-   "name":"Chez Choux",
-   "desc":""
-  },
-  {"id":"EP6",
-  "categoryId":"e928",
-  "name":"Polo Leather",
-  "desc":""
- },
+
  {"id":"EP7",
   "categoryId":"e928",
-  "name":"Perfect Relax",
+  "name":"Concordia Lounge",
   "desc":""
  },
  {"id":"EP8",
@@ -243,7 +260,7 @@
 },
 {"id":"RT4",
  "categoryId":"58a9",
- "name":"Time To Go",
+ "name":"Polo Leather",
  "desc":""
 },
 {"id":"RT5",
@@ -273,7 +290,7 @@
 },
 {"id":"RT9",
  "categoryId":"58a9",
- "name":"No Partner 1",
+ "name":"Secret Garden",
  "desc":""
 },
 {"id":"RT10",
@@ -294,6 +311,21 @@
 {"id":"RT13",
  "categoryId":"58a9",
  "name":"Circle K 2",
+ "desc":""
+},
+{"id":"RT15A",
+ "categoryId":"58a9",
+ "name":"Gajah Duduk",
+ "desc":""
+},
+{"id":"RT15B",
+ "categoryId":"58a9",
+ "name":"Polo 3",
+ "desc":""
+},
+{"id":"RT16A",
+ "categoryId":"58a9",
+ "name":"Circle K 3",
  "desc":""
 },
 {"id":"RT14",
