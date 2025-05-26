@@ -557,17 +557,17 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="A1" //bagasi a1
+        id="BG3" //bagasi a1
         className={`${className} object`}
         x="237" 
-        y="183" 
+        y="159" 
         width="56" 
         height="70" 
         rx="19"
         onClick={handleObjectClick}
       />
       <rect
-        id="A23" //bagasi a2 & a3
+        id="BG4" //bagasi a2 & a3
         className={`${className} object`}
         x="392" 
         y="159" 

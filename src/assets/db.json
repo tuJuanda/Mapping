@@ -76,6 +76,26 @@
    "name":"Gate 15",
    "desc":""
   },
+  {"id":"BG1",
+   "categoryId":"d21e",
+   "name":"Bagasi 1",
+   "desc":""
+  },
+  {"id":"BG2",
+   "categoryId":"d21e",
+   "name":"Bagasi 2",
+   "desc":""
+  },
+  {"id":"BG3",
+   "categoryId":"d21e",
+   "name":"Bagasi 3",
+   "desc":""
+  },
+  {"id":"BG4",
+   "categoryId":"d21e",
+   "name":"Bagasi 4",
+   "desc":""
+  },
   {"id":"FB1",
    "categoryId":"52f1",
    "name":"Warkop Sedati",
@@ -468,6 +488,11 @@
 "name":"Bagage Solution",
 "desc":""
 },
+{"id":"ABS",
+"categoryId":"16be",
+"name":"Bagage Solution Garuda",
+"desc":""
+},
 {"id":"RT01",
 "categoryId":"58a9",
 "name":"Alfa Express 1",
@@ -702,6 +727,11 @@
 {"id":"Mus3",
 "categoryId":"87b0",
 "name":"Musholla Laki-laki",
+"desc":""
+},
+{"id":"AMus",
+"categoryId":"87b0",
+"name":"Musholla 1A",
 "desc":""
 },
 {"id":"FB05",
