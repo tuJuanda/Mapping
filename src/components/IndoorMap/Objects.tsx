@@ -556,6 +556,45 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         height="14"
         onClick={handleObjectClick}
       />
+      <rect
+        id="A1" //bagasi a1
+        className={`${className} object`}
+        x="237" 
+        y="183" 
+        width="56" 
+        height="70" 
+        rx="19"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="A23" //bagasi a2 & a3
+        className={`${className} object`}
+        x="392" 
+        y="159" 
+        width="126" 
+        height="70" 
+        rx="19"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="ABS" //Baggage sollution arrival
+        className={`${className} object`}
+        x="319" 
+        y="202" 
+        width="52" 
+        height="55"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="AMus" //musholla arrival
+        className={`${className} object`}
+        x="276" 
+        y="366" 
+        width="129" 
+        height="62"
+        onClick={handleObjectClick}
+      />
+      
 
     </g>
     )}
