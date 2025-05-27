@@ -30,6 +30,7 @@ export function navigateToObject(
   selectedObjectId: string,
   navigation: NavigationContextType["navigation"],
   setNavigation: NavigationContextType["setNavigation"],
+  selectedFloor: number
 ) {
   const target = findVertexByObjectId(selectedObjectId);
   if (!target) {
@@ -114,7 +115,7 @@ export function navigateWithDelay(
 ) {
   if (index < objects.length) {
     const obj = objects[index];
-    navigateToObject(obj.name, navigation, setNavigation);
+    navigateToObject(obj.name, navigation, setNavigation, selectedFloor);
 
     setTimeout(() => {
       navigateWithDelay(

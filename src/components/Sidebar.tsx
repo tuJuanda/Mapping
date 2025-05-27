@@ -87,12 +87,6 @@ function Sidebar({ selectedFloor }: SidebarProps) {
             />
           </div>
           <div className="flex flex-col">
-<<<<<<< HEAD
-            <p className="text-2xl font-semibold text-gray-900 pl-2">PathPal</p>
-            <p className="text-sm font-semibold text-[#225EA9] pl-2">
-              Indoor-Navigation
-            </p>
-=======
             <div className="flex flex-col">
               <p className="text-2xl font-semibold text-gray-900 pl-2">
                 Tujuanda
@@ -101,7 +95,6 @@ function Sidebar({ selectedFloor }: SidebarProps) {
                 Indoor-Navigation
               </p>
             </div>
->>>>>>> 7226fbb102279bfd5dea57bb3261ad320fee09a2
           </div>
         </div>
       </header>
