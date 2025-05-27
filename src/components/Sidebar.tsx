@@ -7,7 +7,6 @@ import {
   ObjectItem,
 } from "@/utils/types";
 import { MapDataContext, NavigationContext } from "../pages/Map";
-
 import { navigateToObject } from "@/utils/navigationHelper";
 
 interface ParsedObjects {
@@ -17,13 +16,18 @@ interface ParsedObjects {
   };
 }
 
-function Sidebar() {
+interface SidebarProps {
+  selectedFloor: number;
+}
+
+function Sidebar({ selectedFloor }: SidebarProps) {
   const { navigation, setNavigation, setIsEditMode } = useContext(
     NavigationContext
   ) as NavigationContextType;
   const { objects } = useContext(MapDataContext) as MapDataContextType;
   const [parsedObjects, setParsedObjects] = useState<ParsedObjects>({});
   const [isRotating, setIsRotating] = useState(false);
+
   useEffect(() => {
     const groupedObjects = () => {
       const data: ParsedObjects = {};
@@ -47,8 +51,7 @@ function Sidebar() {
     const object = objects.find((obj) => obj.name === selectedObjectName);
     setIsEditMode(false);
     if (!object) return;
-    console.log(object);
-    navigateToObject(object.name, navigation, setNavigation);
+    navigateToObject(object.name, navigation, setNavigation, selectedFloor);
   }
 
   return (
@@ -84,14 +87,10 @@ function Sidebar() {
             />
           </div>
           <div className="flex flex-col">
-            <div className="flex flex-col">
-              <p className="text-2xl font-semibold text-gray-900 pl-2">
-                PathPal
-              </p>
-              <p className="text-sm font-semibold text-[#225EA9] pl-2">
-                Indoor-Navigation
-              </p>
-            </div>
+            <p className="text-2xl font-semibold text-gray-900 pl-2">PathPal</p>
+            <p className="text-sm font-semibold text-[#225EA9] pl-2">
+              Indoor-Navigation
+            </p>
           </div>
         </div>
       </header>
@@ -109,7 +108,7 @@ function Sidebar() {
                   </span>
                 </h2>
               </header>
-              <div className="flex flex-col ">
+              <div className="flex flex-col">
                 {parsedObjects[letter].results.map((item) => (
                   <div
                     key={item.id?.toString()}
@@ -121,7 +120,7 @@ function Sidebar() {
                       <p className="text-xs 2xl:text-sm font-semibold">
                         {item.name}
                       </p>
-                      <p className="text-xs 2xl:text-sm  text-gray-600">
+                      <p className="text-xs 2xl:text-sm text-gray-600">
                         {item.desc}
                       </p>
                     </div>
@@ -137,4 +136,5 @@ function Sidebar() {
     </aside>
   );
 }
+
 export default Sidebar;

@@ -16,6 +16,7 @@ export const NavigationContext = createContext<NavigationContextType | null>(
   null
 );
 export const MapDataContext = createContext<MapDataContextType | null>(null);
+
 function Map() {
   let [searchParams, setSearchParams] = useSearchParams();
   const defaultPosition = "L1";
@@ -26,6 +27,7 @@ function Map() {
   });
   const [isEditMode, setIsEditMode] = useState<boolean>(false);
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
+
   const navigationValue: NavigationContextType = {
     navigation,
     setNavigation,
@@ -38,19 +40,22 @@ function Map() {
   }, [navigation.start]);
 
   const mapData = useMapData();
+
   return (
     <MapDataContext.Provider value={mapData}>
       <NavigationContext.Provider value={navigationValue}>
         <div className="flex bg-gray-100 text-gray-800 relative overflow-hidden w-full h-screen">
-          {isDesktop && <Sidebar />}
+          {isDesktop && <Sidebar selectedFloor={selectedFloor} />}
           <main
             className={`flex w-full ${isDesktop && "-ml-96"} justify-center flex-grow flex-col md:p-10 p-2 transition-all duration-150 ease-in lg:ml-0`}
           >
-      <Toolbar selectedFloor={selectedFloor} setSelectedFloor={setSelectedFloor} />
-        <div className="center w-full h-full">
-        <IndoorMapWrapper selectedFloor={selectedFloor} />
-        </div>
-
+            <Toolbar
+              selectedFloor={selectedFloor}
+              setSelectedFloor={setSelectedFloor}
+            />
+            <div className="center w-full h-full">
+              <IndoorMapWrapper selectedFloor={selectedFloor} />
+            </div>
           </main>
           {navigation.end && isMobile && <MobileRouteDetails />}
         </div>

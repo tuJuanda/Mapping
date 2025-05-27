@@ -1,11 +1,12 @@
 
 
 export interface ObjectItem {
-  id: string;
+  id: number;
+  uid: string;
+  lantai: string;
   name: string;
   desc: string;
-  categoryId: string;
-  categoryName?: string;
+  gambar: string;
 }
 export interface Category {
   id: string;
@@ -32,7 +33,6 @@ export interface NavigationContextType {
 
 export interface MapDataContextType {
   objects: ObjectItem[];
-  categories: Category[];
   beacons?: Beacon[];
   refetchData: () => void;
 }
