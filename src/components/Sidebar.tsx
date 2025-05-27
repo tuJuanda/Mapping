@@ -1,4 +1,4 @@
-import logo from "../assets/img/pathpal-logo.svg";
+import logo from "../assets/img/Tujuanda-logo.svg";
 import { FiChevronRight } from "react-icons/fi";
 import { useContext, useEffect, useState } from "react";
 import {
@@ -58,7 +58,7 @@ function Sidebar({ selectedFloor }: SidebarProps) {
     <aside className="flex flex-col rounded-none w-[35rem] h-screen p-3 bg-white shadow-xl shadow-gray-200 -translate-x-full transform transition-transform duration-150 ease-in lg:translate-x-0 lg:shadow-md ">
       <header className="flex flex-col mb-4 pr-1 border-b py-2 w-full">
         <a
-          href="https://github.com/openindoormap/openindoormaps"
+          href="https://github.com/tuJuanda"
           target="_blank"
           rel="noreferrer"
           className="font-semibold text-blue-800 text-xs"
@@ -73,24 +73,35 @@ function Sidebar({ selectedFloor }: SidebarProps) {
             >
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
             </svg>
-            Check out my new project OpenIndoorMaps
+            Your journey made easier with,
           </div>
         </a>
         <div className="flex items-center flex-none mr-10">
           <div className="rounded-md w-16 h-16 p-4 bg-gray-100 center">
             <img
               src={logo}
-              alt="PathPal"
+              alt="Tujuanda"
               className={` ${isRotating ? "rotate" : ""}`}
               onClick={() => setIsRotating(true)}
               onAnimationEnd={() => setIsRotating(false)}
             />
           </div>
           <div className="flex flex-col">
+<<<<<<< HEAD
             <p className="text-2xl font-semibold text-gray-900 pl-2">PathPal</p>
             <p className="text-sm font-semibold text-[#225EA9] pl-2">
               Indoor-Navigation
             </p>
+=======
+            <div className="flex flex-col">
+              <p className="text-2xl font-semibold text-gray-900 pl-2">
+                Tujuanda
+              </p>
+              <p className="text-sm font-semibold text-[#225EA9] pl-2">
+                Indoor-Navigation
+              </p>
+            </div>
+>>>>>>> 7226fbb102279bfd5dea57bb3261ad320fee09a2
           </div>
         </div>
       </header>

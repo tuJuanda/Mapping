@@ -67,4 +67,3 @@ export interface GraphData {
   vertices: Vertex[];
   edges: Edge[];
 }
-
