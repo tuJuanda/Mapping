@@ -1,23 +1,24 @@
-// useMapData.ts
 import { useState, useEffect } from "react";
-import { getObjects } from "../services/mapServices";
 import { ObjectItem } from "@/utils/types";
 
-function useMapData() {
+function useMapData(selectedFloor: number) {
   const [objects, setObjects] = useState<ObjectItem[]>([]);
 
-  const fetchData = async () => {
+  async function fetchData() {
     try {
-      const objectsData = await getObjects();
-      setObjects(objectsData);
+      const res = await fetch(`http://localhost:8080/tenant/floor/${selectedFloor}`);
+      if (!res.ok) throw new Error("Failed to fetch data");
+      const data = await res.json();
+      setObjects(data);
     } catch (error) {
-      console.error("Error fetching objects:", error);
+      console.error(error);
+      setObjects([]); // reset on error
     }
-  };
+  }
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [selectedFloor]);
 
   return { objects, refetchData: fetchData };
 }

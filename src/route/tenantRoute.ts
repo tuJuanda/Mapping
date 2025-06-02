@@ -1,26 +1,31 @@
 // src/routes/tenantRoutes.ts
-import { Router, Request, Response } from 'express';
-import { db } from '@/lib/data'; // Pastikan ini path-nya sesuai
-import { RowDataPacket } from 'mysql2';
+import { Router, Request, Response } from "express";
+import { getDbConnection } from "@/lib/data";
+import { RowDataPacket } from "mysql2";
 
 const router = Router();
 
-// 1. Definisikan tipe data tenant dari database
 interface TenantData extends RowDataPacket {
-  id: string;       // atau number, sesuaikan dengan database
+  id: number;       // biasanya id int bukan string
   uid: string;
   nama: string;
   decs: string;
   lantai: string;
-  gambar: string;   // diasumsikan berupa string JSON array
+  gambar: string;
 }
 
-// 2. Endpoint GET tenant by ID
-router.get("/", async (req: Request, res: Response) => {
+router.get("/floor/:lantai", async (req, res) => {
   try {
-    const [rows] = await db.execute<TenantData[]>("SELECT * FROM tenant");
+    const db = await getDbConnection();
+    const lantai = req.params.lantai;
+    const [rows] = await db.execute<TenantData[]>(
+      "SELECT * FROM tenant WHERE lantai = ?",
+      [lantai]
+    );
 
+    // map seperti biasa, parsing gambar dll.
     const tenants = rows.map((data) => {
+      // parsing images
       let images: string[] = [];
       try {
         if (data.gambar && typeof data.gambar === "string") {
@@ -45,7 +50,7 @@ router.get("/", async (req: Request, res: Response) => {
 
     res.status(200).json(tenants);
   } catch (error) {
-    console.error("Failed to fetch tenants:", error);
+    console.error("Failed to fetch tenants by floor:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 });

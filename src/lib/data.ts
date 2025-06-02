@@ -1,8 +1,13 @@
-// lib/db.ts
+// lib/data.ts
 import mysql from "mysql2/promise";
 
-export const db = await mysql.createConnection({
-  host: "localhost",    // Sesuaikan
-  user: "root",         // Sesuaikan 
-  database: "db_map",   // Ini sesuai yang kamu mau
-});
+export async function getDbConnection() {
+  const connection = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "", // tambahkan ini jika password kosong
+    database: "db_map",
+  });
+  console.log("Database connected successfully");
+  return connection;
+}

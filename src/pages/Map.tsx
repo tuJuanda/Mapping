@@ -39,7 +39,7 @@ function Map() {
     setSearchParams({ position: navigation.start });
   }, [navigation.start]);
 
-  const mapData = useMapData();
+  const mapData = useMapData(selectedFloor);
 
   return (
     <MapDataContext.Provider value={mapData}>

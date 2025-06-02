@@ -1,9 +1,10 @@
+// src/services/mapServices.ts
 import { ObjectItem } from "@/utils/types";
 
 // Ambil semua tenant
 export async function getObjects(): Promise<ObjectItem[]> {
   try {
-    const response = await fetch("http://localhost:8080/tenants");
+    const response = await fetch("http://localhost:8080/tenant");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -17,7 +18,7 @@ export async function getObjects(): Promise<ObjectItem[]> {
 // Ambil tenant berdasarkan ID
 export async function getObjectById(id: string): Promise<ObjectItem> {
   try {
-    const response = await fetch(`http://localhost:8080/tenants/${id}`);
+    const response = await fetch(`http://localhost:8080/tenant/${id}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -26,4 +27,5 @@ export async function getObjectById(id: string): Promise<ObjectItem> {
     console.error(`Error fetching tenant with ID ${id}:`, error);
     throw error;
   }
+  
 }

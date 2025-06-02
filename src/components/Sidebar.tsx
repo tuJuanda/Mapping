@@ -45,7 +45,7 @@ function Sidebar({ selectedFloor }: SidebarProps) {
       setParsedObjects(data);
     };
     groupedObjects();
-  }, [objects]);
+  }, [objects, selectedFloor]);
 
   function handleObjectNavigation(selectedObjectName: string) {
     const object = objects.find((obj) => obj.name === selectedObjectName);
