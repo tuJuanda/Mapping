@@ -51,6 +51,10 @@ export function navigateToObject(
     return;
   }
 
+  if (graphInfo.floor !== selectedFloor) {
+    toast.error("Objek tidak berada di lantai yang dipilih");
+    return;
+  }
   const { graph, graphData, floor } = graphInfo;
   const shortestPath = graph.calculateShortestPath(navigation.start, target.id);
 

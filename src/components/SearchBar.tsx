@@ -22,12 +22,9 @@ function SearchBar() {
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
   const suggestionsRef = useRef<HTMLUListElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const { navigation, setNavigation } = useContext(
-    NavigationContext
-  ) as NavigationContextType;
-  const { setIsEditMode } = useContext(
-    NavigationContext
-  ) as NavigationContextType;
+  const { navigation, setNavigation, selectedFloor, setIsEditMode } = useContext(
+  NavigationContext
+) as NavigationContextType;
 
   useEffect(() => {
     setSuggestions(objects);
@@ -72,12 +69,13 @@ function SearchBar() {
       } else if (event.key === "Enter" && selectedIndex >= 0) {
         handleSuggestionClick(suggestions[selectedIndex]);
         event.preventDefault();
-        console.log(suggestions[selectedIndex].categoryName);
+        console.log(suggestions[selectedIndex].name);
 
         navigateToObject(
           suggestions[selectedIndex].name,
           navigation,
-          setNavigation
+          setNavigation,
+          selectedFloor
         );
       }
     }
@@ -121,14 +119,14 @@ function SearchBar() {
       //? To test the navigation feature
       if (inputValue === "Test") {
         const delay = 500;
-        navigationTestAll(objects, 0, delay, navigation, setNavigation);
+        navigationTestAll(objects, 0, delay, navigation, setNavigation,selectedFloor);
         return;
       } else {
         setIsInputInvalid(true);
         return;
       }
     }
-    navigateToObject(matchingObject.name, navigation, setNavigation);
+    navigateToObject(matchingObject.name, navigation, setNavigation, selectedFloor);
     setSelectedIndex(-1);
   }
 

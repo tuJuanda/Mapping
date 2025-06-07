@@ -3,10 +3,10 @@
 export interface ObjectItem {
   id: number;
   uid: string;
-  lantai: string;
+  lantai: string; 
   name: string;
   desc: string;
-  gambar: string;
+  gambar: string; 
 }
 export interface Category {
   id: string;
@@ -29,12 +29,14 @@ export interface NavigationContextType {
   setNavigation: React.Dispatch<React.SetStateAction<Navigation>>;
   isEditMode: boolean;
   setIsEditMode: React.Dispatch<React.SetStateAction<boolean>>;
+  selectedFloor: number;
 }
 
 export interface MapDataContextType {
   objects: ObjectItem[];
   beacons?: Beacon[];
   refetchData: () => void;
+  selectedFloor: number;
 }
 
 export interface AdminContextType {

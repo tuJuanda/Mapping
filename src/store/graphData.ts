@@ -578,7 +578,7 @@ export const graphData1: GraphData = {
     { id: "P129_to_P136", from: "P129", to: "P136", floor: 1 },
     { id: "P129_to_P130", from: "P129", to: "P130", floor: 1 },
     { id: "P130_to_P131", from: "P130", to: "P131", floor: 1 },
-    { id: "P130_to_P131", from: "P130", to: "Toilet23", floor: 1 },
+    { id: "P130_to_Toilet23", from: "P130", to: "Toilet23", floor: 1 },
     { id: "P131_to_P132", from: "P131", to: "P132", floor: 1 },
     { id: "P131_to_Toilet24", from: "P131", to: "Toilet24", floor: 1 },
     { id: "P132_to_P133", from: "P132", to: "P133", floor: 1 },

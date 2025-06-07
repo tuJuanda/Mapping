@@ -1,19 +1,26 @@
 import express from "express";
-import tenantRoute from "./route/tenantRoute"; // pastikan ini sesuai path-mu
+import cors from "cors";
+import tenantRoute from "./route/tenantRoute";
 
 const app = express();
 const PORT = 8080;
 
+// --- Middleware ---
+// 1. Enable CORS for all requests
+app.use(cors());
+// 2. Enable the Express app to parse JSON bodies
 app.use(express.json());
 
-// Tambahkan route root di sini:
-app.get("/", (req, res) => {
-  res.send("API is running! Use /tenant to see tenants.");
+// --- Routes ---
+// Health check route
+app.get("/", (_req, res) => {
+  res.send("API is running! Use /api/tenants/floor/:lantai to get tenant data.");
 });
 
-// Routes
-app.use("/tenant", tenantRoute); // ini menangani GET /tenant
+// Use the tenant routes with a prefix
+app.use("/api/tenants", tenantRoute);
 
+// --- Start Server ---
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server is running at http://localhost:${PORT}`);
 });

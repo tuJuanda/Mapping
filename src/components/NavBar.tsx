@@ -1,4 +1,4 @@
-import { AdminContext } from "@/App";
+import { AdminContext } from "@/App.tsx";
 import { AdminContextType } from "@/utils/types";
 import { useContext } from "react";
 import { FaChevronDown, FaMapMarkedAlt } from "react-icons/fa";

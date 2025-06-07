@@ -1,58 +1,46 @@
-// src/routes/tenantRoutes.ts
-import { Router, Request, Response } from "express";
 import { getDbConnection } from "@/lib/data";
+import { Request, Response, Router, RequestHandler } from "express";
 import { RowDataPacket } from "mysql2";
 
-const router = Router();
-
+// Define an interface for the data shape from the database
 interface TenantData extends RowDataPacket {
-  id: number;       // biasanya id int bukan string
+  id: number;
   uid: string;
-  nama: string;
-  decs: string;
-  lantai: string;
+  name: string;
+  desc: string;
+  floor: string;
   gambar: string;
 }
 
-router.get("/floor/:lantai", async (req, res) => {
+// Explicitly type the router
+const router: Router = Router();
+
+// Define the handler function with a clear type
+const getTenantsByFloor: RequestHandler = async (req: Request, res: Response) => {
   try {
     const db = await getDbConnection();
-    const lantai = req.params.lantai;
+    const { lantai } = req.params;
+
+    if (!lantai) {
+      // FIX: Removed the 'return' keyword from the line below.
+      res.status(400).json({ message: "Missing floor parameter" });
+      return; // Use a standalone return to exit the function.
+    }
+
+    // Use SQL aliases (e.g., nama AS name) to match the frontend's expected field names
     const [rows] = await db.execute<TenantData[]>(
-      "SELECT * FROM tenant WHERE lantai = ?",
+      "SELECT id, uid, nama AS name, decs AS `desc`, lantai AS floor, gambar FROM tenant WHERE lantai = ?",
       [lantai]
     );
 
-    // map seperti biasa, parsing gambar dll.
-    const tenants = rows.map((data) => {
-      // parsing images
-      let images: string[] = [];
-      try {
-        if (data.gambar && typeof data.gambar === "string") {
-          const parsed = JSON.parse(data.gambar);
-          if (Array.isArray(parsed) && parsed.every((item) => typeof item === "string")) {
-            images = parsed;
-          }
-        }
-      } catch (err) {
-        console.error("Failed to parse gambar JSON:", err);
-      }
-
-      return {
-        id: data.id,
-        uid: data.uid,
-        name: data.nama,
-        desc: data.decs,
-        floor: data.lantai,
-        images,
-      };
-    });
-
-    res.status(200).json(tenants);
+    res.status(200).json(rows);
   } catch (error) {
     console.error("Failed to fetch tenants by floor:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
-});
+};
+
+// Apply the handler to the route
+router.get("/floor/:lantai", getTenantsByFloor);
 
 export default router;
