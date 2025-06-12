@@ -1,4 +1,4 @@
-import { getDbConnection } from "@/lib/data";
+import { getDbConnection } from "@/lib/data"; // UBAH: Menggunakan named import { getDbConnection }
 import { Request, Response, Router, RequestHandler } from "express";
 import { RowDataPacket } from "mysql2";
 
@@ -18,16 +18,16 @@ const router: Router = Router();
 // Define the handler function with a clear type
 const getTenantsByFloor: RequestHandler = async (req: Request, res: Response) => {
   try {
+    // UBAH: Panggil fungsi getDbConnection() untuk mendapatkan koneksi
     const db = await getDbConnection();
     const { lantai } = req.params;
 
     if (!lantai) {
-      // FIX: Removed the 'return' keyword from the line below.
       res.status(400).json({ message: "Missing floor parameter" });
-      return; // Use a standalone return to exit the function.
+      return;
     }
 
-    // Use SQL aliases (e.g., nama AS name) to match the frontend's expected field names
+    // Gunakan SQL aliases (e.g., nama AS name) untuk cocok dengan nama field di frontend
     const [rows] = await db.execute<TenantData[]>(
       "SELECT id, uid, nama AS name, decs AS `desc`, lantai AS floor, gambar FROM tenant WHERE lantai = ?",
       [lantai]

@@ -1,7 +1,7 @@
 interface ObjectsProps {
   handleObjectClick: (e: React.MouseEvent<SVGPathElement>) => void;
   className?: string;
-  selectedFloor: number; // 👈 Tambahkan ini
+  selectedFloor: number; 
 }
 
 function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) {

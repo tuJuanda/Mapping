@@ -499,7 +499,7 @@ export const graphData1: GraphData = {
     { id: "FB19", objectName: "Expat", cx: 664.929, cy: 480.811 },
     { id: "RT04", objectName: "Sandang Pangan", cx: 803.929, cy: 480.811 },
     { id: "UM01", objectName: "Titian Rasa", cx: 882.929, cy: 480.811 },
-    { id: "FB18", objectName: "Roti O-1", cx: 930.929, cy: 480.811 },
+    { id: "FB18", objectName: "Roti O - 1", cx: 930.929, cy: 480.811 },
     { id: "FB17", objectName: "Kedai MJ", cx: 995.929, cy: 480.811 },
     { id: "RT03", objectName: "Alfa Express 2", cx: 1083.929, cy: 480.811 },
     { id: "FB14A", objectName: "Le Petit Jemma", cx: 1125.929, cy: 480.811 },
