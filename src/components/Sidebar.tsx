@@ -1,4 +1,4 @@
-import logo from "../assets/img/Tujuanda-logo.svg";
+import logo from "../assets/img/Tujuanda-logo.png";
 import { FiChevronRight } from "react-icons/fi";
 import { useContext, useEffect, useState } from "react";
 import {
@@ -77,7 +77,7 @@ function Sidebar({ selectedFloor }: SidebarProps) {
           </div>
         </a>
         <div className="flex items-center flex-none mr-10">
-          <div className="rounded-md w-16 h-16 p-4 bg-gray-100 center">
+          <div className="rounded-md w-16 h-14 p-1 bg-gray-100 center">
             <img
               src={logo}
               alt="Tujuanda"

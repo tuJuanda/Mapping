@@ -1,10 +1,15 @@
+// src/components/DesktopRouteDetails.tsx
 import { useRouteDetails } from "@/hooks/useRouteDetails";
 import { FaX } from "react-icons/fa6";
 import { TbRoute } from "react-icons/tb";
+import { NavigationContext } from "@/pages/Map"; // Import NavigationContext
+import { useContext } from "react"; // Import useContext
+import { NavigationContextType } from "@/utils/types"; // Import NavigationContextType
 
 function DesktopRouteDetails() {
+  const { selectedFloor } = useContext(NavigationContext) as NavigationContextType; // <-- Dapatkan selectedFloor dari context
   const { object, rightRouteLength, walkingTime, handleLeave } =
-    useRouteDetails();
+    useRouteDetails(selectedFloor); // <-- Lewatkan selectedFloor ke hook
 
   return (
     <div className="md:w-fit md:visible invisible hidden md:flex flex-row pl-6">

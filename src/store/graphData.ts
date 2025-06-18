@@ -534,7 +534,7 @@ export const graphData1: GraphData = {
     { id: "FB03", objectName: "Roti O Coffee", cx: 2528.929, cy: 430.811 },
     { id: "Toilet13", objectName: "Toilet-13", cx: 2627.929, cy: 430.811 },
     { id: "EP01", objectName: "Timnas Indonesia", cx: 2627.929, cy: 480.811 },
-    { id: "SV10", objectName: "BCA", cx: 2670.929, cy: 527.811 },
+    { id: "SV10", objectName: "Mandiri", cx: 2670.929, cy: 527.811 },
     { id: "SV09", objectName: "Bank Jatim", cx: 2745.929, cy: 527.811 },
     { id: "FB02", objectName: "Bakmi Gocit", cx: 2817.929, cy: 480.811 },
     { id: "FB01", objectName: "A & w 2", cx: 2883.929, cy: 453.811 },
@@ -731,7 +731,7 @@ export const graphData1: GraphData = {
     { id: "P114_to_Toilet16", from: "P114", to: "Toilet16", floor: 1 },
     { id: "P113_to_P140", from: "P113", to: "P140", floor: 1 },
     { id: "P140_to_Toilet18", from: "P140", to: "Toilet18", floor: 1 },
-    { id: "P125_to_Toilet17", from: "P125", to: "Toilet17", floor: 1 },
+    { id: "P125_to_Toilet17", from: "P125", to: "Toilet17", floor: 1 }, //DMN P125
     { id: "P113_to_P115", from: "P113", to: "P115", floor: 1 },
     { id: "P117_to_P118", from: "P117", to: "P118", floor: 1 },  
     { id: "P117_to_P114", from: "P117", to: "P114", floor: 1 }, 

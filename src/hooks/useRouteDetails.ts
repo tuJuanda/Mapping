@@ -7,7 +7,8 @@ import {
 } from "@/utils/types";
 import { resetEdges } from "@/utils/navigationHelper";
 
-export function useRouteDetails() {
+// Tambahkan selectedFloor sebagai parameter
+export function useRouteDetails(selectedFloor: number) { // <-- Tambahkan parameter ini
   const { objects } = useContext(MapDataContext) as MapDataContextType;
   const { navigation, setNavigation } = useContext(
     NavigationContext
@@ -34,12 +35,12 @@ export function useRouteDetails() {
     };
 
     const calculateRouteDetails = () => {
-      const navigationRoutePath = document.getElementById(
-        "navigation-route"
-      ) as SVGPathElement | null;
+      // Gunakan ID rute yang benar sesuai lantai
+      const pathId = `navigation-route-${selectedFloor}`; // <-- Ubah baris ini
+      const navigationRoutePath = document.getElementById(pathId) as SVGPathElement | null; // <-- Ubah baris ini
       const routeLength = navigationRoutePath?.getTotalLength() || 0;
-      const mapRatio = 6.40; // fictional ratio
-      const walkingSpeed = 1.4; // m/s
+      const mapRatio = 4.57; // fictional ratio
+      const walkingSpeed = 0.94; // m/s
       const rightRouteLength = Math.round((routeLength / mapRatio) * 10) / 10;
       const walkingTime = Math.round(rightRouteLength / walkingSpeed);
 
@@ -48,7 +49,7 @@ export function useRouteDetails() {
 
     fetchObject();
     calculateRouteDetails();
-  }, [navigation.end]);
+  }, [navigation.end, selectedFloor]); // <-- Tambahkan selectedFloor ke dependency array useEffect
 
   function handleLeave() {
     resetEdges();

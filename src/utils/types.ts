@@ -29,7 +29,8 @@ export interface NavigationContextType {
   setNavigation: React.Dispatch<React.SetStateAction<Navigation>>;
   isEditMode: boolean;
   setIsEditMode: React.Dispatch<React.SetStateAction<boolean>>;
-  selectedFloor: number;
+  selectedFloor: number; // Ini yang ditambahkan
+  setSelectedFloor: React.Dispatch<React.SetStateAction<number>>; // Ini yang ditambahkan
 }
 
 export interface MapDataContextType {
