@@ -13,6 +13,7 @@ import {
   NavigationContextType,
 } from "../utils/types";
 import { resetEdges } from "@/utils/navigationHelper";
+import Legend from "@/components/Legend"; // 1. Impor komponen Legend
 
 export const NavigationContext = createContext<NavigationContextType | null>(
   null
@@ -48,7 +49,7 @@ function Map() {
   // 4. Update the start position when the floor is changed via the dropdown.
   //    This also clears any existing route.
   useEffect(() => {
-    const newStartPosition = selectedFloor === 1 ? "P3" : "L1";
+    const newStartPosition = selectedFloor === 1 ? "P3" : "L5";
     setNavigation({ start: newStartPosition, end: "" });
     resetEdges(); // Clear any drawn navigation paths
   }, [selectedFloor]);
@@ -92,6 +93,7 @@ function Map() {
             </div>
           </main>
           {navigation.end && isMobile && <MobileRouteDetails />}
+          {isDesktop && <Legend />} {/* 2. Tambahkan komponen Legend di sini */}
         </div>
       </NavigationContext.Provider>
     </MapDataContext.Provider>

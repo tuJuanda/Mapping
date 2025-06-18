@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"; // 1. Import useEffect
+import React, { useContext, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { MapDataContext, NavigationContext } from "../pages/Map";
@@ -15,60 +15,22 @@ import { navigateToObject } from "@/utils/navigationHelper";
 import { toast } from "react-toastify";
 import { graphData1, graphData2 } from "@/store/graphData";
 
-// 2. Definisikan tipe untuk state posisi logo yang akan dihitung
-type LogoPosition = { cx: number; cy: number };
-type LogoPositionsMap = { [uid: string]: LogoPosition };
-
 function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [object, setObject] = useState<ObjectItem>({} as ObjectItem);
+  
+  // --- DIHAPUS --- State untuk hover tidak lagi diperlukan
+  // const [hoveredObjectData, setHoveredObjectData] = useState(...);
+
   const positionRadius = isMobile ? 10 : 5;
   const { navigation, setNavigation, isEditMode, setIsEditMode } = useContext(
     NavigationContext
   ) as NavigationContextType;
   const { objects } = useContext(MapDataContext) as MapDataContextType;
+
   const graphData = selectedFloor === 1 ? graphData1 : graphData2;
 
-  // 3. State baru untuk menyimpan hasil kalkulasi posisi logo
-  const [logoPositions, setLogoPositions] = useState<LogoPositionsMap>({});
-
-  // 4. useEffect untuk menghitung posisi secara otomatis setelah render
-  useEffect(() => {
-    // Jika tidak ada object, jangan lakukan apa-apa
-    if (objects.length === 0) {
-      setLogoPositions({}); // Kosongkan state jika tidak ada objek
-      return;
-    }
-
-    const newPositions: LogoPositionsMap = {};
-
-    objects.forEach(obj => {
-      // Cari elemen SVG di DOM berdasarkan uid object
-      const element = document.getElementById(obj.uid);
-
-      if (element) {
-        try {
-          // Lakukan perhitungan Bounding Box untuk mendapatkan pusat geometri
-          const bbox = (element as unknown as SVGGraphicsElement).getBBox();
-          const centerX = bbox.x + bbox.width / 2;
-          const centerY = bbox.y + bbox.height / 2;
-          
-          // Simpan hasil perhitungan
-          newPositions[obj.uid] = { cx: centerX, cy: centerY };
-        } catch (e) {
-          console.error(`Gagal menghitung BBox untuk UID: ${obj.uid}`, e);
-        }
-      }
-    });
-
-    // Update state dengan semua posisi yang baru dihitung
-    // Ini akan memicu render ulang untuk menampilkan logo
-    setLogoPositions(newPositions);
-
-    // Dependency array: Jalankan efek ini setiap kali daftar 'objects' atau 'selectedFloor' berubah
-  }, [objects, selectedFloor]);
-
-
+  // Fungsi helper untuk mengambil gambar pertama tetap kita gunakan
   const getFirstImage = (gambarData?: string): string => {
     if (!gambarData || typeof gambarData !== "string") return "";
     try {
@@ -77,6 +39,7 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
         return imageArray[0].replace(/\\/g, "/");
       }
     } catch (e) {
+      console.error("Gagal parse JSON gambar, format mungkin string biasa:", gambarData, e);
       return gambarData.replace(/\\/g, "/");
     }
     return "";
@@ -93,6 +56,10 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
     }
   }
 
+  // --- DIHAPUS --- Fungsi untuk handle mouse enter dan leave tidak diperlukan lagi
+  // function handleObjectMouseEnter(...) {}
+  // function handleObjectMouseLeave(...) {}
+
   const handlePositionClick = (e: React.MouseEvent<SVGPathElement>) => {
     if (isEditMode) {
       const vertexId = (e.target as HTMLElement).id;
@@ -105,6 +72,9 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
     setModalOpen(false);
     navigateToObject(object.name, navigation, setNavigation, selectedFloor);
   }
+  
+  // --- DIHAPUS --- Variabel untuk satu gambar hover tidak diperlukan
+  // const firstImageName = hoveredObjectData ? getFirstImage(...) : "";
 
   return (
     <div className="relative w-full h-full bg-white center">
@@ -128,6 +98,9 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
             <Objects
               selectedFloor={selectedFloor}
               handleObjectClick={handleObjectClick}
+              // --- DIHAPUS --- Props untuk hover tidak lagi dikirim
+              // handleObjectMouseEnter={handleObjectMouseEnter}
+              // handleObjectMouseLeave={handleObjectMouseLeave}
               className={isEditMode ? "" : "hover:cursor-pointer"}
             />
             <Paths selectedFloor={selectedFloor} graphData={graphData} />
@@ -143,28 +116,31 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
               navigation={navigation}
             />
             
-            {/* 5. Bagian render logo, sekarang menggunakan state 'logoPositions' */}
+            {/* --- BAGIAN BARU UNTUK MERENDER SEMUA GAMBAR --- */}
+            {/* Kita lakukan looping pada semua 'objects' yang ada */}
             {objects.map((obj) => {
+              // Cari posisi (vertex) dari object ini di graphData
+              const vertex = graphData.vertices.find(v => v.id === obj.uid);
+              // Ambil nama file gambar pertama
               const imageName = getFirstImage(obj.gambar);
-              // Ambil posisi dari state hasil kalkulasi
-              const calculatedPosition = logoPositions[obj.uid];
 
-              // Render HANYA JIKA gambar ada DAN posisi sudah berhasil dihitung
-              if (imageName && calculatedPosition) {
+              // Jika posisi dan nama gambar ditemukan, render gambarnya
+              if (vertex && imageName) {
                 return (
                   <image
-                    key={obj.uid}
+                    key={obj.uid} // Key unik untuk setiap gambar dalam loop
                     href={`http://localhost:8080/uploads/${imageName}`}
-                    x={calculatedPosition.cx - 15}
-                    y={calculatedPosition.cy - 15}
+                    x={vertex.cx - 15} // Posisi X
+                    y={vertex.cy - 15} // Posisi Y
                     width="30"
                     height="30"
-                    className="pointer-events-none"
+                    className="pointer-events-none" // Agar gambar tidak mengganggu klik
                   />
                 );
               }
-              return null;
+              return null; // Jika tidak ada gambar/posisi, jangan render apa-apa
             })}
+
           </MapBackground>
         </TransformComponent>
         <Controls />
