@@ -10,21 +10,19 @@ interface LegendItem {
 }
 
 const legendItems: LegendItem[] = [
-  // Baris Pertama
-  { type: 'box', content: '#D1D5DB', text: 'Perkantoran' }, // Warna abu-abu (gray-300)
-  { type: 'image', content: '/icons/fnb.png', text: 'Food & Beverage' },
-  { type: 'image', content: '/icons/retail.png', text: 'Retail' },
-  { type: 'image', content: '/icons/prayer.png', text: 'Prayer Room' },
-  { type: 'image', content: '/icons/toilet.png', text: 'Toilet' },
-  { type: 'image', content: '/icons/gate.png', text: 'Gate' },
+  { type: 'image', content: '/media/Boardingpass.png', text: 'Boarding Pass Check' },
+  { type: 'image', content: '/media/Checkin.png', text: 'Check-in Counter' },
+  { type: 'image', content: '/media/Selfcheckin.png', text: 'Self Check-in' },
+  { type: 'image', content: '/media/baggage claim.png', text: 'Baggage Claim' },
+  { type: 'image', content: '/media/Xray.png', text: 'Body Check' },
+  { type: 'image', content: '/media/Emergencystair.png', text: 'Emergency Stair' },
 
-  // Baris Kedua (bisa diisi sesuai kebutuhan)
-  { type: 'image', content: '/icons/layanan.png', text: 'Layanan Bandara' },
-  { type: 'box', content: '#FBBF24', text: 'Contoh 1' }, // Contoh warna kuning
-  { type: 'image', content: '/icons/placeholder.png', text: 'Contoh 2' },
-  { type: 'image', content: '/icons/placeholder.png', text: 'Contoh 3' },
-  { type: 'image', content: '/icons/placeholder.png', text: 'Contoh 4' },
-  { type: 'image', content: '/icons/placeholder.png', text: 'Contoh 5' },
+  { type: 'image', content: '/media/Toilet.png', text: 'Toilet' },
+  { type: 'image', content: '/media/Musholla.png', text: 'Musholla' },
+  { type: 'image', content: '/media/Nursery.png', text: 'Nursery' },
+  { type: 'image', content: '/media/Eskalator.png', text: 'Eskalator' },
+  { type: 'box', content: '#000000', text: 'Gate' }, 
+  { type: 'box', content: '#878787', text: 'Perkantoran' }, 
 ];
 
 const Legend: React.FC = () => {
