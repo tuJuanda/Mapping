@@ -126,17 +126,22 @@ function IndoorMapWrapper({ selectedFloor }: { selectedFloor: number }) {
 
               // Jika posisi dan nama gambar ditemukan, render gambarnya
               if (vertex && imageName) {
-                return (
-                  <image
-                    key={obj.uid} // Key unik untuk setiap gambar dalam loop
-                    href={`http://localhost:8080/uploads/${imageName}`}
-                    x={vertex.cx - 15} // Posisi X
-                    y={vertex.cy - 15} // Posisi Y
-                    width="30"
-                    height="30"
-                    className="pointer-events-none" // Agar gambar tidak mengganggu klik
-                  />
-                );
+                if (typeof vertex.objectCX === 'number' && typeof vertex.objectCY === 'number') {
+                  return (
+                    <image
+                      key={obj.uid}
+                      href={`http://localhost:8080/uploads/${imageName}`}
+                      
+                      // Sekarang ini aman dan tidak akan error (merah) lagi
+                      x={vertex.objectCX - 16}
+                      y={vertex.objectCY - 17}
+                      
+                      width="30"
+                      height="30"
+                      className="pointer-events-none"
+                    />
+                  );
+                }
               }
               return null; // Jika tidak ada gambar/posisi, jangan render apa-apa
             })}
