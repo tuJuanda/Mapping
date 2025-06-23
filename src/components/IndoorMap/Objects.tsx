@@ -520,6 +520,33 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
+        id="FB2A" //killiney baru
+        className={`${className} object`}
+        x="2638" 
+        y="399" 
+        width="65" 
+        height="28"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB7A" //bakso benhil
+        className={`${className} object`}
+        x="2084" 
+        y="477" 
+        width="33" 
+        height="46"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="CSW" //cs air mancur
+        className={`${className} object`}
+        x="1938" 
+        y="483" 
+        width="35" 
+        height="41"
+        onClick={handleObjectClick}
+      />
+      <rect
         id="ATM"
         className={`${className} object`}
         x="2119"
@@ -701,7 +728,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       />
       
       <rect
-        id="RT1"
+        id="RT16A"
         className={`${className} object`}
         x="2706.66"
         y="382.372"
@@ -801,7 +828,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT3"
+        id="RT4A"
         className={`${className} object`}
         x="2318.66"
         y="388.372"
@@ -831,7 +858,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT4A"
+        id="RT4"
         className={`${className} object`}
         x="2072.66"
         y="374.372"
@@ -850,7 +877,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT1"
+        id="RT13"
         className={`${className} object`}
         x="1923.5" 
         y="389.5" 
@@ -930,7 +957,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT7" //periplus
+        id="EP1" //periplus
         className={`${className} object`}
         x="713.478" 
         y="219.5" 
@@ -1081,7 +1108,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="RT13"
+        id="RT1"
         className={`${className} object`}
         x="833.191"
         y="386.372"
