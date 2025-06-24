@@ -113,12 +113,12 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         d="M651.638 107.977V113.857H637.089H622.541V107.977V102.096H637.089H651.638V107.977Z"
         onClick={handleObjectClick}
       />
-      <path
+      {/* <path
         id="Toilet7"
         className={`${className} object`}
         d="M685.21 107.977V115.327H671.781H658.352V107.977V100.626H671.781H685.21V107.977Z"
         onClick={handleObjectClick}
-      />
+      /> */}
       <path
         id="RT04" //Sandang Pangan
         className={`${className} object`}
@@ -162,7 +162,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <path
-        id="Toilet15"
+        id="Toilet6"
         className={`${className} object`}
         d="M1172.02 418.168V425.519H1158.6H1145.17V418.168V410.818H1158.6H1172.02V418.168Z"
         onClick={handleObjectClick}
@@ -191,7 +191,12 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         d="M1335.12 503.37V523.121H1288.64H1242.16L1257.17 503.37L1272.19 483.619H1303.66H1335.12V503.37Z"
         onClick={handleObjectClick}
       />
-     
+      <path
+        id="Toilet7"
+        className={`${className} object`}
+        d="M1367.57 503.89V522.081H1354.11H1340.66V503.89V485.698H1354.11H1367.57V503.89Z"
+        onClick={handleObjectClick}
+      />
       <path
         id="FB14" //Boga
         className={`${className} object`}
@@ -204,7 +209,13 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         d="M1464.9 503.89V522.081H1451.45H1437.99V503.89V485.698H1451.45H1464.9V503.89Z"
         onClick={handleObjectClick}
       />
-      
+      <path
+        id="Toilet8"
+        className={`${className} object`}
+        d="M1386.89 379.946V391.706H1379.62H1372.35V379.946V368.185H1379.62H1386.89V379.946Z"
+        onClick={handleObjectClick}
+      />
+
       <path
         id="Toilet10"
         className={`${className} object`}
@@ -434,12 +445,6 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <path
-        id="EP01"//timnas
-        className={`${className} object`}
-        d="M2636.07 503.37V523.121H2631.32H2626.58V503.37V483.619H2631.32H2636.07V503.37Z"  
-        onClick={handleObjectClick}
-      />
-      <path
         id="SV10"//bca
         className={`${className} object`}
         d="M2700.96 503.37V523.121H2670.49H2640.03V503.37V483.619H2670.49H2700.96V503.37Z"  
@@ -506,6 +511,15 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         y="313"
         width="18"
         height="50"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="EP01" //timnas
+        className={`${className} object`}
+        x="2600" 
+        y="477" 
+        width="33" 
+        height="46"
         onClick={handleObjectClick}
       />
       <rect
@@ -617,7 +631,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
     {selectedFloor === 2 && (
      <g id="Objects2">
       <path
-        id="FB20"
+        id="FB20B"
         className={`${className} object`}
         d="M32.1914 311.872L77.1914 311.872L77.1914 342.372L4.19141 342.372L4.19141 271.372L31.6914 271.372L31.6914 311.372L31.6914 311.872L32.1914 311.872Z"
         onClick={handleObjectClick}
@@ -635,14 +649,14 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <path
-        id="FB18"
+        id="FB18B"
         className={`${className} object`}
         d="M599.691 378.372L599.691 396.372L569.191 396.372L569.191 343.372L668.191 343.372L668.191 377.872L600.191 377.872L599.691 377.872L599.691 378.372Z"
         onClick={handleObjectClick}
       />
       
       <path
-        id="FB17"
+        id="FB17B"
         className={`${className} object`}
         d="M864.691 371.372L864.191 371.372L864.191 371.872L864.191 386.372L834.191 386.372L834.191 343.372L890.191 343.372L890.191 371.372L864.691 371.372Z"
         onClick={handleObjectClick}
@@ -657,7 +671,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
       
       
       <path
-        id="FB15"
+        id="FB15B"
         className={`${className} object`}
         d="M1617.19 472.372L1514.19 472.372L1514.19 365.782L1617.19 351.447L1617.19 472.372Z"
         onClick={handleObjectClick}
@@ -809,7 +823,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="FB9A"
+        id="FB9AA"
         className={`${className} object`}
         x="2353.66"
         y="388.372"
@@ -869,7 +883,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="FB10"
+        id="FB10B"
         className={`${className} object`}
         x="1980.66"
         y="361.372"
@@ -1008,7 +1022,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="FB13"
+        id="FB21"
         className={`${className} object`}
         x="1679.66"
         y="386.372"
@@ -1018,7 +1032,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="FB14"
+        id="FB14B"
         className={`${className} object`}
         x="1647.66"
         y="386.372"
@@ -1145,7 +1159,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="FB16"
+        id="FB16B"
         className={`${className} object`}
         x="795.191"
         y="386.372"
@@ -1165,7 +1179,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <rect
-        id="FB19"
+        id="FB19B"
         className={`${className} object`}
         x="568.191"
         y="396.372"

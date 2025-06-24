@@ -27,8 +27,8 @@ function Paths({ selectedFloor, graphData }: PathsProps) {
               id={edge.id}
               className="edge-path"
               d={pathD}
-             // stroke="black"
-             // fill="none" 
+              stroke="black"
+              fill="none" 
             /> 
           );
         })}
