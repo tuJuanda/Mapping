@@ -191,12 +191,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         d="M1335.12 503.37V523.121H1288.64H1242.16L1257.17 503.37L1272.19 483.619H1303.66H1335.12V503.37Z"
         onClick={handleObjectClick}
       />
-      <path
-        id="Toilet8"
-        className={`${className} object`}
-        d="M1367.57 503.89V522.081H1354.11H1340.66V503.89V485.698H1354.11H1367.57V503.89Z"
-        onClick={handleObjectClick}
-      />
+     
       <path
         id="FB14" //Boga
         className={`${className} object`}
@@ -207,12 +202,6 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         id="Toilet9"
         className={`${className} object`}
         d="M1464.9 503.89V522.081H1451.45H1437.99V503.89V485.698H1451.45H1464.9V503.89Z"
-        onClick={handleObjectClick}
-      />
-      <path
-        id="Toilet8"
-        className={`${className} object`}
-        d="M1386.89 379.946V391.706H1379.62H1372.35V379.946V368.185H1379.62H1386.89V379.946Z"
         onClick={handleObjectClick}
       />
       
@@ -706,6 +695,18 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         id="FB23" //rotio baru dpn majapahit
         className={`${className} object`}
         x="2752" y="192" width="52" height="22" rx="2"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="FB24" //Bakso Pak djo in in active
+        className={`${className} object`}
+        x="3000" y="192" width="52" height="22" rx="2"
+        onClick={handleObjectClick}
+      />
+      <rect
+        id="T8" //toilet in active
+        className={`${className} object`}
+        x="3080" y="192" width="52" height="22" rx="2"
         onClick={handleObjectClick}
       />
       <rect
