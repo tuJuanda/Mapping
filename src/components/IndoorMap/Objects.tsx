@@ -229,7 +229,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <path
-        id="FB16" //Circle K
+        id="RT2A" //Circle K
         className={`${className} object`}
         d="M1466.35 382.886V399.057H1474.19H1482.02V412.288V425.519H1460.37H1438.71L1437.98 409.854C1437.58 401.238 1437.25 388.007 1437.25 380.452V366.715H1451.8H1466.35V382.886Z"
         onClick={handleObjectClick}
@@ -283,7 +283,7 @@ function Objects({ handleObjectClick, className, selectedFloor }: ObjectsProps) 
         onClick={handleObjectClick}
       />
       <path
-        id="RT2A" //Circle K
+        id="FB16" //Circle K
         className={`${className} object`}
         d="M1727 417.5V426H1712H1697V417.5V409H1712H1727V417.5Z" 
         onClick={handleObjectClick}
