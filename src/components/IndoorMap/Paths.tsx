@@ -22,14 +22,14 @@ function Paths({ selectedFloor, graphData }: PathsProps) {
 
           const pathD = `M${fromVertex.cx} ${fromVertex.cy} L${toVertex.cx} ${toVertex.cy}`;
           return (
-            <path
+           <path
               key={edge.id}
               id={edge.id}
               className="edge-path"
               d={pathD}
-              stroke="black"
-              fill="none"
-            />
+             // stroke="black"
+             // fill="none" 
+            /> 
           );
         })}
 
