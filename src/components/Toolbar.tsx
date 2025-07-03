@@ -28,6 +28,14 @@ function Toolbar({ selectedFloor, setSelectedFloor }: ToolbarProps) {
         selectedFloor={selectedFloor}
         onChange={handleFloorChange}
       />
+      <div className="flex-grow" />
+
+      {/* 3. Ikon kompas sekarang akan berada di paling kanan */}
+      <img 
+        src="src\assets\img\compass.svg" 
+        alt="Ikon Kompas"
+        className="h-19 w-15 transition-transform "
+      />
     </div>
   );
 }

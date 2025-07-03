@@ -42,7 +42,9 @@ export function useRouteDetails(selectedFloor: number) { // <-- Tambahkan parame
       const mapRatio = 4.57; // fictional ratio
       const walkingSpeed = 0.94; // m/s
       const rightRouteLength = Math.round((routeLength / mapRatio) * 10) / 10;
-      const walkingTime = Math.round(rightRouteLength / walkingSpeed);
+      const walkingTimeInMinutes = (rightRouteLength / walkingSpeed) / 60;
+      const walkingTime = parseFloat(walkingTimeInMinutes.toFixed(1));
+
 
       setRouteDetails({ routeLength, walkingTime, rightRouteLength });
     };
