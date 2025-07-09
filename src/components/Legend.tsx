@@ -21,7 +21,7 @@ const legendItems: LegendItem[] = [
   { type: 'image', content: '/media/Musholla.png', text: 'Musholla' },
   { type: 'image', content: '/media/Nursery.png', text: 'Nursery' },
   { type: 'image', content: '/media/Eskalator.png', text: 'Eskalator' },
-  { type: 'box', content: '#000000', text: 'Gate' }, 
+  { type: 'box', content: '#FFB8B8', text: 'Waiting Room' }, 
   { type: 'box', content: '#878787', text: 'Perkantoran' }, 
 ];
 
