@@ -21,8 +21,12 @@ const legendItems: LegendItem[] = [
   { type: 'image', content: '/media/Musholla.png', text: 'Musholla' },
   { type: 'image', content: '/media/Nursery.png', text: 'Nursery' },
   { type: 'image', content: '/media/Eskalator.png', text: 'Eskalator' },
-  { type: 'box', content: '#FFB8B8', text: 'Waiting Room' }, 
+  { type: 'box', content: '#C9BBB4', text: 'Waiting Room' }, 
   { type: 'box', content: '#878787', text: 'Perkantoran' }, 
+  { type: 'box', content: '#D89A0B', text: 'Food & Beverage' }, 
+  { type: 'box', content: '#0F9A55', text: 'Retail' }, 
+  { type: 'box', content: '#4CFF00', text: 'Lounge' }, 
+  { type: 'box', content: '#DD0FC9', text: 'Service' }, 
 ];
 
 const Legend: React.FC = () => {

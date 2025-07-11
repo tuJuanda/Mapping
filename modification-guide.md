@@ -90,6 +90,7 @@ Menambahkan tenant baru melibatkan pembuatan data di database, penambahan elemen
 1.  **Tambah Data di Database**: Tambahkan data tenant baru (uid, nama, lantai, gambar, dll.) melalui website admin.
 
 2.  **Gambar Objek di Peta (`Objects.tsx`)**:
+    * Ubah di Figma dan convert to SVG
     * Buka file SVG peta asli (misal: `src/assets/img/T1-LT1.svg`) di editor teks atau Inkscape.
     * Untuk mempermudah, gambar bentuk (persegi, poligon) untuk tenant baru dengan warna yang mencolok (misal: `#FF00FF`).
     * Simpan file, lalu buka file SVG tersebut dengan editor teks. Cari kode warna yang Anda gunakan (`#FF00FF`).

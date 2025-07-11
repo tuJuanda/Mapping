@@ -49,7 +49,7 @@ function Map() {
   // 4. Update the start position when the floor is changed via the dropdown.
   //    This also clears any existing route.
   useEffect(() => {
-    const newStartPosition = selectedFloor === 1 ? "P3" : "L5";
+    const newStartPosition = selectedFloor === 1 ? "P3" : "L5"; //Change default starting poin
     setNavigation({ start: newStartPosition, end: "" });
     resetEdges(); // Clear any drawn navigation paths
   }, [selectedFloor]);
