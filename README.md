@@ -1,138 +1,187 @@
-# TuJuanda: Navigasi Indoor Terminal 1 Bandara Juanda
+# Developer Modification Guide
 
-**TuJuanda** adalah aplikasi web inovatif yang dirancang untuk merevolusi cara Anda bernavigasi di dalam Terminal 1 Bandara Internasional Juanda, Surabaya. Menggunakan peta interaktif dan algoritma pencarian rute yang efisien, aplikasi ini menawarkan solusi intuitif untuk menjelajahi ruang dalam ruangan yang kompleks.
-<br>
-
-## Daftar Isi:
-
-- [TuJuanda: Navigasi Indoor Terminal 1 Bandara Juanda](#tujuanda-navigasi-indoor-terminal-1-bandara-juanda)
-  - [Daftar Isi:](#daftar-isi)
-  - [Tentang Aplikasi](#tentang-aplikasi)
-  - [Tangkapan Layar](#tangkapan-layar)
-  - [Fitur Utama](#fitur-utama)
-  - [Teknologi yang Digunakan](#teknologi-yang-digunakan)
-  - [Panduan Instalasi Lokal](#panduan-instalasi-lokal)
-  - [Wawasan Teknis](#wawasan-teknis)
-    - [Teknologi Peta](#teknologi-peta)
-    - [Pencarian Rute (Pathfinding)](#pencarian-rute-pathfinding)
-    - [Kustomisasi Peta](#kustomisasi-peta)
-  - [Lisensi](#lisensi)
+Panduan ini menjelaskan cara melakukan modifikasi umum pada proyek Indoor-Navigation TuJuanda.
 
 ---
 
-## Tentang Aplikasi
+## 1. Mengubah Nama Tenant
 
-Proyek ini adalah sistem navigasi dan pencarian rute dalam ruangan (*wayfinding*) yang difokuskan pada denah **Terminal 1 Bandara Internasional Juanda**. Aplikasi ini menampilkan peta SVG interaktif dan memanfaatkan **Algoritma Dijkstra** untuk menghitung rute terpendek menuju berbagai tenant dan fasilitas (Points of Interest - POI) yang ada di dalam terminal.
+Nama tenant digunakan untuk pencarian, navigasi, dan tampilan di sidebar. Perubahan harus konsisten di beberapa tempat.
 
----
+**Langkah-langkah:**
 
-## Struktur Proyek
+1.  **Ubah di Database**: Langkah paling penting adalah mengubah nama tenant di database utama, yang kemungkinan besar dikelola melalui website admin TuJuanda. Ini adalah sumber data utama yang diambil oleh aplikasi.
 
-> [!IMPORTANT]
-> Proyek ini terdiri dari **dua repositori terpisah** yang bekerja bersamaan:
-> 1.  `tujuanda-map` (proyek ini): Bertindak sebagai **frontend** yang menampilkan peta dan navigasi kepada pengguna.
-> 2.  `admin-tujuanda`: Bertindak sebagai **backend** dan panel admin untuk mengelola data tenant, fasilitas, dan gambar yang disimpan di database.
->
-> **Keduanya harus di-clone dalam satu folder induk yang sama agar dapat berfungsi dengan baik.**
+2.  **Update `graphData.ts`**: Untuk memastikan fungsi navigasi dan pencarian tetap bekerja, Anda **wajib** memperbarui nama di file `src/store/graphData.ts`.
+    * Buka file `src/store/graphData.ts`.
+    * Cari vertex yang sesuai dengan tenant yang namanya diubah.
+    * Ubah nilai properti `objectName` menjadi nama yang baru, pastikan sama persis dengan yang ada di database.
 
----
+    ```typescript
+    // src/store/graphData.ts
 
-
-## Tangkapan Layar
-
-<table style="border-radius: 10px;  border: 1px solid gray;">
-  <tr >
-    <td align="center"> <img src="media/indoor-map-details.png" alt="Tampilan Informasi Objek"/></td>
-    <td align="center"><h3>Menampilkan Informasi Tenant/Fasilitas Saat Diklik</h3></td>
-  </tr>
-    <tr>
-    <td align="center"> <img src="media/indoor-wayfinding.png" alt="Demonstrasi Rute Terpendek"/></td>
-    <td align="center"><h3>Demonstrasi Perhitungan Rute Terpendek</h3></td>
-  </tr>
-</table>
-
----
-
-## Fitur Utama
-
--   🗺️ **Peta SVG Interaktif**: Bernavigasi di dalam terminal bandara yang kompleks dengan mudah.
--   📍 **Pencarian Rute Dijkstra**: Menghitung jalur terpendek ke tujuan Anda secara akurat.
--   📱 **Desain Responsif**: Dioptimalkan untuk semua perangkat, baik desktop maupun mobile.
--   🏢 **Informasi Tenant dan Fasilitas**: Menampilkan detail nama, kategori, dan gambar untuk setiap titik penting.
--   👆 **Pinch-to-Zoom**: Memperbesar dan memperkecil peta dengan mudah menggunakan gestur sentuh.
-
----
-
-## Teknologi yang Digunakan
-
-Aplikasi ini dibangun dengan teknologi web modern untuk kecepatan, efisiensi, dan skalabilitas:
-
--   **React**
--   **Vite**
--   **TypeScript**
--   **TailwindCSS**
--   **SVG (Scalable Vector Graphics)**
--   **Algoritma Dijkstra**
-
----
-
-## Panduan Instalasi Lokal
-
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara penuh di komputer Anda.
-
-### Prasyarat
-1.  **Proyek Backend**: Pastikan Anda sudah meng-clone proyek backend **"Admin TuJuanda"**.
-2.  **Database**: Pastikan layanan database seperti **phpMyAdmin** (atau XAMPP) sudah berjalan dan database untuk proyek ini telah di-import.
-3.  **Node.js**: Proyek ini memerlukan Node.js. Jika belum terinstal, unduh dari [nodejs.org](https://nodejs.org/).
-
-### Struktur Folder
-Agar frontend dapat berkomunikasi dengan backend, keduanya harus berada dalam satu folder induk yang sama.
-/Proyek-Induk-Tujuanda/
-├── admin-tujuanda/         # Folder backend
-└── indoor-navigation/      # Folder ini (frontend)
-
-
-### Langkah-langkah
-1.  **Clone Repositori Frontend**:
-    ```bash
-    git clone [https://github.com/username/repo-name.git](https://github.com/username/repo-name.git) indoor-navigation
+    export const graphData1: GraphData = {
+      vertices: [
+        // ...
+        // Contoh sebelum diubah
+        { id: "FB11", objectName: "Java Cafe", cx: 1850.929, cy: 480.811, objectCX: 1850.621337890625, objectCY: 503.37005615234375 },
+        // Contoh sesudah diubah
+        { id: "FB11", objectName: "Kafe Java Baru", cx: 1850.929, cy: 480.811, objectCX: 1850.621337890625, objectCY: 503.37005615234375 },
+        // ...
+      ],
+      //...
+    };
     ```
 
-2.  **Install Dependensi**: Masuk ke direktori proyek frontend dan jalankan perintah:
-    ```bash
-    cd indoor-navigation
-    npm install
-    ```
-
-3.  **Jalankan Aplikasi (Frontend & Backend)**: Untuk menjalankan kedua layanan secara bersamaan, gunakan perintah:
-    ```bash
-    npm run dev:all
-    ```
-    Perintah ini akan menjalankan server backend dari `admin-tujuanda` dan server frontend dari `indoor-navigation` secara bersamaan. Buka browser dan akses `localhost:5173` (atau port lain yang ditampilkan di terminal).
+> 📝 **Catatan:** File seperti `src/components/IndoorMap/Objects.tsx` tidak perlu diubah karena ia menggunakan `id` untuk identifikasi, bukan nama tenant.
 
 ---
 
-## Wawasan Teknis
+## 2. Mengubah ID Tenant
 
-### Teknologi Peta
+ID tenant (`uid`) digunakan sebagai pengidentifikasi unik untuk elemen SVG di peta dan vertex pada graf navigasi.
 
--   **Format SVG**: Peta utama menggunakan format SVG karena fleksibilitas dan kemampuan interaktifnya, ideal untuk navigasi yang detail. Elemen di dalam SVG (seperti tenant atau fasilitas) dapat diidentifikasi dengan `id` unik.
--   **Dukungan Format Gambar**: Meskipun SVG adalah format utama, sistem ini dapat mendukung format gambar lain seperti PNG atau JPEG sebagai latar belakang peta.
+**Langkah-langkah:**
 
-### Pencarian Rute (Pathfinding)
+1.  **Ubah di Database**: Ubah `uid` tenant di database melalui admin panel.
 
--   **Definisi Rute (Edges)**: Jalur navigasi di dalam peta didefinisikan sebagai *edges* yang menghubungkan antar titik (vertices) dalam sebuah graf. Graf ini merepresentasikan semua rute yang bisa dilalui.
--   **Algoritma Dijkstra**: Aplikasi ini menggunakan implementasi Algoritma Dijkstra untuk secara akurat menghitung jalur terpendek dari satu titik ke titik lain berdasarkan graf yang telah didefinisikan di `src/store/graphData.ts`.
+2.  **Update `Objects.tsx`**: Buka file `src/components/IndoorMap/Objects.tsx` dan ubah `id` dari elemen SVG yang sesuai.
 
-### Kustomisasi Peta
+    ```typescript
+    // src/components/IndoorMap/Objects.tsx
 
--   **Alat Edit**: Developer dapat menggunakan alat editor grafis vektor seperti **Inkscape**, **Adobe Illustrator**, atau **Boxy SVG** untuk memodifikasi file SVG peta. Modifikasi ini bisa berupa pembaruan tata letak, penambahan/penghapusan tenant, atau penyesuaian jalur.
--   **Konversi ke JSX**: Untuk mengubah SVG menjadi komponen React (JSX), Anda bisa menggunakan alat seperti [Transform Tools](https://transform.tools/).
+    // Sebelum
+    <path
+        id="FB11" // ID lama
+        className={`${className} object`}
+        d="..."
+        onClick={handleObjectClick}
+    />
 
-![Contoh Edit Peta Indoor](media/map-editing-preview.png)
+    // Sesudah
+    <path
+        id="KAFE-01" // ID baru
+        className={`${className} object`}
+        d="..."
+        onClick={handleObjectClick}
+    />
+    ```
+
+3.  **Update `graphData.ts`**: Buka `src/store/graphData.ts`, cari vertex yang bersangkutan, dan ubah `id`-nya agar sesuai dengan `uid` yang baru.
+
+    ```typescript
+    // src/store/graphData.ts
+
+    // Sebelum
+    { id: "FB11", objectName: "Java Cafe", ... },
+
+    // Sesudah
+    { id: "KAFE-01", objectName: "Java Cafe", ... },
+    ```
 
 ---
 
-## Lisensi
+## 3. Menambah Lokasi Tenant Baru
 
-Proyek TuJuanda ini bersifat open-source di bawah **Lisensi MIT**. Kontribusi dan masukan sangat kami harapkan!
+Menambahkan tenant baru melibatkan pembuatan data di database, penambahan elemen visual di peta, dan pendaftaran titik baru di sistem navigasi.
+
+**Langkah-langkah:**
+
+1.  **Tambah Data di Database**: Tambahkan data tenant baru (uid, nama, lantai, gambar, dll.) melalui website admin.
+
+2.  **Gambar Objek di Peta (`Objects.tsx`)**:
+    * Buka file SVG peta asli (misal: `src/assets/img/T1-LT1.svg`) di editor teks atau Inkscape.
+    * Untuk mempermudah, gambar bentuk (persegi, poligon) untuk tenant baru dengan warna yang mencolok (misal: `#FF00FF`).
+    * Simpan file, lalu buka file SVG tersebut dengan editor teks. Cari kode warna yang Anda gunakan (`#FF00FF`).
+    * Salin data path SVG (`<path d="...">` atau `<rect ...>`).
+    * Buka `src/components/IndoorMap/Objects.tsx` dan tempelkan path tersebut di dalam grup (`<g>`) lantai yang sesuai. **Pastikan `id` elemen SVG baru sama dengan `uid` tenant baru dari database.**
+
+3.  **Update `graphData.ts`**:
+    * **Tambahkan Vertex Baru**: Di `src/store/graphData.ts`, dalam array `vertices` untuk lantai yang benar, tambahkan objek vertex baru.
+        * `id`: `uid` tenant baru.
+        * `objectName`: nama tenant baru.
+        * `cx`, `cy`: Koordinat untuk titik henti navigasi (biasanya di depan pintu).
+        * `objectCX`, `objectCY`: Koordinat titik tengah objek untuk menempatkan logo/ikon.
+    * **Tambahkan Edge Baru**: Dalam array `edges`, tambahkan satu atau lebih edge untuk menghubungkan vertex baru ini ke vertex navigasi terdekat. Ini krusial agar rute ke tenant baru dapat ditemukan.
+
+    ```typescript
+    // src/store/graphData.ts
+
+    // 1. Tambah Vertex
+    vertices: [
+        ...
+        { id: "TENANT-BARU", objectName: "Toko Baru", cx: 1300, cy: 400, objectCX: 1305, objectCY: 410 },
+    ],
+
+    // 2. Tambah Edge (hubungkan ke vertex terdekat, misal P7)
+    edges: [
+        ...
+        { id: "P7_to_TENANT-BARU", from: "P7", to: "TENANT-BARU", floor: 1 },
+    ]
+    ```
+
+---
+
+## 4. Memindahkan Lokasi Tenant
+
+Proses ini mirip dengan menambah lokasi, tetapi Anda memodifikasi data yang sudah ada.
+
+**Langkah-langkah:**
+
+1.  **Update Path di `Objects.tsx`**: Dapatkan path SVG baru dari lokasi tenant yang baru (gunakan trik warna seperti di atas) dan ganti path lama di `src/components/IndoorMap/Objects.tsx`.
+
+2.  **Update Koordinat di `graphData.ts`**:
+    * Cari vertex tenant yang pindah berdasarkan `id`-nya.
+    * Perbarui koordinat `cx`, `cy`, `objectCX`, dan `objectCY` agar sesuai dengan lokasi baru.
+
+3.  **Update Edge di `graphData.ts`**: Ini adalah bagian terpenting.
+    * Hapus semua *edge* lama yang terhubung ke vertex tenant tersebut.
+    * Tambahkan *edge* baru yang menghubungkan vertex tersebut ke titik-titik navigasi terdekat di lokasi barunya. Kegagalan pada langkah ini akan menyebabkan navigasi ke tenant tersebut rusak.
+
+---
+
+## 5. Mengubah ViewBox Peta
+
+Jika Anda mengganti file SVG peta dengan yang memiliki `viewBox` atau dimensi berbeda, beberapa penyesuaian diperlukan.
+
+**Langkah-langkah:**
+
+1.  **Update `MapBackground.tsx`**: Buka `src/components/IndoorMap/MapBackground.tsx` dan ubah properti `viewBox` pada komponen `<svg>`.
+
+2.  **Kalibrasi Ulang `mapRatio`**: Perubahan `viewBox` akan mengubah skala peta. Untuk menjaga akurasi perhitungan jarak (meter) dan estimasi waktu jalan kaki, Anda harus mengkalibrasi ulang rasio di `src/hooks/useRouteDetails.ts`.
+    * Ukur jarak antara dua titik di SVG (dalam unit SVG).
+    * Ukur jarak nyata antara dua titik yang sama di lokasi fisik (dalam meter).
+    * Hitung rasio baru dan perbarui nilai `mapRatio`.
+
+---
+
+## 6. Mengubah Isi Legenda
+
+Legenda yang ditampilkan di desktop mudah untuk diubah.
+
+**Langkah-langkah:**
+
+* Buka file `src/components/Legend.tsx`.
+* Modifikasi, tambah, atau hapus item dari array `legendItems`. Setiap item memiliki properti `type` ('box' untuk warna, 'image' untuk ikon), `content` (kode warna atau path gambar), dan `text` (label legenda).
+
+```typescript
+// src/components/Legend.tsx
+
+const legendItems: LegendItem[] = [
+  { type: 'image', content: '/media/Toilet.png', text: 'Toilet' },
+  { type: 'box', content: '#000000', text: 'Gate' },
+  // Tambah atau ubah item di sini
+];
+ ```
+
+---
+
+## 7. Melihat Semua Jalur Navigasi (Edges)
+Untuk keperluan debugging, Anda bisa menampilkan semua kemungkinan jalur (edges) yang ada di dalam graf navigasi.
+
+**Langkah-langkah:**
+
+* Buka file `src/components/IndoorMap/Paths.tsx`.
+* Cari bagian kode render untuk edge-path.
+* Hilangkan komentar pada properti stroke dan fill untuk membuatnya terlihat.
+
