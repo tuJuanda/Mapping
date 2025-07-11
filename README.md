@@ -1,124 +1,187 @@
-> [!TIP]
-> Looking for a more advanced indoor navigation solution?
-> Try [OpenIndoorMaps](https://github.com/openindoormap/openindoormaps) - featuring map editing, 3D views, and outdoor map integration.
+# Developer Modification Guide
 
-# Pathpal: Web-Based Indoor Wayfinder
+Panduan ini menjelaskan cara melakukan modifikasi umum pada proyek Indoor-Navigation TuJuanda.
 
-Pathpal is an innovative web application designed to revolutionize indoor navigation. Using interactive maps and efficient pathfinding algorithms, it offers an intuitive solution for navigating complex indoor spaces.
-<br>
-**Demo:** [Visit Pathpal](https://indoor-wayfinder.vercel.app)
+---
 
-## Table of Content:
+## 1. Mengubah Nama Tenant
 
-- [Pathpal: Web-Based Indoor Wayfinder](#pathpal-web-based-indoor-wayfinder)
-  - [Table of Content:](#table-of-content)
-  - [About The App](#about-the-app)
-  - [Screenshots](#screenshots)
-  - [Features](#features)
-  - [Technologies](#technologies)
-  - [Setup](#setup)
-  - [Technical Insights](#technical-insights)
-    - [Map Technology](#map-technology)
-    - [Pathfinding](#pathfinding)
-    - [Core Map Technology](#core-map-technology)
-    - [Path Drawing and Wayfinding](#path-drawing-and-wayfinding)
-    - [Customizing the Map](#customizing-the-map)
-  - [Credits](#credits)
-  - [License](#license)
+Nama tenant digunakan untuk pencarian, navigasi, dan tampilan di sidebar. Perubahan harus konsisten di beberapa tempat.
 
-## About The App
+**Langkah-langkah:**
 
-This project is a variation of my diploma project, focusing on an interactive map for indoor wayfinding and navigation. It features an interactive SVG map and utilizes the Dijkstra algorithm to calculate the shortest path to points of interest (POIs). Originally, the application experimented with indoor positioning using BLE technology, but due to ithe experimental nature of the Bluetooth Web API, it has been omitted in this variation.
+1.  **Ubah di Database**: Langkah paling penting adalah mengubah nama tenant di database utama, yang kemungkinan besar dikelola melalui website admin TuJuanda. Ini adalah sumber data utama yang diambil oleh aplikasi.
 
-> [!WARNING]  
-> The backend of this project has been removed. All data are stored in a JSON file. This project is a prototype and should not be used for production purposes. Please check out my new project [OpenIndoorMaps](https://github.com/yourusername/OpenIndoorMaps) for a more comprehensive solution.
+2.  **Update `graphData.ts`**: Untuk memastikan fungsi navigasi dan pencarian tetap bekerja, Anda **wajib** memperbarui nama di file `src/store/graphData.ts`.
+    * Buka file `src/store/graphData.ts`.
+    * Cari vertex yang sesuai dengan tenant yang namanya diubah.
+    * Ubah nilai properti `objectName` menjadi nama yang baru, pastikan sama persis dengan yang ada di database.
 
-## Screenshots
+    ```typescript
+    // src/store/graphData.ts
 
-<table style="border-radius: 10px;  border: 1px solid gray;">
-  <tr >
-    <td align="center"><img src="media/indoor-map-details.png"/></td>
-   <td align="center"><h3 >Displaying Object Information on Click</h3></td>
-  </tr>
-    <tr>
-    <td align="center"><img src="media/indoor-wayfinding.png"/></td>
-    <td align="center"><h3>Demonstration of Shortest Path Calculation</h3></td>
-  </tr>
-</table>
+    export const graphData1: GraphData = {
+      vertices: [
+        // ...
+        // Contoh sebelum diubah
+        { id: "FB11", objectName: "Java Cafe", cx: 1850.929, cy: 480.811, objectCX: 1850.621337890625, objectCY: 503.37005615234375 },
+        // Contoh sesudah diubah
+        { id: "FB11", objectName: "Kafe Java Baru", cx: 1850.929, cy: 480.811, objectCX: 1850.621337890625, objectCY: 503.37005615234375 },
+        // ...
+      ],
+      //...
+    };
+    ```
 
-## Features
+> 📝 **Catatan:** File seperti `src/components/IndoorMap/Objects.tsx` tidak perlu diubah karena ia menggunakan `id` untuk identifikasi, bukan nama tenant.
 
-- **Interactive SVG Maps**: Navigate complex indoor spaces with ease.
-- **Dijkstra Pathfinding**: Calculates the shortest path to your destination.
-- **Responsive Design**: Optimized for any device and screen size.
-- **Customizable POIs**: Edit names and categories of points of interest.
-- **Pinch-to-Zoom**: Effortlessly zoom in and out on maps with touch gestures.
+---
 
-## Technologies
+## 2. Mengubah ID Tenant
 
-Pathpal is built with the latest web technologies for speed, efficiency, and adaptability:
+ID tenant (`uid`) digunakan sebagai pengidentifikasi unik untuk elemen SVG di peta dan vertex pada graf navigasi.
 
-- React
-- Vite
-- TypeScript
-- TailwindCSS
-- SVG
-- Dijkstra's Algorithm
+**Langkah-langkah:**
 
-## Setup
+1.  **Ubah di Database**: Ubah `uid` tenant di database melalui admin panel.
 
-Follow these steps to get the project up and running:
+2.  **Update `Objects.tsx`**: Buka file `src/components/IndoorMap/Objects.tsx` dan ubah `id` dari elemen SVG yang sesuai.
 
-1. **Clone the Repository**: Use your preferred Git client to clone this repository to your local machine.
+    ```typescript
+    // src/components/IndoorMap/Objects.tsx
 
-2. **Install Node.js**: This project requires Node.js. If you don't have Node.js version 21 installed, you can download and install it from [nodejs.org](https://nodejs.org/).
+    // Sebelum
+    <path
+        id="FB11" // ID lama
+        className={`${className} object`}
+        d="..."
+        onClick={handleObjectClick}
+    />
 
-3. **Install Dependencies**: Navigate to the project directory in your terminal and run the following command to install the necessary dependencies:
+    // Sesudah
+    <path
+        id="KAFE-01" // ID baru
+        className={`${className} object`}
+        d="..."
+        onClick={handleObjectClick}
+    />
+    ```
 
-   ```bash
-   npm install
-   ```
+3.  **Update `graphData.ts`**: Buka `src/store/graphData.ts`, cari vertex yang bersangkutan, dan ubah `id`-nya agar sesuai dengan `uid` yang baru.
 
-4. **Start the Application**: Once the dependencies are installed, you can start the application by running the following command in your terminal:
+    ```typescript
+    // src/store/graphData.ts
 
-   ```bash
-   npm run dev
-   ```
+    // Sebelum
+    { id: "FB11", objectName: "Java Cafe", ... },
 
-After running these commands, your default web browser should automatically open and navigate to `localhost:5173`, where you can see the running application.
+    // Sesudah
+    { id: "KAFE-01", objectName: "Java Cafe", ... },
+    ```
 
-## Technical Insights
+---
 
-### Map Technology
+## 3. Menambah Lokasi Tenant Baru
 
-- **SVG Format**: The map is primarily SVG for its flexibility and interactive capabilities, ideal for detailed navigation.
-- **Image Format Support**: Supports various formats like PNG and JPEG for map backgrounds, with interactive features best suited for SVG.
+Menambahkan tenant baru melibatkan pembuatan data di database, penambahan elemen visual di peta, dan pendaftaran titik baru di sistem navigasi.
 
-### Pathfinding
+**Langkah-langkah:**
 
-- **Routes Definition**: Paths within the map represent navigable routes, essential for the Dijkstra algorithm to calculate efficient paths.
-- **Dijkstra Algorithm**: Ensures accurate and swift navigation between POIs.
+1.  **Tambah Data di Database**: Tambahkan data tenant baru (uid, nama, lantai, gambar, dll.) melalui website admin.
 
-### Core Map Technology
+2.  **Gambar Objek di Peta (`Objects.tsx`)**:
+    * Buka file SVG peta asli (misal: `src/assets/img/T1-LT1.svg`) di editor teks atau Inkscape.
+    * Untuk mempermudah, gambar bentuk (persegi, poligon) untuk tenant baru dengan warna yang mencolok (misal: `#FF00FF`).
+    * Simpan file, lalu buka file SVG tersebut dengan editor teks. Cari kode warna yang Anda gunakan (`#FF00FF`).
+    * Salin data path SVG (`<path d="...">` atau `<rect ...>`).
+    * Buka `src/components/IndoorMap/Objects.tsx` dan tempelkan path tersebut di dalam grup (`<g>`) lantai yang sesuai. **Pastikan `id` elemen SVG baru sama dengan `uid` tenant baru dari database.**
 
-- **SVG as the Default Format**: The application primarily uses an SVG (Scalable Vector Graphics) file for the map due to its scalability and ease of manipulation. SVGs allow for interactive and dynamic rendering of indoor spaces, making them ideal for detailed navigation paths.
-- **Support for Various Image Formats**: While SVG is the default, the system is designed to accommodate any image format (e.g., PNG, JPEG) as a map background. This flexibility ensures that developers can use existing floor plans or maps without needing to convert them to SVG. However, the primary interactive and navigational features are optimized for SVG.
+3.  **Update `graphData.ts`**:
+    * **Tambahkan Vertex Baru**: Di `src/store/graphData.ts`, dalam array `vertices` untuk lantai yang benar, tambahkan objek vertex baru.
+        * `id`: `uid` tenant baru.
+        * `objectName`: nama tenant baru.
+        * `cx`, `cy`: Koordinat untuk titik henti navigasi (biasanya di depan pintu).
+        * `objectCX`, `objectCY`: Koordinat titik tengah objek untuk menempatkan logo/ikon.
+    * **Tambahkan Edge Baru**: Dalam array `edges`, tambahkan satu atau lebih edge untuk menghubungkan vertex baru ini ke vertex navigasi terdekat. Ini krusial agar rute ke tenant baru dapat ditemukan.
 
-### Path Drawing and Wayfinding
+    ```typescript
+    // src/store/graphData.ts
 
-- **Path Drawing**: For navigation to function, paths must be defined within the map. These paths represent walkable routes and are crucial for the wayfinding algorithm. In SVG files, paths can be drawn and edited directly, allowing for precise control over navigation routes.
-- **Wayfinding Algorithm**: The application utilizes the Dijkstra algorithm for calculating the shortest path between points of interest (POIs) on the map. This algorithm operates on the network of paths drawn on the map, ensuring efficient and accurate navigation.
+    // 1. Tambah Vertex
+    vertices: [
+        ...
+        { id: "TENANT-BARU", objectName: "Toko Baru", cx: 1300, cy: 400, objectCX: 1305, objectCY: 410 },
+    ],
 
-### Customizing the Map
+    // 2. Tambah Edge (hubungkan ke vertex terdekat, misal P7)
+    edges: [
+        ...
+        { id: "P7_to_TENANT-BARU", from: "P7", to: "TENANT-BARU", floor: 1 },
+    ]
+    ```
 
-- **Editing Tools**: Developers have the option to utilize vector graphic editing tools such as Adobe Illustrator or Boxy SVG for modifying the SVG map. This modification can involve updating layouts, adding or removing Points of Interest (POIs), and adjusting paths. Refer to the screenshot below to see an example of map editing using Boxy SVG. For converting SVG to JSX, [Transform Tools](https://transform.tools/) can be a useful resource.
+---
 
-![IndoorMap Editing Example](media/map-editing-preview.png)
+## 4. Memindahkan Lokasi Tenant
 
-## Credits
+Proses ini mirip dengan menambah lokasi, tetapi Anda memodifikasi data yang sudah ada.
 
-This project was inspired by my diploma work and significantly influenced by the support of mentors, peers, and resources like [maciejb2k's pathfinding app](https://github.com/maciejb2k/pathfinding_app).
+**Langkah-langkah:**
 
-## License
+1.  **Update Path di `Objects.tsx`**: Dapatkan path SVG baru dari lokasi tenant yang baru (gunakan trik warna seperti di atas) dan ganti path lama di `src/components/IndoorMap/Objects.tsx`.
 
-Pathpal is open-sourced under the MIT License. Contributions and feedback are welcome!
+2.  **Update Koordinat di `graphData.ts`**:
+    * Cari vertex tenant yang pindah berdasarkan `id`-nya.
+    * Perbarui koordinat `cx`, `cy`, `objectCX`, dan `objectCY` agar sesuai dengan lokasi baru.
+
+3.  **Update Edge di `graphData.ts`**: Ini adalah bagian terpenting.
+    * Hapus semua *edge* lama yang terhubung ke vertex tenant tersebut.
+    * Tambahkan *edge* baru yang menghubungkan vertex tersebut ke titik-titik navigasi terdekat di lokasi barunya. Kegagalan pada langkah ini akan menyebabkan navigasi ke tenant tersebut rusak.
+
+---
+
+## 5. Mengubah ViewBox Peta
+
+Jika Anda mengganti file SVG peta dengan yang memiliki `viewBox` atau dimensi berbeda, beberapa penyesuaian diperlukan.
+
+**Langkah-langkah:**
+
+1.  **Update `MapBackground.tsx`**: Buka `src/components/IndoorMap/MapBackground.tsx` dan ubah properti `viewBox` pada komponen `<svg>`.
+
+2.  **Kalibrasi Ulang `mapRatio`**: Perubahan `viewBox` akan mengubah skala peta. Untuk menjaga akurasi perhitungan jarak (meter) dan estimasi waktu jalan kaki, Anda harus mengkalibrasi ulang rasio di `src/hooks/useRouteDetails.ts`.
+    * Ukur jarak antara dua titik di SVG (dalam unit SVG).
+    * Ukur jarak nyata antara dua titik yang sama di lokasi fisik (dalam meter).
+    * Hitung rasio baru dan perbarui nilai `mapRatio`.
+
+---
+
+## 6. Mengubah Isi Legenda
+
+Legenda yang ditampilkan di desktop mudah untuk diubah.
+
+**Langkah-langkah:**
+
+* Buka file `src/components/Legend.tsx`.
+* Modifikasi, tambah, atau hapus item dari array `legendItems`. Setiap item memiliki properti `type` ('box' untuk warna, 'image' untuk ikon), `content` (kode warna atau path gambar), dan `text` (label legenda).
+
+```typescript
+// src/components/Legend.tsx
+
+const legendItems: LegendItem[] = [
+  { type: 'image', content: '/media/Toilet.png', text: 'Toilet' },
+  { type: 'box', content: '#000000', text: 'Gate' },
+  // Tambah atau ubah item di sini
+];
+ ```
+
+---
+
+## 7. Melihat Semua Jalur Navigasi (Edges)
+Untuk keperluan debugging, Anda bisa menampilkan semua kemungkinan jalur (edges) yang ada di dalam graf navigasi.
+
+**Langkah-langkah:**
+
+* Buka file `src/components/IndoorMap/Paths.tsx`.
+* Cari bagian kode render untuk edge-path.
+* Hilangkan komentar pada properti stroke dan fill untuk membuatnya terlihat.
+
